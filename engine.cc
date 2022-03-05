@@ -17,6 +17,17 @@
 
 using Lines2D = std::list<Line2D>;
 
+struct Brackets {
+    double x;
+    double y;
+    double angle;
+    Brackets(double x_, double y_, double angle_) {
+        x = x_;
+        y = y_;
+        angle = angle_;
+    }
+};
+
 void ColorRectangle(img::EasyImage &img) {
     for (unsigned int i = 0; i < 256; i++) {
         for (unsigned int j = 0; j < 256; j++) {
@@ -142,7 +153,7 @@ img::EasyImage draw2DLines(const Lines2D& lines, const int size, img::Color bg_c
     return image;
 }
 
-void drawLSystemHelper(const LParser::LSystem2D& l_system, Lines2D& lines, const Color col, int& recursionDepth, const unsigned int maxRecursion, std::string currentString, double& currentAngle, const double angleIncrement, double& x0, double& y0) {
+void drawLSystemHelper(const LParser::LSystem2D& l_system, Lines2D& lines, const Color col, int& recursionDepth, const unsigned int maxRecursion, std::string currentString, double& currentAngle, const double angleIncrement, double& x0, double& y0,  std::stack<Brackets>& bracketStack) {
     if (recursionDepth == maxRecursion) {
         // Make the lines
         double x1;
@@ -150,6 +161,14 @@ void drawLSystemHelper(const LParser::LSystem2D& l_system, Lines2D& lines, const
         for (char c: currentString) {
             if (c == '+') currentAngle += angleIncrement;
             else if (c == '-') currentAngle -= angleIncrement;
+            else if (c == '(') bracketStack.push(Brackets(x0, y0, currentAngle));
+            else if (c == ')') {
+                Brackets brackets = bracketStack.top();
+                x0 = brackets.x;
+                y0 = brackets.y;
+                currentAngle = brackets.angle;
+                bracketStack.pop();
+            }
             else if (l_system.draw(c)) {
                 x1 = x0 + cos(currentAngle);
                 y1 = y0 + sin(currentAngle);
@@ -164,9 +183,17 @@ void drawLSystemHelper(const LParser::LSystem2D& l_system, Lines2D& lines, const
         for (char c: currentString) {
             if (c == '+') currentAngle += angleIncrement;
             else if (c == '-') currentAngle -= angleIncrement;
+            else if (c == '(') bracketStack.push(Brackets(x0, y0, currentAngle));
+            else if (c == ')') {
+                Brackets brackets = bracketStack.top();
+                x0 = brackets.x;
+                y0 = brackets.y;
+                currentAngle = brackets.angle;
+                bracketStack.pop();
+            }
             else if (l_system.draw(c)) {
                 recursionDepth++;
-                drawLSystemHelper(l_system, lines, col, recursionDepth, maxRecursion, l_system.get_replacement(c), currentAngle, angleIncrement, x0, y0);
+                drawLSystemHelper(l_system, lines, col, recursionDepth, maxRecursion, l_system.get_replacement(c), currentAngle, angleIncrement, x0, y0, bracketStack);
             }
         }
         recursionDepth--;
@@ -175,8 +202,8 @@ void drawLSystemHelper(const LParser::LSystem2D& l_system, Lines2D& lines, const
 
 Lines2D drawLSystem (const LParser::LSystem2D& l_system, Color col) {
     Lines2D lines;
-//    std::stack<std::map<std::pair<double, double>, double>> bracketStack;
     // Call recursive function
+    std::stack<Brackets> bracketStack;
     unsigned int Iterations = l_system.get_nr_iterations();
     std::string const& Initiator = l_system.get_initiator();
     double startingAngle = l_system.get_starting_angle()/180 * M_PI;
@@ -188,7 +215,15 @@ Lines2D drawLSystem (const LParser::LSystem2D& l_system, Color col) {
     for (char c: Initiator) {
         if (c == '+') currentAngle += angleIncrement;
         else if (c == '-') currentAngle -= angleIncrement;
-        else if (l_system.draw(c)) drawLSystemHelper(l_system, lines, col, recursionDepth, Iterations, l_system.get_replacement(c), currentAngle, angleIncrement, x0, y0);
+        else if (c == '(') bracketStack.push(Brackets(x0, y0, currentAngle));
+        else if (c == ')') {
+            Brackets brackets = bracketStack.top();
+            x0 = brackets.x;
+            y0 = brackets.y;
+            currentAngle = brackets.angle;
+            bracketStack.pop();
+        }
+        else if (l_system.draw(c)) drawLSystemHelper(l_system, lines, col, recursionDepth, Iterations, l_system.get_replacement(c), currentAngle, angleIncrement, x0, y0, bracketStack);
     }
     return lines;
 }
