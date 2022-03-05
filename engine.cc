@@ -1,7 +1,7 @@
 #define _USE_MATH_DEFINES
 
 #include "util/Easy_image/easy_image.h"
-#include "ini_configuration.h"
+#include "util/Ini_config/ini_configuration.h"
 
 #include <fstream>
 #include <iostream>
