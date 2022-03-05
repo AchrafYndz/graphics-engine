@@ -14,7 +14,7 @@ set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} ${OWN_GXX_FLAGS}")
 # List all sources
 ############################################################
 set(engine_sources
-	easy_image.cc
+	util/Easy_image/easy_image.cc
 	engine.cc
 	ini_configuration.cc
 	util/Color.cc

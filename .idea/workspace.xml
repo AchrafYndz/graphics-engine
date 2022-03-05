@@ -32,6 +32,11 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2021" />
+    <option name="minorVersion" value="3.3" />
+  </component>
   <component name="ProjectId" id="25bNuHOjV5Nnbb4eGTQ22dV3nml" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -51,6 +56,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Achraf\CLionProjects\graphics-engine\util\Easy_image" />
+      <recent name="C:\Users\Achraf\CLionProjects\graphics-engine\util" />
       <recent name="C:\Users\Achraf\CLionProjects\Inleiding_CGR\util\Parser" />
       <recent name="C:\Users\Achraf\CLionProjects\Inleiding_CGR\ini\intro" />
     </key>
@@ -66,7 +73,7 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="engine" type="CMakeRunConfiguration" factoryName="Application" temporary="true" PROGRAM_PARAMS="l-systems/l_systems001.ini" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$/ini" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="engine" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="engine">
+    <configuration name="engine" type="CMakeRunConfiguration" factoryName="Application" temporary="true" PROGRAM_PARAMS="l-systems/l_systems001.ini" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$/ini" PASS_PARENT_ENVS_2="true" PROJECT_NAME="engine" TARGET_NAME="engine" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="engine" RUN_TARGET_NAME="engine">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -96,7 +103,7 @@
       <workItem from="1646400134994" duration="3732000" />
       <workItem from="1646403935402" duration="9017000" />
       <workItem from="1646499863171" duration="749000" />
-      <workItem from="1646500777900" duration="1684000" />
+      <workItem from="1646500777900" duration="1921000" />
     </task>
     <servers />
   </component>

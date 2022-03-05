@@ -1,6 +1,6 @@
 #define _USE_MATH_DEFINES
 
-#include "easy_image.h"
+#include "util/Easy_image/easy_image.h"
 #include "ini_configuration.h"
 
 #include <fstream>
