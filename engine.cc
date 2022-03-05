@@ -211,20 +211,9 @@ Lines2D drawLSystem (const LParser::LSystem2D& l_system, Color col) {
     double angleIncrement = l_system.get_angle()/180*M_PI;
     double x0 = 0;
     double y0 = 0;
-    int recursionDepth = 1;
-    for (char c: Initiator) {
-        if (c == '+') currentAngle += angleIncrement;
-        else if (c == '-') currentAngle -= angleIncrement;
-        else if (c == '(') bracketStack.push(Brackets(x0, y0, currentAngle));
-        else if (c == ')') {
-            Brackets brackets = bracketStack.top();
-            x0 = brackets.x;
-            y0 = brackets.y;
-            currentAngle = brackets.angle;
-            bracketStack.pop();
-        }
-        else if (l_system.draw(c)) drawLSystemHelper(l_system, lines, col, recursionDepth, Iterations, l_system.get_replacement(c), currentAngle, angleIncrement, x0, y0, bracketStack);
-    }
+    int recursionDepth = 0;
+    drawLSystemHelper(l_system, lines, col, recursionDepth, Iterations, Initiator, currentAngle, angleIncrement,
+                              x0, y0, bracketStack);
     return lines;
 }
 
@@ -249,10 +238,10 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
     std::ifstream input_stream(configuration["2DLSystem"]["inputfile"]);
     input_stream >> l_system;
     input_stream.close();
-    std::vector<int> color = configuration["2DLSystem"]["color"];
-    std::vector<int> bg_col = configuration["General"]["backgroundcolor"];
+    std::vector<double> color = configuration["2DLSystem"]["color"];
+    std::vector<double> bg_col = configuration["General"]["backgroundcolor"];
     Color c(color[0], color[1], color[2]);
-    img::Color bg(bg_col[0]*255, bg_col[1]*255, bg_col[2]*255);
+    img::Color bg(bg_col[0]*250, bg_col[1]*250, bg_col[2]*250);
     img::EasyImage image = draw2DLines(drawLSystem(l_system, c) , configuration["General"]["size"], bg);
     std::ofstream fout("out.bmp", std::ios::binary);
     fout << image;
