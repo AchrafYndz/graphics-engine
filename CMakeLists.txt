@@ -16,7 +16,7 @@ set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} ${OWN_GXX_FLAGS}")
 set(engine_sources
 	util/Easy_image/easy_image.cc
 	engine.cc
-		util/Ini_config/ini_configuration.cc
+	util/Ini_config/ini_configuration.cc
 	util/Color.cc
 	util/Line2D.cc
 	util/Point2D.cc

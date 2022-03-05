@@ -9,6 +9,7 @@
 #include <string>
 #include <cmath>
 #include <list>
+#include <stack>
 
 #include "util/Line2D.h"
 #include "util/Parser/l_parser.h"
@@ -141,44 +142,53 @@ img::EasyImage draw2DLines(const Lines2D& lines, const int size, img::Color bg_c
     return image;
 }
 
+void drawLSystemHelper(const LParser::LSystem2D& l_system, Lines2D& lines, const Color col, int& recursionDepth, const unsigned int maxRecursion, std::string currentString, double& currentAngle, const double angleIncrement, double& x0, double& y0) {
+    if (recursionDepth == maxRecursion) {
+        // Make the lines
+        double x1;
+        double y1;
+        for (char c: currentString) {
+            if (c == '+') currentAngle += angleIncrement;
+            else if (c == '-') currentAngle -= angleIncrement;
+            else if (l_system.draw(c)) {
+                x1 = x0 + cos(currentAngle);
+                y1 = y0 + sin(currentAngle);
+                lines.push_back(Line2D(Point2D(x0, y0), Point2D(x1, y1), col));
+                x0 = x1;
+                y0 = y1;
+            }
+        }
+        recursionDepth--;
+    }
+    else {
+        for (char c: currentString) {
+            if (c == '+') currentAngle += angleIncrement;
+            else if (c == '-') currentAngle -= angleIncrement;
+            else if (l_system.draw(c)) {
+                recursionDepth++;
+                drawLSystemHelper(l_system, lines, col, recursionDepth, maxRecursion, l_system.get_replacement(c), currentAngle, angleIncrement, x0, y0);
+            }
+        }
+        recursionDepth--;
+    }
+}
+
 Lines2D drawLSystem (const LParser::LSystem2D& l_system, Color col) {
     Lines2D lines;
-    std::set<char> const& Alphabet = l_system.get_alphabet();
-
-    // Get the deepest l-system string
-    int it=0;
+//    std::stack<std::map<std::pair<double, double>, double>> bracketStack;
+    // Call recursive function
     unsigned int Iterations = l_system.get_nr_iterations();
     std::string const& Initiator = l_system.get_initiator();
-    std::string current_string = Initiator;
-    std::string placeholder;
-    while (it < Iterations) {
-        for (char c: current_string) {
-            if (c == '+' || c == '-') placeholder += c;
-            else placeholder += l_system.get_replacement(c);
-        }
-        current_string = placeholder;
-        placeholder = "";
-        it ++;
-    }
-
-    // Make the lines
-    double StartingAngle = l_system.get_starting_angle();
-    double currentAngle = StartingAngle/180 * M_PI;
+    double startingAngle = l_system.get_starting_angle()/180 * M_PI;
+    double currentAngle = startingAngle;
     double angleIncrement = l_system.get_angle()/180*M_PI;
-    double x0=0;
-    double y0=0;
-    double x1;
-    double y1;
-    for (char c: current_string) {
+    double x0 = 0;
+    double y0 = 0;
+    int recursionDepth = 1;
+    for (char c: Initiator) {
         if (c == '+') currentAngle += angleIncrement;
         else if (c == '-') currentAngle -= angleIncrement;
-        else if (l_system.draw(c)) {
-            x1 = x0 + cos(currentAngle);
-            y1 = y0 + sin(currentAngle);
-            lines.push_back(Line2D(Point2D(x0, y0), Point2D(x1, y1), col));
-            x0 = x1;
-            y0 = y1;
-        }
+        else if (l_system.draw(c)) drawLSystemHelper(l_system, lines, col, recursionDepth, Iterations, l_system.get_replacement(c), currentAngle, angleIncrement, x0, y0);
     }
     return lines;
 }
