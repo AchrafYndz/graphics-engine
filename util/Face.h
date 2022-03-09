@@ -6,6 +6,7 @@
 class Face {
 public:
     std::vector<int> point_indexes;
+    Face(std::vector<int> point_indexes_) : point_indexes(point_indexes_) {};
 };
 
 

@@ -161,6 +161,8 @@ CMakeFiles/engine.dir/engine.cc.o: \
  /usr/include/c++/9/list /usr/include/c++/9/bits/stl_list.h \
  /usr/include/c++/9/bits/allocated_ptr.h /usr/include/c++/9/bits/list.tcc \
  /mnt/c/Users/Achraf/CLionProjects/graphics-engine/util/Vector3D/vector3d.h \
+ /mnt/c/Users/Achraf/CLionProjects/graphics-engine/util/Face.h \
+ /mnt/c/Users/Achraf/CLionProjects/graphics-engine/util/Face.h \
  /usr/include/c++/9/fstream /usr/include/c++/9/bits/codecvt.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/c++io.h \

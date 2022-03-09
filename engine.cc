@@ -295,8 +295,8 @@ Lines2D doProjection(const Figures3D& figs) {
     Lines2D projection;
     for (Figure fig: figs) {
         for (Face face: fig.faces) {
-            Vector3D p0 = fig.points[0];
-            Vector3D p1 = fig.points[1];
+            Vector3D p0 = fig.points[face.point_indexes[0]];
+            Vector3D p1 = fig.points[face.point_indexes[1]];
             Point2D x = doProjection(p0, 1);
             Point2D y = doProjection(p1, 1);
             projection.push_back(Line2D(x, y, fig.color));
@@ -326,16 +326,53 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
 //    Diamond(image, configuration["ImageProperties"]["height"], configuration["ImageProperties"]["width"],
 //            configuration["LineProperties"]["nrLines"], configuration["LineProperties"]["lineColor"],
 //            configuration["LineProperties"]["backgroundcolor"]);
-    LParser::LSystem2D l_system;
+//    LParser::LSystem2D l_system;
+//
+//    std::ifstream input_stream(configuration["2DLSystem"]["inputfile"]);
+//    input_stream >> l_system;
+//    input_stream.close();
+//    std::vector<double> color = configuration["2DLSystem"]["color"];
+//    std::vector<double> bg_col = configuration["General"]["backgroundcolor"];
+//    Color c(color[0], color[1], color[2]);
+//    img::Color bg(bg_col[0]*250, bg_col[1]*250, bg_col[2]*250);
+//    img::EasyImage image = draw2DLines(drawLSystem(l_system, c) , configuration["General"]["size"], bg);
 
-    std::ifstream input_stream(configuration["2DLSystem"]["inputfile"]);
-    input_stream >> l_system;
-    input_stream.close();
-    std::vector<double> color = configuration["2DLSystem"]["color"];
     std::vector<double> bg_col = configuration["General"]["backgroundcolor"];
-    Color c(color[0], color[1], color[2]);
     img::Color bg(bg_col[0]*250, bg_col[1]*250, bg_col[2]*250);
-    img::EasyImage image = draw2DLines(drawLSystem(l_system, c) , configuration["General"]["size"], bg);
+    int size = configuration["General"]["size"];
+
+
+    Figures3D figures;
+    int i = 0;
+    int nrFigures = configuration["General"]["nrFigures"];
+    while (i<nrFigures) {
+        std::vector<Vector3D> points;
+        int nrPoints = configuration["Figure"+std::to_string(i)]["nrPoints"];
+        int indexp=0;
+        while (indexp < nrPoints) {
+            std::vector<double> point = configuration["Figure"+std::to_string(i)]["point"+std::to_string(indexp)];
+            Vector3D p = Vector3D::point(point[0], point[1], point[2]);
+            points.push_back(p);
+            indexp++;
+        }
+
+        std::vector<Face> faces;
+        int nrLines = configuration["Figure"+std::to_string(i)]["nrLines"];
+        int indexl=0;
+        while (indexl < nrLines) {
+            std::vector<int> indexes = configuration["Figure"+std::to_string(i)]["line"+std::to_string(indexl)];
+            Face f = Face(indexes);
+            faces.push_back(f);
+            indexl++;
+        }
+        std::vector<double> col = configuration["Figure"+std::to_string(i)]["color"];
+        Color color(col[0] * 255, col[1] * 255, col[2] * 255);
+        Figure f(points, faces, color);
+        figures.push_back(f);
+        i++;
+    }
+
+    img::EasyImage image = draw2DLines(doProjection(figures), size, bg);
     std::ofstream fout("out.bmp", std::ios::binary);
     fout << image;
     fout.close();

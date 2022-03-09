@@ -146,4 +146,5 @@ CMakeFiles/engine.dir/util/Figure.cc.o: \
  /usr/include/c++/9/bits/locale_facets.tcc \
  /usr/include/c++/9/bits/basic_ios.tcc \
  /usr/include/c++/9/bits/ostream.tcc /usr/include/c++/9/istream \
- /usr/include/c++/9/bits/istream.tcc
+ /usr/include/c++/9/bits/istream.tcc \
+ /mnt/c/Users/Achraf/CLionProjects/graphics-engine/util/Face.h

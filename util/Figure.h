@@ -6,14 +6,14 @@
 
 #include "Color.h"
 #include "Vector3D/vector3d.h"
-
-class Face;
+#include "Face.h"
 
 class Figure {
 public:
     std::vector<Vector3D> points;
     std::vector<Face> faces;
     Color color;
+    Figure(std::vector<Vector3D> points_, std::vector<Face> faces_, Color color_): points(points_), faces(faces_), color(color_) {};
 };
 
 typedef std::list<Figure> Figures3D;
