@@ -54,22 +54,30 @@
     <property name="cf.first.check.clang-format" value="false" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="cmake.loaded.for.project" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ini/line_drawings" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Achraf\CLionProjects\graphics-engine\ini\line_drawings" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Achraf\CLionProjects\graphics-engine\util\Ini_config" />
+      <recent name="C:\Users\Achraf\CLionProjects\graphics-engine\ini\line_drawings" />
+      <recent name="C:\Users\Achraf\CLionProjects\graphics-engine\ini" />
+      <recent name="C:\Users\Achraf\CLionProjects\graphics-engine\util\Vector3D" />
       <recent name="C:\Users\Achraf\CLionProjects\graphics-engine\util" />
-      <recent name="C:\Users\Achraf\CLionProjects\graphics-engine\util\Easy_image" />
-      <recent name="C:\Users\Achraf\CLionProjects\Inleiding_CGR\util\Parser" />
-      <recent name="C:\Users\Achraf\CLionProjects\Inleiding_CGR\ini\intro" />
+      <recent name="C:\Users\Achraf\CLionProjects\graphics-engine\util\Ini_config" />
     </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
     <configuration name="engine" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="l-systems/l_systems006.ini" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$/ini" PASS_PARENT_ENVS_2="true" PROJECT_NAME="engine" TARGET_NAME="engine" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="engine" RUN_TARGET_NAME="engine">
@@ -100,7 +108,9 @@
       <workItem from="1646500777900" duration="4037000" />
       <workItem from="1646506300790" duration="3486000" />
       <workItem from="1646509837678" duration="1437000" />
-      <workItem from="1646516964161" duration="6848000" />
+      <workItem from="1646516964161" duration="6890000" />
+      <workItem from="1646593715717" duration="32000" />
+      <workItem from="1646832034582" duration="2982000" />
     </task>
     <servers />
   </component>

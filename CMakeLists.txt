@@ -14,14 +14,19 @@ set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} ${OWN_GXX_FLAGS}")
 # List all sources
 ############################################################
 set(engine_sources
-	util/Easy_image/easy_image.cc
-	engine.cc
-	util/Ini_config/ini_configuration.cc
-	util/Color.cc
-	util/Line2D.cc
-	util/Point2D.cc
-	util/Parser/l_parser.cc
-)
+		util/Easy_image/easy_image.cc
+		engine.cc
+		util/Ini_config/ini_configuration.cc
+		util/Color.cc
+		util/Line2D.cc
+		util/Point2D.cc
+		util/Parser/l_parser.cc
+		util/Face.cc
+		util/Face.h
+		util/Figure.cc
+		util/Figure.h
+		util/Vector3D/vector3d.h
+		util/Vector3D/vector3d.cc)
 
 ############################################################
 # Create an executable

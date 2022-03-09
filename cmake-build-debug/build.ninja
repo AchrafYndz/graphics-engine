@@ -91,6 +91,24 @@ build CMakeFiles/engine.dir/util/Parser/l_parser.cc.obj: CXX_COMPILER__engine_De
   OBJECT_DIR = CMakeFiles\engine.dir
   OBJECT_FILE_DIR = CMakeFiles\engine.dir\util\Parser
 
+build CMakeFiles/engine.dir/util/Face.cc.obj: CXX_COMPILER__engine_Debug C$:/Users/Achraf/CLionProjects/graphics-engine/util/Face.cc || cmake_object_order_depends_target_engine
+  DEP_FILE = CMakeFiles\engine.dir\util\Face.cc.obj.d
+  FLAGS = -std=c++14 -g -std=c++14
+  OBJECT_DIR = CMakeFiles\engine.dir
+  OBJECT_FILE_DIR = CMakeFiles\engine.dir\util
+
+build CMakeFiles/engine.dir/util/Figure.cc.obj: CXX_COMPILER__engine_Debug C$:/Users/Achraf/CLionProjects/graphics-engine/util/Figure.cc || cmake_object_order_depends_target_engine
+  DEP_FILE = CMakeFiles\engine.dir\util\Figure.cc.obj.d
+  FLAGS = -std=c++14 -g -std=c++14
+  OBJECT_DIR = CMakeFiles\engine.dir
+  OBJECT_FILE_DIR = CMakeFiles\engine.dir\util
+
+build CMakeFiles/engine.dir/util/Vector3D/vector3d.cc.obj: CXX_COMPILER__engine_Debug C$:/Users/Achraf/CLionProjects/graphics-engine/util/Vector3D/vector3d.cc || cmake_object_order_depends_target_engine
+  DEP_FILE = CMakeFiles\engine.dir\util\Vector3D\vector3d.cc.obj.d
+  FLAGS = -std=c++14 -g -std=c++14
+  OBJECT_DIR = CMakeFiles\engine.dir
+  OBJECT_FILE_DIR = CMakeFiles\engine.dir\util\Vector3D
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target engine
@@ -99,7 +117,7 @@ build CMakeFiles/engine.dir/util/Parser/l_parser.cc.obj: CXX_COMPILER__engine_De
 #############################################
 # Link the executable engine.exe
 
-build engine.exe: CXX_EXECUTABLE_LINKER__engine_Debug CMakeFiles/engine.dir/util/Easy_image/easy_image.cc.obj CMakeFiles/engine.dir/engine.cc.obj CMakeFiles/engine.dir/util/Ini_config/ini_configuration.cc.obj CMakeFiles/engine.dir/util/Color.cc.obj CMakeFiles/engine.dir/util/Line2D.cc.obj CMakeFiles/engine.dir/util/Point2D.cc.obj CMakeFiles/engine.dir/util/Parser/l_parser.cc.obj
+build engine.exe: CXX_EXECUTABLE_LINKER__engine_Debug CMakeFiles/engine.dir/util/Easy_image/easy_image.cc.obj CMakeFiles/engine.dir/engine.cc.obj CMakeFiles/engine.dir/util/Ini_config/ini_configuration.cc.obj CMakeFiles/engine.dir/util/Color.cc.obj CMakeFiles/engine.dir/util/Line2D.cc.obj CMakeFiles/engine.dir/util/Point2D.cc.obj CMakeFiles/engine.dir/util/Parser/l_parser.cc.obj CMakeFiles/engine.dir/util/Face.cc.obj CMakeFiles/engine.dir/util/Figure.cc.obj CMakeFiles/engine.dir/util/Vector3D/vector3d.cc.obj
   FLAGS = -std=c++14 -g -std=c++14
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\engine.dir
