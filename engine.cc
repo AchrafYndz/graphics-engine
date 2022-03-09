@@ -334,12 +334,13 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
 //    std::vector<double> color = configuration["2DLSystem"]["color"];
 //    std::vector<double> bg_col = configuration["General"]["backgroundcolor"];
 //    Color c(color[0], color[1], color[2]);
-//    img::Color bg(bg_col[0]*250, bg_col[1]*250, bg_col[2]*250);
+//    img::Color bg(bg_col[0]*255, bg_col[1]*255, bg_col[2]*255);
 //    img::EasyImage image = draw2DLines(drawLSystem(l_system, c) , configuration["General"]["size"], bg);
 
     std::vector<double> bg_col = configuration["General"]["backgroundcolor"];
-    img::Color bg(bg_col[0]*250, bg_col[1]*250, bg_col[2]*250);
+    img::Color bg(bg_col[0]*255, bg_col[1]*255, bg_col[2]*255);
     int size = configuration["General"]["size"];
+
 
 
     Figures3D figures;
