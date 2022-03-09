@@ -6,6 +6,7 @@
 #include "util/Parser/l_parser.h"
 #include "util/Vector3D/vector3d.h"
 #include "util/Figure.h"
+#include "util/Face.h"
 
 #include <fstream>
 #include <iostream>
@@ -261,6 +262,49 @@ Matrix translate(const Vector3D &vector) {
     translationMatrix(3, 2) = vector.z;
     return translationMatrix;
 }
+
+void toPolar(const Vector3D& point, double& theta, double& phi, double& r) {
+    r = sqrt(pow(point.x, 2) + pow(point.y, 2) + pow(point.z, 2));
+    theta = atan2(point.y, point.x);
+    phi = acos(point.z/r);
+}
+
+Matrix eyePointTrans(const Vector3D& eyepoint) {
+    double theta;
+    double phi;
+    double r;
+    toPolar(eyepoint, theta, phi, r);
+    Matrix eyePointMatrix;
+    eyePointMatrix(0, 0) = -sin(theta);
+    eyePointMatrix(0, 1) = -cos(theta)*cos(theta);
+    eyePointMatrix(0, 2) = cos(theta)*sin(theta);
+    eyePointMatrix(1, 0) = cos(theta);
+    eyePointMatrix(1, 1) = -sin(theta)*cos(theta);
+    eyePointMatrix(1, 2) = sin(theta)*sin(theta);
+    eyePointMatrix(2, 1) = sin(theta);
+    eyePointMatrix(2, 2) = cos(theta);
+    eyePointMatrix(3, 2) = -r;
+    return eyePointMatrix;
+}
+
+Point2D doProjection(const Vector3D& point, const double d) {
+    return {-point.x*d/point.z, -point.y*d/point.z};
+}
+
+Lines2D doProjection(const Figures3D& figs) {
+    Lines2D projection;
+    for (Figure fig: figs) {
+        for (Face face: fig.faces) {
+            Vector3D p0 = fig.points[0];
+            Vector3D p1 = fig.points[1];
+            Point2D x = doProjection(p0, 1);
+            Point2D y = doProjection(p1, 1);
+            projection.push_back(Line2D(x, y, fig.color));
+        }
+    }
+    return projection;
+}
+
 
 void applyTransformation(Figure& fig, const Matrix& m) {
     for (Vector3D& point: fig.points) {
