@@ -2,6 +2,10 @@
 
 #include "util/Easy_image/easy_image.h"
 #include "util/Ini_config/ini_configuration.h"
+#include "util/Line2D.h"
+#include "util/Parser/l_parser.h"
+#include "util/Vector3D/vector3d.h"
+#include "util/Figure.h"
 
 #include <fstream>
 #include <iostream>
@@ -11,8 +15,6 @@
 #include <list>
 #include <stack>
 
-#include "util/Line2D.h"
-#include "util/Parser/l_parser.h"
 
 
 using Lines2D = std::list<Line2D>;
@@ -217,7 +219,54 @@ Lines2D drawLSystem (const LParser::LSystem2D& l_system, Color col) {
     return lines;
 }
 
+Matrix scaleFigure(const double scale) {
+    Matrix scaleMatrix;
+    for (int i=0; i<3; i++) {
+        scaleMatrix(i, i) = scale;
+    }
+    return scaleMatrix;
+}
 
+Matrix rotateX(const double angle) {
+    Matrix rotationMatrix;
+    rotationMatrix(1, 1) = cos(angle);
+    rotationMatrix(1, 2) = sin(angle);
+    rotationMatrix(2, 1) = -sin(angle);
+    rotationMatrix(1, 2) = cos(angle);
+    return rotationMatrix;
+}
+
+Matrix rotateY(const double angle) {
+    Matrix rotationMatrix;
+    rotationMatrix(0, 0) = cos(angle);
+    rotationMatrix(0, 2) = -sin(angle);
+    rotationMatrix(2, 0) = sin(angle);
+    rotationMatrix(2, 2) = cos(angle);
+    return rotationMatrix;
+}
+
+Matrix rotateZ(const double angle) {
+    Matrix rotationMatrix;
+    rotationMatrix(0, 0) = cos(angle);
+    rotationMatrix(0, 1) = sin(angle);
+    rotationMatrix(1, 0) = -sin(angle);
+    rotationMatrix(1, 1) = cos(angle);
+    return rotationMatrix;
+}
+
+Matrix translate(const Vector3D &vector) {
+    Matrix translationMatrix;
+    translationMatrix(3, 0) = vector.x;
+    translationMatrix(3, 1) = vector.y;
+    translationMatrix(3, 2) = vector.z;
+    return translationMatrix;
+}
+
+void applyTransformation(Figure& fig, const Matrix& m) {
+    for (Vector3D& point: fig.points) {
+        point = point*m;
+    }
+}
 
 img::EasyImage generate_image(const ini::Configuration &configuration) {
 //    img::EasyImage image((int) configuration["ImageProperties"]["width"],

@@ -9,3 +9,8 @@
 3087	3483	6682269092083968	engine.exe	4ed84cbace8804e3
 1	392	6685357874936786	build.ninja	c66b4d57146378d7
 11	2417	6682060773848437	CMakeFiles/engine.dir/util/Ini_config/ini_configuration.cc.obj	3b66b082ae3dd07b
+71	3308	6685498420540193	CMakeFiles/engine.dir/util/Face.cc.obj	86f5fa322ff43e20
+86	3342	6685498420580276	CMakeFiles/engine.dir/util/Figure.cc.obj	cf85d183127d897a
+93	3348	6685498420790214	CMakeFiles/engine.dir/util/Vector3D/vector3d.cc.obj	5abc39989b96f090
+47	3772	6685498425430382	CMakeFiles/engine.dir/engine.cc.obj	b1e6bd5e23572cce
+3772	4468	6685498432347747	engine.exe	41782ea3ac3b4cfb
