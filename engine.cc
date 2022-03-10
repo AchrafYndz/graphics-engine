@@ -298,6 +298,8 @@ Lines2D doProjection(const Figures3D& figs, const Vector3D& eyepoint) {
             Vector3D p0 = fig.points[face.point_indexes[0]];
             Vector3D p1 = fig.points[face.point_indexes[1]];
             Matrix m = eyePointTrans(eyepoint);
+            p0 = p0*m;
+            p1 = p1*m;
             Point2D x = doProjection(p0, 1);
             Point2D y = doProjection(p1, 1);
             projection.push_back(Line2D(x, y, fig.color));
@@ -340,6 +342,7 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
 
     std::vector<double> bg_col = configuration["General"]["backgroundcolor"];
     img::Color bg(bg_col[0]*255, bg_col[1]*255, bg_col[2]*255);
+//    img::Color bg(255, 255, 255);
     int size = configuration["General"]["size"];
 
 
@@ -368,7 +371,7 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
             indexl++;
         }
         std::vector<double> col = configuration["Figure"+std::to_string(i)]["color"];
-        Color color(col[0] * 255, col[1] * 255, col[2] * 255);
+        Color color(col[0], col[1], col[2]);
         Figure f(points, faces, color);
         figures.push_back(f);
         i++;
