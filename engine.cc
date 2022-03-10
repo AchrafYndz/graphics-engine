@@ -230,36 +230,36 @@ Matrix scaleFigure(const double scale) {
 
 Matrix rotateX(const double angle) {
     Matrix rotationMatrix;
-    rotationMatrix(1, 1) = cos(angle);
-    rotationMatrix(1, 2) = sin(angle);
-    rotationMatrix(2, 1) = -sin(angle);
-    rotationMatrix(1, 2) = cos(angle);
+    rotationMatrix(2, 2) = cos(angle);
+    rotationMatrix(2, 3) = sin(angle);
+    rotationMatrix(3, 2) = -sin(angle);
+    rotationMatrix(2, 3) = cos(angle);
     return rotationMatrix;
 }
 
 Matrix rotateY(const double angle) {
     Matrix rotationMatrix;
-    rotationMatrix(0, 0) = cos(angle);
-    rotationMatrix(0, 2) = -sin(angle);
-    rotationMatrix(2, 0) = sin(angle);
-    rotationMatrix(2, 2) = cos(angle);
+    rotationMatrix(1, 1) = cos(angle);
+    rotationMatrix(1, 3) = -sin(angle);
+    rotationMatrix(3, 1) = sin(angle);
+    rotationMatrix(3, 3) = cos(angle);
     return rotationMatrix;
 }
 
 Matrix rotateZ(const double angle) {
     Matrix rotationMatrix;
-    rotationMatrix(0, 0) = cos(angle);
-    rotationMatrix(0, 1) = sin(angle);
-    rotationMatrix(1, 0) = -sin(angle);
     rotationMatrix(1, 1) = cos(angle);
+    rotationMatrix(1, 2) = sin(angle);
+    rotationMatrix(2, 1) = -sin(angle);
+    rotationMatrix(2, 2) = cos(angle);
     return rotationMatrix;
 }
 
 Matrix translate(const Vector3D &vector) {
     Matrix translationMatrix;
-    translationMatrix(3, 0) = vector.x;
-    translationMatrix(3, 1) = vector.y;
-    translationMatrix(3, 2) = vector.z;
+    translationMatrix(4, 1) = vector.x;
+    translationMatrix(4, 2) = vector.y;
+    translationMatrix(4, 3) = vector.z;
     return translationMatrix;
 }
 
@@ -275,15 +275,15 @@ Matrix eyePointTrans(const Vector3D& eyepoint) {
     double r;
     toPolar(eyepoint, theta, phi, r);
     Matrix eyePointMatrix;
-    eyePointMatrix(0, 0) = -sin(theta);
-    eyePointMatrix(0, 1) = -cos(theta)*cos(theta);
-    eyePointMatrix(0, 2) = cos(theta)*sin(theta);
-    eyePointMatrix(1, 0) = cos(theta);
-    eyePointMatrix(1, 1) = -sin(theta)*cos(theta);
-    eyePointMatrix(1, 2) = sin(theta)*sin(theta);
-    eyePointMatrix(2, 1) = sin(theta);
-    eyePointMatrix(2, 2) = cos(theta);
-    eyePointMatrix(3, 2) = -r;
+    eyePointMatrix(1, 1) = -sin(theta);
+    eyePointMatrix(1, 2) = -cos(theta)*cos(theta);
+    eyePointMatrix(1, 3) = cos(theta)*sin(theta);
+    eyePointMatrix(2, 1) = cos(theta);
+    eyePointMatrix(2, 2) = -sin(theta)*cos(theta);
+    eyePointMatrix(2, 3) = sin(theta)*sin(theta);
+    eyePointMatrix(3, 2) = sin(theta);
+    eyePointMatrix(3, 3) = cos(theta);
+    eyePointMatrix(4, 3) = -r;
     return eyePointMatrix;
 }
 
@@ -291,12 +291,13 @@ Point2D doProjection(const Vector3D& point, const double d) {
     return {-point.x*d/point.z, -point.y*d/point.z};
 }
 
-Lines2D doProjection(const Figures3D& figs) {
+Lines2D doProjection(const Figures3D& figs, const Vector3D& eyepoint) {
     Lines2D projection;
     for (Figure fig: figs) {
         for (Face face: fig.faces) {
             Vector3D p0 = fig.points[face.point_indexes[0]];
             Vector3D p1 = fig.points[face.point_indexes[1]];
+            Matrix m = eyePointTrans(eyepoint);
             Point2D x = doProjection(p0, 1);
             Point2D y = doProjection(p1, 1);
             projection.push_back(Line2D(x, y, fig.color));
@@ -372,8 +373,9 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
         figures.push_back(f);
         i++;
     }
-
-    img::EasyImage image = draw2DLines(doProjection(figures), size, bg);
+    std::vector<double> eyepoint_ = configuration["General"]["eye"];
+    Vector3D eyepoint = Vector3D::point(eyepoint_[0], eyepoint_[1], eyepoint_[2]);
+    img::EasyImage image = draw2DLines(doProjection(figures, eyepoint), size, bg);
     std::ofstream fout("out.bmp", std::ios::binary);
     fout << image;
     fout.close();
