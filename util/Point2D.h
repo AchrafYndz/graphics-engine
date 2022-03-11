@@ -6,7 +6,7 @@ class Point2D {
 public:
     double x;
     double y;
-    Point2D(double eks, double wai): x(eks), y(wai) {};
+    Point2D(double x_, double y_): x(x_), y(y_) {};
 };
 
 
