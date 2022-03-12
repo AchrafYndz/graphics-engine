@@ -277,13 +277,13 @@ Matrix eyePointTrans(const Vector3D& eyepoint) {
     toPolar(eyepoint, theta, phi, r);
     Matrix eyePointMatrix;
     eyePointMatrix(1, 1) = -sin(theta);
-    eyePointMatrix(1, 2) = -cos(theta)*cos(theta);
-    eyePointMatrix(1, 3) = cos(theta)*sin(theta);
+    eyePointMatrix(1, 2) = -cos(theta)*cos(phi);
+    eyePointMatrix(1, 3) = cos(theta)*sin(phi);
     eyePointMatrix(2, 1) = cos(theta);
-    eyePointMatrix(2, 2) = -sin(theta)*cos(theta);
-    eyePointMatrix(2, 3) = sin(theta)*sin(theta);
-    eyePointMatrix(3, 2) = sin(theta);
-    eyePointMatrix(3, 3) = cos(theta);
+    eyePointMatrix(2, 2) = -sin(theta)*cos(phi);
+    eyePointMatrix(2, 3) = sin(theta)*sin(phi);
+    eyePointMatrix(3, 2) = sin(phi);
+    eyePointMatrix(3, 3) = cos(phi);
     eyePointMatrix(4, 3) = -r;
     return eyePointMatrix;
 }
