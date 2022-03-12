@@ -266,7 +266,6 @@ Matrix translate(const Vector3D &vector) {
 void toPolar(const Vector3D& point, double& theta, double& phi, double& r) {
     r = sqrt(pow(point.x, 2) + pow(point.y, 2) + pow(point.z, 2));
     theta = atan2(point.y, point.x);
-    if (theta < 0) theta += M_PI;
     phi = acos(point.z/r);
 }
 
