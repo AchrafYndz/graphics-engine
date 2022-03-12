@@ -13,7 +13,10 @@ public:
     std::vector<Vector3D> points;
     std::vector<Face> faces;
     Color color;
-    Figure(std::vector<Vector3D> points_, std::vector<Face> faces_, Color color_): points(points_), faces(faces_), color(color_) {};
+    double rotateAngleX;
+    double rotateAngleY;
+    double rotateAngleZ;
+    Figure(std::vector<Vector3D> points_, std::vector<Face> faces_, Color color_, double angleX_, double angleY_, double angleZ_): points(points_), faces(faces_), color(color_), rotateAngleX(angleX_), rotateAngleY(angleY_), rotateAngleZ(angleY_){};
 };
 
 typedef std::list<Figure> Figures3D;

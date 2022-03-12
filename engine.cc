@@ -297,7 +297,7 @@ Lines2D doProjection(const Figures3D& figs, const Vector3D& eyepoint) {
         for (Face face: fig.faces) {
             Vector3D p0 = fig.points[face.point_indexes[0]];
             Vector3D p1 = fig.points[face.point_indexes[1]];
-            Matrix m = eyePointTrans(eyepoint);
+            Matrix m = eyePointTrans(eyepoint)* rotateX(fig.rotateAngleX) * rotateY(fig.rotateAngleY)*rotateZ(fig.rotateAngleZ);
             p0 = p0*m;
             p1 = p1*m;
             Point2D x = doProjection(p0, 1);
@@ -372,7 +372,13 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
         }
         std::vector<double> col = configuration["Figure"+std::to_string(i)]["color"];
         Color color(col[0], col[1], col[2]);
-        Figure f(points, faces, color);
+        double degreeX = configuration["Figure"+std::to_string(i)]["rotateX"];
+        double angleX = degreeX/180*M_PI;
+        double degreeY = configuration["Figure"+std::to_string(i)]["rotateY"];
+        double angleY = degreeY/180*M_PI;
+        double degreeZ = configuration["Figure"+std::to_string(i)]["rotateZ"];
+        double angleZ = degreeZ/180*M_PI;
+        Figure f(points, faces, color, angleX, angleY, angleZ);
         figures.push_back(f);
         i++;
     }

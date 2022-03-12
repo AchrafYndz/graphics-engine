@@ -11,18 +11,44 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings003.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings004.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings005.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings006.bmp" afterDir="false" />
+    <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="Remove redundant theta+pi">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/engine.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/engine.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/engine.dir/engine.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/engine.dir/engine.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/engine.dir/util/Figure.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/engine.dir/util/Figure.cc.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/engine" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/engine" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engine.cc" beforeDir="false" afterPath="$PROJECT_DIR$/engine.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/line_drawings/line_drawings001.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings001.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/line_drawings/line_drawings001.ini" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings001.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ini/line_drawings/line_drawings002.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings002.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/out.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/out.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/line_drawings/line_drawings003.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings003.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/line_drawings/line_drawings004.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings004.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/line_drawings/line_drawings005.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings005.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/line_drawings/line_drawings006.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings006.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/line_drawings/line_drawings007.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings007.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/line_drawings/line_drawings008.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings008.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/line_drawings/line_drawings009.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings009.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/line_drawings/line_drawings010.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings010.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/line_drawings/line_drawings011.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings011.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/line_drawings/line_drawings012.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings012.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/line_drawings/line_drawings013.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings013.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/line_drawings/line_drawings014.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings014.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/line_drawings/line_drawings015.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings015.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/line_drawings/line_drawings016.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings016.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/line_drawings/line_drawings017.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings017.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/line_drawings/line_drawings018.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings018.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/line_drawings/line_drawings019.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings019.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/line_drawings/line_drawings020.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings020.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/line_drawings/line_drawings021.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings021.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/line_drawings/line_drawings022.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings022.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/line_drawings/line_drawings023.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings023.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/line_drawings/line_drawings024.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings024.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/line_drawings/line_drawings025.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings025.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/line_drawings/line_drawings026.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings026.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/line_drawings/line_drawings027.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings027.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/line_drawings/out.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/out.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/Figure.h" beforeDir="false" afterPath="$PROJECT_DIR$/util/Figure.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +121,7 @@
         <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
-    <configuration name="engine" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$/ini/line_drawings" PASS_PARENT_ENVS_2="true" PROJECT_NAME="engine" TARGET_NAME="engine" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="engine" RUN_TARGET_NAME="engine">
+    <configuration name="engine" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="line_drawings027.ini" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$/ini/line_drawings" PASS_PARENT_ENVS_2="true" PROJECT_NAME="engine" TARGET_NAME="engine" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="engine" RUN_TARGET_NAME="engine">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -141,8 +167,16 @@
       <workItem from="1646920229849" duration="1569000" />
       <workItem from="1646936684628" duration="25000" />
       <workItem from="1646999647152" duration="3528000" />
-      <workItem from="1647090618864" duration="1484000" />
+      <workItem from="1647090618864" duration="3525000" />
     </task>
+    <task id="LOCAL-00001" summary="Remove redundant theta+pi">
+      <created>1647092291607</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1647092291607</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,5 +198,7 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
+    <MESSAGE value="Remove redundant theta+pi" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove redundant theta+pi" />
   </component>
 </project>
