@@ -342,33 +342,27 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
 
     std::vector<double> bg_col = configuration["General"]["backgroundcolor"];
     img::Color bg(bg_col[0]*255, bg_col[1]*255, bg_col[2]*255);
-//    img::Color bg(255, 255, 255);
     int size = configuration["General"]["size"];
 
 
 
     Figures3D figures;
-    int i = 0;
     int nrFigures = configuration["General"]["nrFigures"];
-    while (i<nrFigures) {
+    for (int i =0; i<nrFigures; i++) {
         std::vector<Vector3D> points;
         int nrPoints = configuration["Figure"+std::to_string(i)]["nrPoints"];
-        int indexp=0;
-        while (indexp < nrPoints) {
+        for (int indexp=0; indexp < nrPoints; indexp++) {
             std::vector<double> point = configuration["Figure"+std::to_string(i)]["point"+std::to_string(indexp)];
             Vector3D p = Vector3D::point(point[0], point[1], point[2]);
             points.push_back(p);
-            indexp++;
         }
 
         std::vector<Face> faces;
         int nrLines = configuration["Figure"+std::to_string(i)]["nrLines"];
-        int indexl=0;
-        while (indexl < nrLines) {
+        for (int indexl=0; indexl < nrLines; indexl++) {
             std::vector<int> indexes = configuration["Figure"+std::to_string(i)]["line"+std::to_string(indexl)];
             Face f = Face(indexes);
             faces.push_back(f);
-            indexl++;
         }
         std::vector<double> col = configuration["Figure"+std::to_string(i)]["color"];
         Color color(col[0], col[1], col[2]);
@@ -380,7 +374,6 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
         double angleZ = degreeZ/180*M_PI;
         Figure f(points, faces, color, angleX, angleY, angleZ);
         figures.push_back(f);
-        i++;
     }
     std::vector<double> eyepoint_ = configuration["General"]["eye"];
     Vector3D eyepoint = Vector3D::point(eyepoint_[0], eyepoint_[1], eyepoint_[2]);

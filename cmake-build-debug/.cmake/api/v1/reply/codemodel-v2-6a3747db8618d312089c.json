@@ -7,6 +7,7 @@
 				{
 					"build" : ".",
 					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-6e6bfd9b495744940596.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.5"
@@ -39,7 +40,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "engine::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-engine-Debug-de5c91502fc5f043fa82.json",
+					"jsonFile" : "target-engine-Debug-666944b7adf50df160b2.json",
 					"name" : "engine",
 					"projectIndex" : 0
 				}
@@ -49,12 +50,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/achraf/CLionProjects/graphics-engine/cmake-build-debug",
-		"source" : "/home/achraf/CLionProjects/graphics-engine"
+		"build" : "/mnt/c/Users/Achraf/CLionProjects/graphics-engine/cmake-build-debug",
+		"source" : "/mnt/c/Users/Achraf/CLionProjects/graphics-engine"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 2
+		"minor" : 3
 	}
 }
