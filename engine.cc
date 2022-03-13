@@ -287,33 +287,34 @@ Matrix eyePointTrans(const Vector3D& eyepoint) {
     return eyePointMatrix;
 }
 
-Point2D doProjection(const Vector3D& point, const double d) {
+Point2D doProjection(const Vector3D& point, const int d) {
     return {-point.x*d/point.z, -point.y*d/point.z};
 }
-
-Lines2D doProjection(const Figures3D& figs, const Vector3D& eyepoint) {
-    Lines2D projection;
-    for (Figure fig: figs) {
-        for (Face face: fig.faces) {
-            Vector3D p0 = fig.points[face.point_indexes[0]];
-            Vector3D p1 = fig.points[face.point_indexes[1]];
-            Matrix m = eyePointTrans(eyepoint)* rotateX(fig.rotateAngleX) * rotateY(fig.rotateAngleY)*rotateZ(fig.rotateAngleZ);
-            p0 = p0*m;
-            p1 = p1*m;
-            Point2D x = doProjection(p0, 1);
-            Point2D y = doProjection(p1, 1);
-            projection.push_back(Line2D(x, y, fig.color));
-        }
-    }
-    return projection;
-}
-
 
 void applyTransformation(Figure& fig, const Matrix& m) {
     for (Vector3D& point: fig.points) {
         point = point*m;
     }
 }
+
+Lines2D doProjection(const Figures3D& figs, const Vector3D& eyepoint) {
+    Lines2D projection;
+    for (Figure fig: figs) {
+        Matrix m = eyePointTrans(eyepoint)* rotateX(fig.rotateAngleX) * rotateY(fig.rotateAngleY)*rotateZ(fig.rotateAngleZ)*
+                                                                                                  translate(fig.center);
+        applyTransformation(fig, m);
+        for (Face face: fig.faces) {
+            Vector3D p0 = fig.points[face.point_indexes[0]];
+            Vector3D p1 = fig.points[face.point_indexes[1]];
+            Point2D x = doProjection(p0, 2);
+            Point2D y = doProjection(p1, 2);
+//            std::cout << "(" << x.x << ", " << x.y << ") to (" << y.x << ", " << y.y << ")" << std::endl;
+            projection.push_back(Line2D(x, y, fig.color));
+        }
+    }
+    return projection;
+}
+
 
 img::EasyImage generate_image(const ini::Configuration &configuration) {
 //    img::EasyImage image((int) configuration["ImageProperties"]["width"],
@@ -366,13 +367,15 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
         }
         std::vector<double> col = configuration["Figure"+std::to_string(i)]["color"];
         Color color(col[0], col[1], col[2]);
+        std::vector<double> centerFetch = configuration["Figure" + std::to_string(i)]["center"];
+        Vector3D center = Vector3D::point(centerFetch[0], centerFetch[1], centerFetch[2]);
         double degreeX = configuration["Figure"+std::to_string(i)]["rotateX"];
         double angleX = degreeX/180*M_PI;
         double degreeY = configuration["Figure"+std::to_string(i)]["rotateY"];
         double angleY = degreeY/180*M_PI;
         double degreeZ = configuration["Figure"+std::to_string(i)]["rotateZ"];
         double angleZ = degreeZ/180*M_PI;
-        Figure f(points, faces, color, angleX, angleY, angleZ);
+        Figure f(points, faces, color, center, angleX, angleY, angleZ);
         figures.push_back(f);
     }
     std::vector<double> eyepoint_ = configuration["General"]["eye"];
