@@ -24,11 +24,7 @@ struct Brackets {
     double y;
     double angle;
 
-    Brackets(double x_, double y_, double angle_) {
-        x = x_;
-        y = y_;
-        angle = angle_;
-    }
+    Brackets(double x_, double y_, double angle_) : x(x_), y(y_), angle(angle_){};
 };
 
 void ColorRectangle(img::EasyImage &img) {
@@ -234,7 +230,7 @@ Matrix rotateX(const double angle) {
     rotationMatrix(2, 2) = cos(angle);
     rotationMatrix(2, 3) = sin(angle);
     rotationMatrix(3, 2) = -sin(angle);
-    rotationMatrix(2, 3) = cos(angle);
+    rotationMatrix(3, 3) = cos(angle);
     return rotationMatrix;
 }
 
@@ -298,19 +294,18 @@ void applyTransformation(Figure &fig, const Matrix &m) {
     }
 }
 
-Lines2D doProjection(const Figures3D &figs, const Vector3D &eyepoint) {
+Lines2D doProjection(Figures3D &figs, const Vector3D &eyepoint) {
     Lines2D projection;
-    for (Figure fig: figs) {
+    for (Figure& fig: figs) {
         Matrix m = eyePointTrans(eyepoint) * rotateX(fig.rotateAngleX) * rotateY(fig.rotateAngleY) *
                    rotateZ(fig.rotateAngleZ) *
                    translate(fig.center) * scaleFigure(fig.scale);
         applyTransformation(fig, m);
-        for (Face face: fig.faces) {
+        for (Face& face: fig.faces) {
             Vector3D p0 = fig.points[face.point_indexes[0]];
             Vector3D p1 = fig.points[face.point_indexes[1]];
             Point2D x = doProjection(p0, 1);
             Point2D y = doProjection(p1, 1);
-//            std::cout << "(" << x.x << ", " << x.y << ") to (" << y.x << ", " << y.y << ")" << std::endl;
             projection.push_back(Line2D(x, y, fig.color));
         }
     }
