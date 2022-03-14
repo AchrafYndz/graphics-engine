@@ -297,9 +297,9 @@ void applyTransformation(Figure &fig, const Matrix &m) {
 Lines2D doProjection(Figures3D &figs, const Vector3D &eyepoint) {
     Lines2D projection;
     for (Figure& fig: figs) {
-        Matrix m = eyePointTrans(eyepoint) * rotateX(fig.rotateAngleX) * rotateY(fig.rotateAngleY) *
+        Matrix m = scaleFigure(fig.scale) * rotateX(fig.rotateAngleX) * rotateY(fig.rotateAngleY) *
                    rotateZ(fig.rotateAngleZ) *
-                   translate(fig.center) * scaleFigure(fig.scale);
+                   translate(fig.center) * eyePointTrans(eyepoint);
         applyTransformation(fig, m);
         for (Face& face: fig.faces) {
             Vector3D p0 = fig.points[face.point_indexes[0]];

@@ -11,13 +11,14 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="FIx minor bugs">
+    <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="Pass figures by reference rather than value">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/engine.dir/engine.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/engine.dir/engine.cc.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/engine" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/engine" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engine.cc" beforeDir="false" afterPath="$PROJECT_DIR$/engine.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/Figure.h" beforeDir="false" afterPath="$PROJECT_DIR$/util/Figure.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/line_drawings/line_drawings027.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings027.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/line_drawings/out.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/out.bmp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +141,7 @@
       <workItem from="1647187227818" duration="4344000" />
       <workItem from="1647191666854" duration="1582000" />
       <workItem from="1647194479180" duration="1152000" />
-      <workItem from="1647288622092" duration="680000" />
+      <workItem from="1647288622092" duration="1177000" />
     </task>
     <task id="LOCAL-00001" summary="Remove redundant theta+pi">
       <created>1647092291607</created>
@@ -156,7 +157,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647282407363</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Pass figures by reference rather than value">
+      <created>1647289543321</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1647289543321</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,6 +189,7 @@
     </ignored-roots>
     <MESSAGE value="Remove redundant theta+pi" />
     <MESSAGE value="FIx minor bugs" />
-    <option name="LAST_COMMIT_MESSAGE" value="FIx minor bugs" />
+    <MESSAGE value="Pass figures by reference rather than value" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pass figures by reference rather than value" />
   </component>
 </project>
