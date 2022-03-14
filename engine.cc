@@ -290,7 +290,7 @@ Point2D doProjection(const Vector3D &point, const int d) {
 
 void applyTransformation(Figure &fig, const Matrix &m) {
     for (Vector3D &point: fig.points) {
-        point = point * m;
+        point *= m;
     }
 }
 
