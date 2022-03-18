@@ -302,11 +302,22 @@ Lines2D doProjection(Figures3D &figs, const Vector3D &eyepoint) {
                    translate(fig.center) * eyePointTrans(eyepoint);
         applyTransformation(fig, m);
         for (Face& face: fig.faces) {
-            Vector3D p0 = fig.points[face.point_indexes[0]];
-            Vector3D p1 = fig.points[face.point_indexes[1]];
-            Point2D x = doProjection(p0, 1);
-            Point2D y = doProjection(p1, 1);
-            projection.push_back(Line2D(x, y, fig.color));
+            for (int i=0; i<face.point_indexes.size(); i++) {
+                if (i != face.point_indexes.size()-1) {
+                    Vector3D p0 = fig.points[face.point_indexes[i]];
+                    Vector3D p1 = fig.points[face.point_indexes[i+1]];
+                    Point2D x = doProjection(p0, 1);
+                    Point2D y = doProjection(p1, 1);
+                    projection.push_back(Line2D(x, y, fig.color));
+                }
+                else {
+                    Vector3D p0 = fig.points[face.point_indexes[i]];
+                    Vector3D p1 = fig.points[face.point_indexes[0]];
+                    Point2D x = doProjection(p0, 1);
+                    Point2D y = doProjection(p1, 1);
+                    projection.push_back(Line2D(x, y, fig.color));
+                }
+            }
         }
     }
     return projection;

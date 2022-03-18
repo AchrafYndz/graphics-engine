@@ -11,14 +11,228 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="Pass figures by reference rather than value">
+    <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="Change order in which matrices are multiplied">
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/Fig20_1.L3D" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/Fig20_2.L3D" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/Hilbert.L3D" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes001.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes001.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes002.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes002.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes003.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes003.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes004.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes004.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes005.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes005.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes006.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes006.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes007.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes007.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes008.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes008.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes009.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes009.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes010.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes010.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes011.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes011.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes012.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes012.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes013.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes013.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes014.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes014.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes015.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes015.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes016.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes016.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes017.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes017.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes018.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes018.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes019.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes019.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes020.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes020.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes021.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes021.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes022.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes022.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes023.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes023.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes024.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes024.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes025.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes025.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes026.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes026.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes027.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes027.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes028.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes028.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes029.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes029.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes030.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes030.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes031.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes031.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes032.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes032.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes033.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes033.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes034.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes034.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes035.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes035.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes036.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes036.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes037.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes037.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes038.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes038.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes039.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes039.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes040.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes040.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes041.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes041.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes042.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes042.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes043.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes043.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes044.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes044.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes045.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes045.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes046.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes046.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes047.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes047.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes048.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes048.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes049.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes049.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes050.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes050.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes051.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes051.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes052.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes052.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes053.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes053.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes054.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes054.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes055.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes055.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes056.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes056.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes057.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes057.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes058.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes058.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes059.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes059.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes060.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes060.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes061.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes061.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes062.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes062.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes063.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes063.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes064.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes064.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes065.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes065.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes066.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes066.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes067.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes067.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes068.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes068.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes069.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes069.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes070.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes070.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes071.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes071.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes072.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes072.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes073.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes073.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes074.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes074.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes075.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes075.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes076.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes076.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes077.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes077.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes078.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes078.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes079.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes079.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes080.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes080.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes081.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes081.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes082.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes082.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes083.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes083.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes084.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes084.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes085.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes085.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes086.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes086.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes087.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes087.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes088.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes088.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes089.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes089.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes090.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes090.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes091.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes091.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes092.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes092.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes093.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes093.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes094.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes094.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/engine.dir/engine.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/engine.dir/engine.cc.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/engine" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/engine" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engine.cc" beforeDir="false" afterPath="$PROJECT_DIR$/engine.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/line_drawings/line_drawings027.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings027.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/line_drawings/out.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/out.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/filelist" beforeDir="false" afterPath="$PROJECT_DIR$/filelist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/line_drawings/line_drawings001.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings001.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/line_drawings/line_drawings002.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings002.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/line_drawings/line_drawings003.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings003.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/line_drawings/line_drawings004.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings004.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/line_drawings/line_drawings005.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings005.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/line_drawings/line_drawings006.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings006.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/line_drawings/line_drawings007.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings007.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/line_drawings/line_drawings008.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings008.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/line_drawings/line_drawings009.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings009.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/line_drawings/line_drawings010.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings010.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/line_drawings/line_drawings011.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings011.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/line_drawings/line_drawings012.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings012.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/line_drawings/line_drawings013.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings013.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/line_drawings/line_drawings014.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings014.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/line_drawings/line_drawings015.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings015.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/line_drawings/line_drawings016.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings016.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/line_drawings/line_drawings017.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings017.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/line_drawings/line_drawings018.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings018.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/line_drawings/line_drawings019.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings019.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/line_drawings/line_drawings020.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings020.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/line_drawings/line_drawings021.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings021.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/line_drawings/line_drawings022.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings022.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/line_drawings/line_drawings023.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings023.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/line_drawings/line_drawings024.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings024.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/line_drawings/line_drawings025.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings025.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/line_drawings/line_drawings026.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings026.bmp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,14 +305,9 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="engine" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="line_drawings027.ini" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$/ini/line_drawings" PASS_PARENT_ENVS_2="true" PROJECT_NAME="engine" TARGET_NAME="engine" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="engine" RUN_TARGET_NAME="engine">
+    <configuration name="engine" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$/ini/line_drawings" PASS_PARENT_ENVS_2="true" PROJECT_NAME="engine" TARGET_NAME="engine" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="engine" RUN_TARGET_NAME="engine">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
   </component>
@@ -141,7 +350,9 @@
       <workItem from="1647187227818" duration="4344000" />
       <workItem from="1647191666854" duration="1582000" />
       <workItem from="1647194479180" duration="1152000" />
-      <workItem from="1647288622092" duration="1177000" />
+      <workItem from="1647288622092" duration="1808000" />
+      <workItem from="1647379471366" duration="77000" />
+      <workItem from="1647601193965" duration="1309000" />
     </task>
     <task id="LOCAL-00001" summary="Remove redundant theta+pi">
       <created>1647092291607</created>
@@ -164,7 +375,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647289543321</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Change order in which matrices are multiplied">
+      <created>1647289896442</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1647289896442</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,6 +408,7 @@
     <MESSAGE value="Remove redundant theta+pi" />
     <MESSAGE value="FIx minor bugs" />
     <MESSAGE value="Pass figures by reference rather than value" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pass figures by reference rather than value" />
+    <MESSAGE value="Change order in which matrices are multiplied" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change order in which matrices are multiplied" />
   </component>
 </project>
