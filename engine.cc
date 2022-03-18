@@ -492,89 +492,159 @@ Figure createIcosahedron(Color color, Vector3D& center, double scale, double ang
     // Create faces
     std::vector<Face> faces;
 
-    std::vector<int> point_indexes0 = {0, 1, 5};
+    std::vector<int> point_indexes0 = {0, 1, 2};
     Face face0(point_indexes0);
     faces.push_back(face0);
 
-    std::vector<int> point_indexes1 = {1, 2, 5};
+    std::vector<int> point_indexes1 = {0, 2, 3};
     Face face1(point_indexes1);
     faces.push_back(face1);
 
-    std::vector<int> point_indexes2 = {2, 3, 5};
+    std::vector<int> point_indexes2 = {0, 3, 4};
     Face face2(point_indexes2);
     faces.push_back(face2);
 
-    std::vector<int> point_indexes3 = {3, 0, 5};
+    std::vector<int> point_indexes3 = {0, 4, 5};
     Face face3(point_indexes3);
     faces.push_back(face3);
 
-    std::vector<int> point_indexes4 = {1, 0, 4};
+    std::vector<int> point_indexes4 = {0, 5, 1};
     Face face4(point_indexes4);
     faces.push_back(face4);
 
-    std::vector<int> point_indexes5 = {2, 1, 4};
+    std::vector<int> point_indexes5 = {1, 6, 2};
     Face face5(point_indexes5);
     faces.push_back(face5);
 
-    std::vector<int> point_indexes6 = {3, 2, 4};
+    std::vector<int> point_indexes6 = {2, 6, 7};
     Face face6(point_indexes6);
     faces.push_back(face6);
 
-    std::vector<int> point_indexes7 = {0, 3, 4};
+    std::vector<int> point_indexes7 = {2, 7, 3};
     Face face7(point_indexes7);
     faces.push_back(face7);
 
-    std::vector<int> point_indexes8 = {0, 1, 5};
+    std::vector<int> point_indexes8 = {3, 7, 8};
     Face face8(point_indexes8);
     faces.push_back(face8);
 
-    std::vector<int> point_indexes9 = {1, 2, 5};
+    std::vector<int> point_indexes9 = {3, 8, 4};
     Face face9(point_indexes9);
     faces.push_back(face9);
 
-    std::vector<int> point_indexes10 = {2, 3, 5};
+    std::vector<int> point_indexes10 = {4, 8, 9};
     Face face10(point_indexes10);
     faces.push_back(face10);
 
-    std::vector<int> point_indexes11 = {3, 0, 5};
+    std::vector<int> point_indexes11 = {4, 9, 5};
     Face face11(point_indexes11);
     faces.push_back(face11);
 
-    std::vector<int> point_indexes12 = {1, 0, 4};
+    std::vector<int> point_indexes12 = {5, 9, 10};
     Face face12(point_indexes12);
     faces.push_back(face12);
 
-    std::vector<int> point_indexes13 = {2, 1, 4};
+    std::vector<int> point_indexes13 = {5, 10, 1};
     Face face13(point_indexes13);
     faces.push_back(face13);
 
-    std::vector<int> point_indexes14 = {3, 2, 4};
+    std::vector<int> point_indexes14 = {1, 10, 6};
     Face face14(point_indexes14);
     faces.push_back(face14);
 
-    std::vector<int> point_indexes15 = {0, 3, 4};
+    std::vector<int> point_indexes15 = {11, 7, 6};
     Face face15(point_indexes15);
     faces.push_back(face15);
 
-    std::vector<int> point_indexes16 = {0, 1, 5};
+    std::vector<int> point_indexes16 = {11, 8, 7};
     Face face16(point_indexes16);
     faces.push_back(face16);
 
-    std::vector<int> point_indexes17 = {1, 2, 5};
+    std::vector<int> point_indexes17 = {11, 9, 8};
     Face face17(point_indexes17);
     faces.push_back(face17);
 
-    std::vector<int> point_indexes18 = {2, 3, 5};
+    std::vector<int> point_indexes18 = {11, 10, 9};
     Face face18(point_indexes18);
     faces.push_back(face18);
 
-    std::vector<int> point_indexes19 = {3, 0, 5};
+    std::vector<int> point_indexes19 = {11, 7, 10};
     Face face19(point_indexes19);
     faces.push_back(face19);
 
     // Create figure
     Figure octahedron(points, faces, color, center, scale, angleX, angleY, angleZ);
     return octahedron;
+}
+
+Figure createDodecahedron(Color color, Vector3D& center, double scale, double angleX, double angleY, double angleZ) {
+    // Create points
+    std::vector<Vector3D> points;
+
+    
+
+    // Create faces
+    std::vector<Face> faces;
+
+    std::vector<int> point_indexes0 = {0, 1, 2, 3, 4};
+    Face face0(point_indexes0);
+    faces.push_back(face0);
+
+    std::vector<int> point_indexes1 = {0, 5, 6, 7, 1};
+    Face face1(point_indexes1);
+    faces.push_back(face1);
+
+    std::vector<int> point_indexes2 = {1, 7, 8, 9, 2};
+    Face face2(point_indexes2);
+    faces.push_back(face2);
+
+    std::vector<int> point_indexes3 = {2, 9, 10, 11, 3};
+    Face face3(point_indexes3);
+    faces.push_back(face3);
+
+    std::vector<int> point_indexes4 = {3, 11, 12, 13, 4};
+    Face face4(point_indexes4);
+    faces.push_back(face4);
+
+    std::vector<int> point_indexes5 = {4, 13, 14, 5, 0};
+    Face face5(point_indexes5);
+    faces.push_back(face5);
+
+    std::vector<int> point_indexes6 = {19, 18, 17, 16, 15};
+    Face face6(point_indexes6);
+    faces.push_back(face6);
+
+    std::vector<int> point_indexes7 = {19, 14, 13, 12, 18};
+    Face face7(point_indexes7);
+    faces.push_back(face7);
+
+    std::vector<int> point_indexes8 = {18, 12, 11, 10, 17};
+    Face face8(point_indexes8);
+    faces.push_back(face8);
+
+    std::vector<int> point_indexes9 = {17, 10, 9, 8, 16};
+    Face face9(point_indexes9);
+    faces.push_back(face9);
+
+    std::vector<int> point_indexes10 = {16, 8, 7, 6, 17};
+    Face face10(point_indexes10);
+    faces.push_back(face10);
+
+    std::vector<int> point_indexes11 = {15, 6, 5, 14, 19};
+    Face face11(point_indexes11);
+    faces.push_back(face11);
+
+    // Create figure
+    Figure octahedron(points, faces, color, center, scale, angleX, angleY, angleZ);
+    return octahedron;
+}
+
+Figure createSphere(Color color, Vector3D& center, double scale, double angleX, double angleY, double angleZ, const double radius, const int n) {
+
+}
+
+Figure createCone(Color color, Vector3D& center, double scale, double angleX, double angleY, double angleZ, const int n, const double h) {
+
 }
 
 img::EasyImage generate_image(const ini::Configuration &configuration) {
@@ -647,7 +717,7 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
     Vector3D center = Vector3D::point(0, 0, 0);
     Vector3D eyepoint = Vector3D::point(5, 450, 150);
     Figures3D figures;
-    figures.push_back(createOctahedron(color, center, 1, 0, 0, 0));
+    figures.push_back(createIcosahedron(color, center, 1, 0, 0, 0));
     img::EasyImage image = draw2DLines(doProjection(figures, eyepoint), 768, bg);
     std::ofstream fout("out.bmp", std::ios::binary);
     fout << image;
