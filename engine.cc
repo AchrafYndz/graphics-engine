@@ -648,6 +648,7 @@ Figure createCone(Color color, Vector3D& center, double scale, double angleX, do
 }
 
 img::EasyImage generate_image(const ini::Configuration &configuration) {
+//     ############################# INTRO #############################
 //    img::EasyImage image((int) configuration["ImageProperties"]["width"],
 //                         (int) configuration["ImageProperties"]["height"]);
 //    ColorRectangle(image);
@@ -661,17 +662,19 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
 //    Diamond(image, configuration["ImageProperties"]["height"], configuration["ImageProperties"]["width"],
 //            configuration["LineProperties"]["nrLines"], configuration["LineProperties"]["lineColor"],
 //            configuration["LineProperties"]["backgroundcolor"]);
-//    LParser::LSystem2D l_system;
-//
-//    std::ifstream input_stream(configuration["2DLSystem"]["inputfile"]);
-//    input_stream >> l_system;
-//    input_stream.close();
-//    std::vector<double> color = configuration["2DLSystem"]["color"];
-//    std::vector<double> bg_col = configuration["General"]["backgroundcolor"];
-//    Color c(color[0], color[1], color[2]);
-//    img::Color bg(bg_col[0]*255, bg_col[1]*255, bg_col[2]*255);
-//    img::EasyImage image = draw2DLines(drawLSystem(l_system, c) , configuration["General"]["size"], bg);
 
+//    ############################# 2D L-systems #############################
+    LParser::LSystem2D l_system;
+    std::ifstream input_stream(configuration["2DLSystem"]["inputfile"]);
+    input_stream >> l_system;
+    input_stream.close();
+    std::vector<double> color = configuration["2DLSystem"]["color"];
+    std::vector<double> bg_col = configuration["General"]["backgroundcolor"];
+    Color c(color[0], color[1], color[2]);
+    img::Color bg(bg_col[0]*255, bg_col[1]*255, bg_col[2]*255);
+    img::EasyImage image = draw2DLines(drawLSystem(l_system, c) , configuration["General"]["size"], bg);
+
+//    ############################# 3D Line drawings #############################
 //    std::vector<double> bg_col = configuration["General"]["backgroundcolor"];
 //    img::Color bg(bg_col[0] * 255, bg_col[1] * 255, bg_col[2] * 255);
 //    int size = configuration["General"]["size"];
@@ -709,16 +712,18 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
 //        Figure f(points, faces, color, center, scale, angleX, angleY, angleZ);
 //        figures.push_back(f);
 //    }
+
+//    ############################# 3D Figures #############################
 //    std::vector<double> eyepoint_ = configuration["General"]["eye"];
 //    Vector3D eyepoint = Vector3D::point(eyepoint_[0], eyepoint_[1], eyepoint_[2]);
 //    img::EasyImage image = draw2DLines(doProjection(figures, eyepoint), size, bg);
-    Color color(0, 255, 0);
-    img::Color bg(255, 255, 255);
-    Vector3D center = Vector3D::point(0, 0, 0);
-    Vector3D eyepoint = Vector3D::point(5, 450, 150);
-    Figures3D figures;
-    figures.push_back(createIcosahedron(color, center, 1, 0, 0, 0));
-    img::EasyImage image = draw2DLines(doProjection(figures, eyepoint), 768, bg);
+//    Color color(0, 255, 0);
+//    img::Color bg(255, 255, 255);
+//    Vector3D center = Vector3D::point(0, 0, 0);
+//    Vector3D eyepoint = Vector3D::point(5, 450, 150);
+//    Figures3D figures;
+//    figures.push_back(createIcosahedron(color, center, 1, 0, 0, 0));
+//    img::EasyImage image = draw2DLines(doProjection(figures, eyepoint), 768, bg);
     std::ofstream fout("out.bmp", std::ios::binary);
     fout << image;
     fout.close();
