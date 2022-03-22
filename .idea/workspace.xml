@@ -11,43 +11,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="Add comments">
+    <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="Add points to Dodecahedron">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/engine.dir/engine.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/engine.dir/engine.cc.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/engine.dir/util/Figure.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/engine.dir/util/Figure.cc.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/engine" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/engine" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engine.cc" beforeDir="false" afterPath="$PROJECT_DIR$/engine.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems001.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems001.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems002.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems002.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems003.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems003.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems004.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems004.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems005.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems005.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems006.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems006.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems007.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems007.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems008.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems008.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems009.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems009.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems010.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems010.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems011.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems011.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems012.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems012.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems013.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems013.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems014.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems014.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems015.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems015.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems016.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems016.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems017.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems017.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems018.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems018.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems019.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems019.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems020.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems020.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems021.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems021.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems022.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems022.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems023.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems023.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems024.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems024.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems025.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems025.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems026.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems026.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/l-systems/out.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/out.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/wireframe/out.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/wireframe/out.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/wireframe/wireframes001.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/wireframe/wireframes001.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/Figure.h" beforeDir="false" afterPath="$PROJECT_DIR$/util/Figure.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +140,7 @@
       <workItem from="1647955791085" duration="288000" />
       <workItem from="1647985989961" duration="822000" />
       <workItem from="1647986837929" duration="196000" />
-      <workItem from="1647987052821" duration="1460000" />
+      <workItem from="1647987052821" duration="2130000" />
     </task>
     <task id="LOCAL-00001" summary="Remove redundant theta+pi">
       <created>1647092291607</created>
@@ -231,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647626682022</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Add points to Dodecahedron">
+      <created>1647988832472</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1647988832472</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -262,6 +236,7 @@
     <MESSAGE value="Add 3D line figures up to icosahedron" />
     <MESSAGE value="Add more 3D lines up to Dodecahedron" />
     <MESSAGE value="Add comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add comments" />
+    <MESSAGE value="Add points to Dodecahedron" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add points to Dodecahedron" />
   </component>
 </project>

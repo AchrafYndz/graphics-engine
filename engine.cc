@@ -571,7 +571,7 @@ Figure createIcosahedron(Color color, Vector3D &center, double scale, double ang
     Face face18(point_indexes18);
     faces.push_back(face18);
 
-    std::vector<int> point_indexes19 = {11, 7, 10};
+    std::vector<int> point_indexes19 = {11, 6, 10};
     Face face19(point_indexes19);
     faces.push_back(face19);
 
