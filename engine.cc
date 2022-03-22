@@ -24,7 +24,7 @@ struct Brackets {
     double y;
     double angle;
 
-    Brackets(double x_, double y_, double angle_) : x(x_), y(y_), angle(angle_){};
+    Brackets(double x_, double y_, double angle_) : x(x_), y(y_), angle(angle_) {};
 };
 
 void ColorRectangle(img::EasyImage &img) {
@@ -296,21 +296,20 @@ void applyTransformation(Figure &fig, const Matrix &m) {
 
 Lines2D doProjection(Figures3D &figs, const Vector3D &eyepoint) {
     Lines2D projection;
-    for (Figure& fig: figs) {
+    for (Figure &fig: figs) {
         Matrix m = scaleFigure(fig.scale) * rotateX(fig.rotateAngleX) * rotateY(fig.rotateAngleY) *
                    rotateZ(fig.rotateAngleZ) *
                    translate(fig.center) * eyePointTrans(eyepoint);
         applyTransformation(fig, m);
-        for (Face& face: fig.faces) {
-            for (int i=0; i<face.point_indexes.size(); i++) {
-                if (i != face.point_indexes.size()-1) {
+        for (Face &face: fig.faces) {
+            for (int i = 0; i < face.point_indexes.size(); i++) {
+                if (i != face.point_indexes.size() - 1) {
                     Vector3D p0 = fig.points[face.point_indexes[i]];
-                    Vector3D p1 = fig.points[face.point_indexes[i+1]];
+                    Vector3D p1 = fig.points[face.point_indexes[i + 1]];
                     Point2D x = doProjection(p0, 1);
                     Point2D y = doProjection(p1, 1);
                     projection.push_back(Line2D(x, y, fig.color));
-                }
-                else {
+                } else {
                     Vector3D p0 = fig.points[face.point_indexes[i]];
                     Vector3D p1 = fig.points[face.point_indexes[0]];
                     Point2D x = doProjection(p0, 1);
@@ -324,7 +323,7 @@ Lines2D doProjection(Figures3D &figs, const Vector3D &eyepoint) {
 }
 
 // 3D Figures
-Figure createCube(Color color, Vector3D& center, double scale, double angleX, double angleY, double angleZ) {
+Figure createCube(Color color, Vector3D &center, double scale, double angleX, double angleY, double angleZ) {
     // Create points
     std::vector<Vector3D> points;
 
@@ -384,7 +383,7 @@ Figure createCube(Color color, Vector3D& center, double scale, double angleX, do
     return cube;
 }
 
-Figure createTetrahedron(Color color, Vector3D& center, double scale, double angleX, double angleY, double angleZ) {
+Figure createTetrahedron(Color color, Vector3D &center, double scale, double angleX, double angleY, double angleZ) {
     // Create points
     std::vector<Vector3D> points;
     Vector3D p0 = Vector3D::point(1, -1, -1);
@@ -416,7 +415,7 @@ Figure createTetrahedron(Color color, Vector3D& center, double scale, double ang
     return tetrahedron;
 }
 
-Figure createOctahedron(Color color, Vector3D& center, double scale, double angleX, double angleY, double angleZ) {
+Figure createOctahedron(Color color, Vector3D &center, double scale, double angleX, double angleY, double angleZ) {
     // Create points
     std::vector<Vector3D> points;
 
@@ -478,15 +477,19 @@ Figure createOctahedron(Color color, Vector3D& center, double scale, double angl
     return octahedron;
 }
 
-Figure createIcosahedron(Color color, Vector3D& center, double scale, double angleX, double angleY, double angleZ) {
+Figure createIcosahedron(Color color, Vector3D &center, double scale, double angleX, double angleY, double angleZ) {
     // Create points
     std::vector<Vector3D> points;
 
-    for (int i=1; i<=12; i++) {
-        if (i==1) points.push_back(Vector3D::point(0, 0, sqrt(5)/2));
-        else if (2 <= i && i <= 6)  points.push_back(Vector3D::point(cos((i-2)*2*M_PI/5), sin((i-2)*2*M_PI/5), 0.5));
-        else if (7 <= i && i <= 11) points.push_back(Vector3D::point(cos(M_PI/5 + (i-7)*2*M_PI/5), sin(M_PI/5 + (i-7)*2*M_PI/5), -0.5));
-        else points.push_back(Vector3D::point(0, 0, -sqrt(5)/2));
+    for (int i = 1; i <= 12; i++) {
+        if (i == 1) points.push_back(Vector3D::point(0, 0, sqrt(5) / 2));
+        else if (2 <= i && i <= 6)
+            points.push_back(Vector3D::point(cos((i - 2) * 2 * M_PI / 5), sin((i - 2) * 2 * M_PI / 5), 0.5));
+        else if (7 <= i && i <= 11)
+            points.push_back(
+                    Vector3D::point(cos(M_PI / 5 + (i - 7) * 2 * M_PI / 5), sin(M_PI / 5 + (i - 7) * 2 * M_PI / 5),
+                                    -0.5));
+        else points.push_back(Vector3D::point(0, 0, -sqrt(5) / 2));
     }
 
     // Create faces
@@ -577,11 +580,19 @@ Figure createIcosahedron(Color color, Vector3D& center, double scale, double ang
     return octahedron;
 }
 
-Figure createDodecahedron(Color color, Vector3D& center, double scale, double angleX, double angleY, double angleZ) {
+Figure createDodecahedron(Color color, Vector3D &center, double scale, double angleX, double angleY, double angleZ) {
     // Create points
     std::vector<Vector3D> points;
 
-    
+    Figure icosahedron = createIcosahedron(color, center, scale, angleX, angleY, angleZ);
+
+    for (const Face& triangle: icosahedron.faces) {
+        Vector3D point1 = icosahedron.points[triangle.point_indexes[0]];
+        Vector3D point2 = icosahedron.points[triangle.point_indexes[1]];
+        Vector3D point3 = icosahedron.points[triangle.point_indexes[2]];
+        points.push_back(Vector3D::point((point1.x + point2.x + point3.x) / 3, (point1.y + point2.y + point3.y) / 3,
+                                         (point1.z + point2.z + point3.z) / 3));
+    }
 
     // Create faces
     std::vector<Face> faces;
@@ -626,7 +637,7 @@ Figure createDodecahedron(Color color, Vector3D& center, double scale, double an
     Face face9(point_indexes9);
     faces.push_back(face9);
 
-    std::vector<int> point_indexes10 = {16, 8, 7, 6, 17};
+    std::vector<int> point_indexes10 = {16, 8, 7, 6, 15};
     Face face10(point_indexes10);
     faces.push_back(face10);
 
@@ -635,15 +646,17 @@ Figure createDodecahedron(Color color, Vector3D& center, double scale, double an
     faces.push_back(face11);
 
     // Create figure
-    Figure octahedron(points, faces, color, center, scale, angleX, angleY, angleZ);
-    return octahedron;
+    Figure dodecahedron(points, faces, color, center, scale, angleX, angleY, angleZ);
+    return dodecahedron;
 }
 
-Figure createSphere(Color color, Vector3D& center, double scale, double angleX, double angleY, double angleZ, const double radius, const int n) {
+Figure createSphere(Color color, Vector3D &center, double scale, double angleX, double angleY, double angleZ,
+                    const double radius, const int n) {
 
 }
 
-Figure createCone(Color color, Vector3D& center, double scale, double angleX, double angleY, double angleZ, const int n, const double h) {
+Figure createCone(Color color, Vector3D &center, double scale, double angleX, double angleY, double angleZ, const int n,
+                  const double h) {
 
 }
 
@@ -664,15 +677,15 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
 //            configuration["LineProperties"]["backgroundcolor"]);
 
 //    ############################# 2D L-systems #############################
-    LParser::LSystem2D l_system;
-    std::ifstream input_stream(configuration["2DLSystem"]["inputfile"]);
-    input_stream >> l_system;
-    input_stream.close();
-    std::vector<double> color = configuration["2DLSystem"]["color"];
-    std::vector<double> bg_col = configuration["General"]["backgroundcolor"];
-    Color c(color[0], color[1], color[2]);
-    img::Color bg(bg_col[0]*255, bg_col[1]*255, bg_col[2]*255);
-    img::EasyImage image = draw2DLines(drawLSystem(l_system, c) , configuration["General"]["size"], bg);
+//    LParser::LSystem2D l_system;
+//    std::ifstream input_stream(configuration["2DLSystem"]["inputfile"]);
+//    input_stream >> l_system;
+//    input_stream.close();
+//    std::vector<double> color = configuration["2DLSystem"]["color"];
+//    std::vector<double> bg_col = configuration["General"]["backgroundcolor"];
+//    Color c(color[0], color[1], color[2]);
+//    img::Color bg(bg_col[0] * 255, bg_col[1] * 255, bg_col[2] * 255);
+//    img::EasyImage image = draw2DLines(drawLSystem(l_system, c), configuration["General"]["size"], bg);
 
 //    ############################# 3D Line drawings #############################
 //    std::vector<double> bg_col = configuration["General"]["backgroundcolor"];
@@ -717,13 +730,13 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
 //    std::vector<double> eyepoint_ = configuration["General"]["eye"];
 //    Vector3D eyepoint = Vector3D::point(eyepoint_[0], eyepoint_[1], eyepoint_[2]);
 //    img::EasyImage image = draw2DLines(doProjection(figures, eyepoint), size, bg);
-//    Color color(0, 255, 0);
-//    img::Color bg(255, 255, 255);
-//    Vector3D center = Vector3D::point(0, 0, 0);
-//    Vector3D eyepoint = Vector3D::point(5, 450, 150);
-//    Figures3D figures;
-//    figures.push_back(createIcosahedron(color, center, 1, 0, 0, 0));
-//    img::EasyImage image = draw2DLines(doProjection(figures, eyepoint), 768, bg);
+    Color color(0, 255, 0);
+    img::Color bg(255, 255, 255);
+    Vector3D center = Vector3D::point(0, 0, 0);
+    Vector3D eyepoint = Vector3D::point(5, 450, 150);
+    Figures3D figures;
+    figures.push_back(createDodecahedron(color, center, 1, 0, 0, 0));
+    img::EasyImage image = draw2DLines(doProjection(figures, eyepoint), 768, bg);
     std::ofstream fout("out.bmp", std::ios::binary);
     fout << image;
     fout.close();

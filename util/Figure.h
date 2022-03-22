@@ -18,7 +18,11 @@ public:
     double rotateAngleY;
     double rotateAngleZ;
     double scale;
-    Figure(std::vector<Vector3D>& points_, std::vector<Face>& faces_, Color color_, Vector3D& center_, double scale_, double angleX_, double angleY_, double angleZ_): points(points_), faces(faces_), color(color_), center(center_), scale(scale_), rotateAngleX(angleX_), rotateAngleY(angleY_), rotateAngleZ(angleZ_){};
+
+    Figure(std::vector<Vector3D> &points_, std::vector<Face> &faces_, Color color_, Vector3D &center_, double scale_,
+           double angleX_, double angleY_, double angleZ_) : points(points_), faces(faces_), color(color_),
+                                                             center(center_), scale(scale_), rotateAngleX(angleX_),
+                                                             rotateAngleY(angleY_), rotateAngleZ(angleZ_) {};
 
 };
 
