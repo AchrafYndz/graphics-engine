@@ -586,7 +586,7 @@ Figure createDodecahedron(Color color, Vector3D &center, double scale, double an
 
     Figure icosahedron = createIcosahedron(color, center, scale, angleX, angleY, angleZ);
 
-    for (const Face& triangle: icosahedron.faces) {
+    for (const Face &triangle: icosahedron.faces) {
         Vector3D point1 = icosahedron.points[triangle.point_indexes[0]];
         Vector3D point2 = icosahedron.points[triangle.point_indexes[1]];
         Vector3D point3 = icosahedron.points[triangle.point_indexes[2]];
@@ -652,7 +652,54 @@ Figure createDodecahedron(Color color, Vector3D &center, double scale, double an
 
 Figure createSphere(Color color, Vector3D &center, double scale, double angleX, double angleY, double angleZ,
                     const double radius, const int n) {
+    Figure icosahedron = createIcosahedron(color, center, scale, angleX, angleY, angleZ);
 
+    for (int _=0; _<n; _++) {
+        std::vector<Face> faces;
+        std::vector<Vector3D> points;
+        int triangleCounter = 0;
+        for (Face triangle: icosahedron.faces) {
+            // Fetch A, B and C
+            Vector3D A = icosahedron.points[triangle.point_indexes[0]];
+            Vector3D B = icosahedron.points[triangle.point_indexes[1]];
+            Vector3D C = icosahedron.points[triangle.point_indexes[2]];
+
+            // Calculate D, E and F
+            Vector3D D = Vector3D::point((A.x + B.x) / 2, (A.y + B.y) / 2, (A.z + B.z) / 2);
+            Vector3D E = Vector3D::point((A.x + C.x) / 2, (A.y + C.y) / 2, (A.z + C.z) / 2);
+            Vector3D F = Vector3D::point((B.x + C.x) / 2, (B.y + C.y) / 2, (B.z + C.z) / 2);
+
+            // Add new points to temp points vector
+            points.push_back(A); // 0 + 6*triangleCounter
+            points.push_back(B); // 1 + 6*triangleCounter
+            points.push_back(C); // 2 + 6*triangleCounter
+            points.push_back(D); // 3 + 6*triangleCounter
+            points.push_back(E); // 4 + 6*triangleCounter
+            points.push_back(F); // 5 + 6*triangleCounter
+
+            // Add new faces to temp faces vector
+            faces.emplace_back(
+                    std::vector<int>{6 * triangleCounter, 3 + 6 * triangleCounter, 4 + 6 * triangleCounter}); // ADE
+            faces.emplace_back(
+                    std::vector<int>{1 + 6 * triangleCounter, 5 + 6 * triangleCounter, 3 + 6 * triangleCounter}); // BFD
+            faces.emplace_back(
+                    std::vector<int>{2 + 6 * triangleCounter, 4 + 6 * triangleCounter, 5 + 6 * triangleCounter}); // CEF
+            faces.emplace_back(
+                    std::vector<int>{3 + 6 * triangleCounter, 5 + 6 * triangleCounter, 4 + 6 * triangleCounter}); // DFE
+            triangleCounter++;
+        }
+        // Replace points and faces
+        icosahedron.points = points;
+        icosahedron.faces = faces;
+    }
+
+    for (Vector3D& point: icosahedron.points) {
+        // Calculate radius
+        double r = sqrt(pow(point.x, 2) + pow(point.y, 2) + pow(point.z, 2));
+
+        // Replace coordinates
+        point /= r;
+    }
 }
 
 Figure createCone(Color color, Vector3D &center, double scale, double angleX, double angleY, double angleZ, const int n,
@@ -735,7 +782,7 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
     Vector3D center = Vector3D::point(0, 0, 0);
     Vector3D eyepoint = Vector3D::point(5, 450, 150);
     Figures3D figures;
-    figures.push_back(createDodecahedron(color, center, 1, 0, 0, 0));
+    figures.push_back(createCircle(color, center, 1, 0, 0, 0));
     img::EasyImage image = draw2DLines(doProjection(figures, eyepoint), 768, bg);
     std::ofstream fout("out.bmp", std::ios::binary);
     fout << image;
