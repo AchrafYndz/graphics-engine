@@ -590,8 +590,7 @@ Figure createDodecahedron(Color color, Vector3D &center, double scale, double an
         Vector3D point1 = icosahedron.points[triangle.point_indexes[0]];
         Vector3D point2 = icosahedron.points[triangle.point_indexes[1]];
         Vector3D point3 = icosahedron.points[triangle.point_indexes[2]];
-        points.push_back(Vector3D::point((point1.x + point2.x + point3.x) / 3, (point1.y + point2.y + point3.y) / 3,
-                                         (point1.z + point2.z + point3.z) / 3));
+        points.push_back((point1+point2+point3)/3);
     }
 
     // Create faces
@@ -654,7 +653,7 @@ Figure createSphere(Color color, Vector3D &center, double scale, double angleX, 
                     const double radius, const int n) {
     Figure icosahedron = createIcosahedron(color, center, scale, angleX, angleY, angleZ);
 
-    for (int _=0; _<n; _++) {
+    for (int _ = 0; _ < n; _++) {
         std::vector<Face> faces;
         std::vector<Vector3D> points;
         int triangleCounter = 0;
@@ -665,9 +664,9 @@ Figure createSphere(Color color, Vector3D &center, double scale, double angleX, 
             Vector3D C = icosahedron.points[triangle.point_indexes[2]];
 
             // Calculate D, E and F
-            Vector3D D = Vector3D::point((A.x + B.x) / 2, (A.y + B.y) / 2, (A.z + B.z) / 2);
-            Vector3D E = Vector3D::point((A.x + C.x) / 2, (A.y + C.y) / 2, (A.z + C.z) / 2);
-            Vector3D F = Vector3D::point((B.x + C.x) / 2, (B.y + C.y) / 2, (B.z + C.z) / 2);
+            Vector3D D = (A + B) / 2;
+            Vector3D E = (A + C) / 2;
+            Vector3D F = (B + C) / 2;
 
             // Add new points to temp points vector
             points.push_back(A); // 0 + 6*triangleCounter
@@ -693,7 +692,7 @@ Figure createSphere(Color color, Vector3D &center, double scale, double angleX, 
         icosahedron.faces = faces;
     }
 
-    for (Vector3D& point: icosahedron.points) {
+    for (Vector3D &point: icosahedron.points) {
         // Calculate radius
         double r = sqrt(pow(point.x, 2) + pow(point.y, 2) + pow(point.z, 2));
 
@@ -782,7 +781,7 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
     Vector3D center = Vector3D::point(0, 0, 0);
     Vector3D eyepoint = Vector3D::point(5, 450, 150);
     Figures3D figures;
-    figures.push_back(createCircle(color, center, 1, 0, 0, 0));
+    figures.push_back(createDodecahedron(color, center, 1, 0, 0, 0));
     img::EasyImage image = draw2DLines(doProjection(figures, eyepoint), 768, bg);
     std::ofstream fout("out.bmp", std::ios::binary);
     fout << image;
