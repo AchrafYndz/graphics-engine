@@ -649,8 +649,7 @@ Figure createDodecahedron(Color color, Vector3D &center, double scale, double an
     return dodecahedron;
 }
 
-Figure createSphere(Color color, Vector3D &center, double scale, double angleX, double angleY, double angleZ,
-                    const double radius, const int n) {
+Figure createSphere(Color color, Vector3D &center, double scale, double angleX, double angleY, double angleZ, const int n) {
     Figure icosahedron = createIcosahedron(color, center, scale, angleX, angleY, angleZ);
 
     for (int _ = 0; _ < n; _++) {
@@ -699,11 +698,18 @@ Figure createSphere(Color color, Vector3D &center, double scale, double angleX, 
         // Replace coordinates
         point /= r;
     }
+    return icosahedron;
 }
 
 Figure createCone(Color color, Vector3D &center, double scale, double angleX, double angleY, double angleZ, const int n,
                   const double h) {
+    // Create points
+    std::vector<Vector3D> points;
 
+    for (int i=0; i<=n; i++) {
+        if (i==n) points.push_back(Vector3D::point(0, 0, h));
+        else points.push_back(Vector3D::point(cos(2*i*M_PI/n), sin(2*i*M_PI/n), 0));
+    }
 }
 
 img::EasyImage generate_image(const ini::Configuration &configuration) {
@@ -781,7 +787,7 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
     Vector3D center = Vector3D::point(0, 0, 0);
     Vector3D eyepoint = Vector3D::point(5, 450, 150);
     Figures3D figures;
-    figures.push_back(createDodecahedron(color, center, 1, 0, 0, 0));
+    figures.push_back(createSphere(color, center, 1, 0, 0, 0, 1));
     img::EasyImage image = draw2DLines(doProjection(figures, eyepoint), 768, bg);
     std::ofstream fout("out.bmp", std::ios::binary);
     fout << image;

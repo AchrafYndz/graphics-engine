@@ -11,9 +11,14 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="Add circle support">
+    <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="Use Vector3D arithmetic">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/engine.dir/engine.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/engine.dir/engine.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/engine" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/engine" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engine.cc" beforeDir="false" afterPath="$PROJECT_DIR$/engine.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/wireframe/out.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/wireframe/out.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/wireframe/wireframes001.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/wireframe/wireframes001.bmp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +147,7 @@
       <workItem from="1647987052821" duration="2288000" />
       <workItem from="1648023842921" duration="91000" />
       <workItem from="1648067434823" duration="19000" />
-      <workItem from="1648067469138" duration="3019000" />
+      <workItem from="1648067469138" duration="3842000" />
     </task>
     <task id="LOCAL-00001" summary="Remove redundant theta+pi">
       <created>1647092291607</created>
@@ -221,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648070395289</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Use Vector3D arithmetic">
+      <created>1648070541096</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1648070541096</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -255,6 +267,7 @@
     <MESSAGE value="Add points to Dodecahedron" />
     <MESSAGE value="Fix wrong index Icosahedron" />
     <MESSAGE value="Add circle support" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add circle support" />
+    <MESSAGE value="Use Vector3D arithmetic" />
+    <option name="LAST_COMMIT_MESSAGE" value="Use Vector3D arithmetic" />
   </component>
 </project>
