@@ -11,11 +11,15 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="Remove redundant theta+pi">
+    <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="Start working on Cone">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/engine.dir/engine.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/engine.dir/engine.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/engine" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/engine" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engine.cc" beforeDir="false" afterPath="$PROJECT_DIR$/engine.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/wireframe/out.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/wireframe/out.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/wireframe/wireframes001.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/wireframe/wireframes001.bmp" afterDir="false" />
     </list>
-    <list id="b68927ea-c945-47d9-b646-451ab3acbc8d" name="Changes by Jonas" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -87,6 +91,11 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -138,7 +147,8 @@
       <workItem from="1647987052821" duration="2288000" />
       <workItem from="1648023842921" duration="91000" />
       <workItem from="1648067434823" duration="19000" />
-      <workItem from="1648067469138" duration="3842000" />
+      <workItem from="1648067469138" duration="4154000" />
+      <workItem from="1648124577283" duration="947000" />
     </task>
     <task id="LOCAL-00001" summary="Remove redundant theta+pi">
       <created>1647092291607</created>
@@ -224,7 +234,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648070541096</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Start working on Cone">
+      <created>1648071622553</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1648071622553</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,6 +257,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -258,6 +276,7 @@
     <MESSAGE value="Fix wrong index Icosahedron" />
     <MESSAGE value="Add circle support" />
     <MESSAGE value="Use Vector3D arithmetic" />
-    <option name="LAST_COMMIT_MESSAGE" value="Use Vector3D arithmetic" />
+    <MESSAGE value="Start working on Cone" />
+    <option name="LAST_COMMIT_MESSAGE" value="Start working on Cone" />
   </component>
 </project>
