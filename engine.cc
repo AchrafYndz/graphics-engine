@@ -590,7 +590,7 @@ Figure createDodecahedron(Color color, Vector3D &center, double scale, double an
         Vector3D point1 = icosahedron.points[triangle.point_indexes[0]];
         Vector3D point2 = icosahedron.points[triangle.point_indexes[1]];
         Vector3D point3 = icosahedron.points[triangle.point_indexes[2]];
-        points.push_back((point1+point2+point3)/3);
+        points.push_back((point1 + point2 + point3) / 3);
     }
 
     // Create faces
@@ -649,7 +649,8 @@ Figure createDodecahedron(Color color, Vector3D &center, double scale, double an
     return dodecahedron;
 }
 
-Figure createSphere(Color color, Vector3D &center, double scale, double angleX, double angleY, double angleZ, const int n) {
+Figure
+createSphere(Color color, Vector3D &center, double scale, double angleX, double angleY, double angleZ, const int n) {
     Figure icosahedron = createIcosahedron(color, center, scale, angleX, angleY, angleZ);
 
     for (int _ = 0; _ < n; _++) {
@@ -705,23 +706,89 @@ Figure createCone(Color color, Vector3D &center, double scale, double angleX, do
                   const double h) {
     // Create points
     std::vector<Vector3D> points;
-    for (int i=0; i<=n; i++) {
-        if (i==n) points.push_back(Vector3D::point(0, 0, h));
-        else points.push_back(Vector3D::point(cos(2*i*M_PI/n), sin(2*i*M_PI/n), 0));
+    for (int i = 0; i <= n; i++) {
+        if (i == n) points.push_back(Vector3D::point(0, 0, h));
+        else points.push_back(Vector3D::point(cos(2 * i * M_PI / n), sin(2 * i * M_PI / n), 0));
     }
 
     // Create faces
     std::vector<Face> faces;
-    for (int i=0; i<=n; i++) {
-        if (i!=n) faces.emplace_back(std::vector<int> {i, (i+1)%n, n});
+    for (int i = 0; i <= n; i++) {
+        if (i != n) faces.emplace_back(std::vector<int>{i, (i + 1) % n, n});
         else {
             std::vector<int> point_indexes;
-            for (int j=n-1; j >= 0; j--) point_indexes.push_back(j);
+            for (int j = n - 1; j >= 0; j--) point_indexes.push_back(j);
             faces.emplace_back(point_indexes);
         }
     }
     Figure cone = Figure(points, faces, color, center, scale, angleX, angleY, angleZ);
     return cone;
+}
+
+Figure
+createCylinder(Color color, Vector3D &center, double scale, double angleX, double angleY, double angleZ, const int n,
+               const int h) {
+    // Create points
+    std::vector<Vector3D> points;
+
+    // Bottom surface
+    points.reserve(2 * n);
+    for (int i = 0; i < n; i++) points.push_back(Vector3D::point(cos(2 * i * M_PI / n), sin(2 * i * M_PI / n), 0));
+
+    // Top surface
+    for (int i = n; i < 2 * n; i++) points.push_back(Vector3D::point(cos(2 * i * M_PI / n), sin(2 * i * M_PI / n), h));
+
+    // Create faces
+    std::vector<Face> faces;
+
+//    faces.reserve(n + 2);
+    for (int i = 0; i <= n; i++) {
+        if (i == n) {
+            std::vector<int> point_indexes_bottom;
+            for (int j = n - 1; j >= 0; j--) point_indexes_bottom.push_back(j);
+            faces.emplace_back(point_indexes_bottom);
+            std::vector<int> point_indexes_top;
+            for (int j = 2 * n - 1; j >= n; j--) point_indexes_top.push_back(j);
+            faces.emplace_back(point_indexes_top);
+        } else if (i == n - 1) faces.emplace_back(std::vector<int>{i + 1, n + i, i, (i + 1) % n});
+        else faces.emplace_back(std::vector<int>{n + i + 1, n + i, i, i + 1});
+    }
+
+
+    Figure cylinder = Figure(points, faces, color, center, scale, angleX, angleY, angleZ);
+    return cylinder;
+}
+
+Figure
+createTorus(Color color, Vector3D &center, double scale, double angleX, double angleY, double angleZ, const double r,
+            const double R, const int n, const int m) {
+    // Create points
+    std::vector<Vector3D> points;
+    for (int i=0; i<n; i++) {
+        for (int j=0; j<m; j++) {
+            // Calculate u and v
+            double u = 2*i*M_PI/n;
+            double v = 2*j*M_PI/m;
+
+            // Determine x, y and z using the parametric equations
+            double x_uv = (R+r*cos(v))*cos(u);
+            double y_uv = (R+r*cos(v))*sin(u);
+            double z_uv = r*sin(v);
+
+            points.push_back(Vector3D::point(x_uv, y_uv, z_uv));
+        }
+    }
+
+    // Create faces
+    std::vector<Face> faces;
+    for (int i=0; i<n; i++) {
+        for (int j=0; j<m; j++) {
+            faces.emplace_back(std::vector<int>{i+j, (i+1)%n+j, (i+1)%n+(j+1)%m,i+(j+1)%m});
+        }
+    }
+
+    Figure torus = Figure(points, faces, color, center, scale, angleX, angleY, angleZ);
+    return torus;
 }
 
 img::EasyImage generate_image(const ini::Configuration &configuration) {
@@ -799,8 +866,8 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
     Vector3D center = Vector3D::point(0, 0, 0);
     Vector3D eyepoint = Vector3D::point(5, 450, 150);
     Figures3D figures;
-    figures.push_back(createCone(color, center, 1, 0, 0, 0, 10, 5));
-    img::EasyImage image = draw2DLines(doProjection(figures, eyepoint), 768, bg);
+    figures.push_back(createTorus(color, center, 1, 0, 0, 0, 10, 10, 8, 10));
+    img::EasyImage image = draw2DLines(doProjection(figures, eyepoint), 1080, bg);
     std::ofstream fout("out.bmp", std::ios::binary);
     fout << image;
     fout.close();
