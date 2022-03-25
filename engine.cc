@@ -727,7 +727,7 @@ Figure createCone(Color color, Vector3D &center, double scale, double angleX, do
 
 Figure
 createCylinder(Color color, Vector3D &center, double scale, double angleX, double angleY, double angleZ, const int n,
-               const int h) {
+               const double h) {
     // Create points
     std::vector<Vector3D> points;
 
@@ -764,16 +764,16 @@ createTorus(Color color, Vector3D &center, double scale, double angleX, double a
             const double R, const int n, const int m) {
     // Create points
     std::vector<Vector3D> points;
-    for (int i=0; i<n; i++) {
-        for (int j=0; j<m; j++) {
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
             // Calculate u and v
-            double u = 2*i*M_PI/n;
-            double v = 2*j*M_PI/m;
+            double u = 2 * i * M_PI / n;
+            double v = 2 * j * M_PI / m;
 
             // Determine x, y and z using the parametric equations
-            double x_uv = (R+r*cos(v))*cos(u);
-            double y_uv = (R+r*cos(v))*sin(u);
-            double z_uv = r*sin(v);
+            double x_uv = (R + r * cos(v)) * cos(u);
+            double y_uv = (R + r * cos(v)) * sin(u);
+            double z_uv = r * sin(v);
 
             points.push_back(Vector3D::point(x_uv, y_uv, z_uv));
         }
@@ -781,9 +781,11 @@ createTorus(Color color, Vector3D &center, double scale, double angleX, double a
 
     // Create faces
     std::vector<Face> faces;
-    for (int i=0; i<n; i++) {
-        for (int j=0; j<m; j++) {
-            faces.emplace_back(std::vector<int>{i+j, (i+1)%n+j, (i+1)%n+(j+1)%m,i+(j+1)%m});
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            faces.emplace_back(
+                    std::vector<int>{m * i + j, ((i + 1) % n) * m + j, ((i + 1) % n) * m + ((j + 1) % m),
+                                     i * m + ((j + 1) % m)});
         }
     }
 
@@ -856,18 +858,70 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
 //        Figure f(points, faces, color, center, scale, angleX, angleY, angleZ);
 //        figures.push_back(f);
 //    }
-
-//    ############################# 3D Figures #############################
 //    std::vector<double> eyepoint_ = configuration["General"]["eye"];
 //    Vector3D eyepoint = Vector3D::point(eyepoint_[0], eyepoint_[1], eyepoint_[2]);
 //    img::EasyImage image = draw2DLines(doProjection(figures, eyepoint), size, bg);
-    Color color(0, 255, 0);
-    img::Color bg(255, 255, 255);
-    Vector3D center = Vector3D::point(0, 0, 0);
-    Vector3D eyepoint = Vector3D::point(5, 450, 150);
+
+//    ############################# 3D Figures #############################
+    std::vector<double> bg_col = configuration["General"]["backgroundcolor"];
+    img::Color bg(bg_col[0] * 255, bg_col[1] * 255, bg_col[2] * 255);
+    int size = configuration["General"]["size"];
     Figures3D figures;
-    figures.push_back(createTorus(color, center, 1, 0, 0, 0, 10, 10, 8, 10));
-    img::EasyImage image = draw2DLines(doProjection(figures, eyepoint), 1080, bg);
+    int nrFigures = configuration["General"]["nrFigures"];
+    for (int i = 0; i < nrFigures; i++) {
+        std::vector<double> col = configuration["Figure" + std::to_string(i)]["color"];
+        Color color(col[0], col[1], col[2]);
+        std::vector<double> centerFetch = configuration["Figure" + std::to_string(i)]["center"];
+        Vector3D center = Vector3D::point(centerFetch[0], centerFetch[1], centerFetch[2]);
+        double scale = configuration["Figure" + std::to_string(i)]["scale"];
+
+        // Get rotation angles
+        double degreeX = configuration["Figure" + std::to_string(i)]["rotateX"];
+        double angleX = degreeX / 180 * M_PI;
+        double degreeY = configuration["Figure" + std::to_string(i)]["rotateY"];
+        double angleY = degreeY / 180 * M_PI;
+        double degreeZ = configuration["Figure" + std::to_string(i)]["rotateZ"];
+        double angleZ = degreeZ / 180 * M_PI;
+        std::string type = configuration["Figure" + std::to_string(i)]["type"];
+        if (type == "Cube") figures.push_back(createCube(color, center, scale, angleX, angleY, angleZ));
+        else if (type == "Tetrahedron")
+            figures.push_back(createTetrahedron(color, center, scale, angleX, angleY, angleZ));
+        else if (type == "Icosahedron")
+            figures.push_back(createIcosahedron(color, center, scale, angleX, angleY, angleZ));
+        else if (type == "Octahedron")
+            figures.push_back(createOctahedron(color, center, scale, angleX, angleY, angleZ));
+        else if (type == "Dodecahedron")
+            figures.push_back(createDodecahedron(color, center, scale, angleX, angleY, angleZ));
+        else if (type == "Cone") {
+            double height = configuration["Figure" + std::to_string(i)]["height"];
+            int n = configuration["Figure" + std::to_string(i)]["n"];
+            figures.push_back(createCone(color, center, scale, angleX, angleY, angleZ, n, height));
+        }
+        else if (type == "Cylinder") {
+            double height = configuration["Figure" + std::to_string(i)]["height"];
+            int n = configuration["Figure" + std::to_string(i)]["n"];
+            figures.push_back(createCylinder(color, center, scale, angleX, angleY, angleZ, n, height));
+        }
+        else if (type == "Sphere") {
+            int n = configuration["Figure" + std::to_string(i)]["n"];
+            figures.push_back(createSphere(color, center, scale, angleX, angleY, angleZ, n));
+        }
+        else if (type == "Torus") {
+            double r = configuration["Figure" + std::to_string(i)]["r"];
+            double R = configuration["Figure" + std::to_string(i)]["R"];
+            int n = configuration["Figure" + std::to_string(i)]["m"];
+            int m = configuration["Figure" + std::to_string(i)]["n"];
+            figures.push_back(createTorus(color, center, scale, angleX, angleY, angleZ, r, R, n, m));
+        }
+        else if (type == "3DLSystem") {
+
+        }
+    }
+    std::vector<double> eyepoint_ = configuration["General"]["eye"];
+    Vector3D eyepoint = Vector3D::point(eyepoint_[0], eyepoint_[1], eyepoint_[2]);
+    img::EasyImage image = draw2DLines(doProjection(figures, eyepoint), size, bg);
+
+    // Output image
     std::ofstream fout("out.bmp", std::ios::binary);
     fout << image;
     fout.close();
