@@ -868,6 +868,8 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
     int size = configuration["General"]["size"];
     Figures3D figures;
     int nrFigures = configuration["General"]["nrFigures"];
+    bool l_sys = false;
+    img::EasyImage image;
     for (int i = 0; i < nrFigures; i++) {
         std::vector<double> col = configuration["Figure" + std::to_string(i)]["color"];
         Color color(col[0], col[1], col[2]);
@@ -914,13 +916,17 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
             figures.push_back(createTorus(color, center, scale, angleX, angleY, angleZ, r, R, n, m));
         }
         else if (type == "3DLSystem") {
-
+            l_sys = true;
+            LParser::LSystem2D l_system;
+            std::ifstream input_stream(configuration["Figure" + std::to_string(i)]["inputfile"]);
+            input_stream >> l_system;
+            input_stream.close();
+            image = draw2DLines(drawLSystem(l_system, color), configuration["General"]["size"], bg);
         }
     }
     std::vector<double> eyepoint_ = configuration["General"]["eye"];
     Vector3D eyepoint = Vector3D::point(eyepoint_[0], eyepoint_[1], eyepoint_[2]);
-    img::EasyImage image = draw2DLines(doProjection(figures, eyepoint), size, bg);
-
+    if (!l_sys)image = draw2DLines(doProjection(figures, eyepoint), size, bg);
     // Output image
     std::ofstream fout("out.bmp", std::ios::binary);
     fout << image;
