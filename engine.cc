@@ -36,9 +36,10 @@ struct Brackets3D {
     Vector3D L;
     Vector3D U;
 
-    Brackets3D(const Vector3D& position_, const Vector3D &H_, const Vector3D &L_, const Vector3D &U_) : position(position_),
-                                                                                                 H(H_),
-                                                                                                 L(L_), U(U_) {};
+    Brackets3D(const Vector3D &position_, const Vector3D &H_, const Vector3D &L_, const Vector3D &U_) : position(
+            position_),
+                                                                                                        H(H_),
+                                                                                                        L(L_), U(U_) {};
 };
 
 void ColorRectangle(img::EasyImage &img) {
@@ -73,7 +74,7 @@ Blocks(img::EasyImage &img, int Wi, int Hi, int Nx, int Ny, std::vector<double> 
 }
 
 void QuarterCircle(img::EasyImage &img, int Hi, int Wi, int N, std::vector<double> lineColor,
-                   const std::vector<double>& backgroundColor, const std::string& figure = "") {
+                   const std::vector<double> &backgroundColor, const std::string &figure = "") {
     int Hs = Hi / (N - 1);
     int Ws = Wi / (N - 1);
     img::Color li_col;
@@ -114,16 +115,17 @@ void QuarterCircle(img::EasyImage &img, int Hi, int Wi, int N, std::vector<doubl
 
 
 void
-Eye(img::EasyImage &img, int Hi, int Wi, int N, std::vector<double> lineColor, const std::vector<double>& backgroundColor) {
+Eye(img::EasyImage &img, int Hi, int Wi, int N, std::vector<double> lineColor,
+    const std::vector<double> &backgroundColor) {
     QuarterCircle(img, Hi, Wi, N, std::move(lineColor), backgroundColor, "eye");
 }
 
 void Diamond(img::EasyImage &img, int Hi, int Wi, int N, std::vector<double> lineColor,
-             const std::vector<double>& backgroundColor) {
+             const std::vector<double> &backgroundColor) {
     QuarterCircle(img, Hi, Wi, N, lineColor, backgroundColor, "diamond");
 }
 
-img::EasyImage draw2DLines(const Lines2D &lines, const int size, const img::Color& bg_col) {
+img::EasyImage draw2DLines(const Lines2D &lines, const int size, const img::Color &bg_col) {
     double xmin = lines.front().p1.x;
     double xmax = lines.front().p1.y;
     double ymin = lines.front().p2.x;
@@ -807,8 +809,10 @@ createTorus(Color color, Vector3D &center, double scale, double angleX, double a
     return torus;
 }
 
-void draw3DLSystemHelper(const LParser::LSystem3D &l_system, std::vector<Vector3D> &points, std::vector<Face> &faces, const Color col, int &recursionDepth,
-                         const unsigned int maxRecursion, const std::string& currentString, double &angle, Vector3D position,
+void draw3DLSystemHelper(const LParser::LSystem3D &l_system, std::vector<Vector3D> &points, std::vector<Face> &faces,
+                         const Color col, int &recursionDepth,
+                         const unsigned int maxRecursion, const std::string &currentString, double &angle,
+                         Vector3D position,
                          Vector3D &H, Vector3D &L, Vector3D &U, std::stack<Brackets3D> &bracketStack) {
     if (recursionDepth == maxRecursion) {
         // Make the lines
@@ -846,7 +850,8 @@ void draw3DLSystemHelper(const LParser::LSystem3D &l_system, std::vector<Vector3
                 points.push_back(position);
                 position += H;
                 points.push_back(position);
-                faces.emplace_back(std::vector<int> {static_cast<int>(points.size())-2, static_cast<int>(points.size())-1});
+                faces.emplace_back(
+                        std::vector<int>{static_cast<int>(points.size()) - 2, static_cast<int>(points.size()) - 1});
             }
         }
         recursionDepth--;
@@ -883,7 +888,8 @@ void draw3DLSystemHelper(const LParser::LSystem3D &l_system, std::vector<Vector3
                 bracketStack.pop();
             } else if (l_system.draw(c)) {
                 recursionDepth++;
-                draw3DLSystemHelper(l_system, points, faces, col, recursionDepth, maxRecursion, l_system.get_replacement(c),
+                draw3DLSystemHelper(l_system, points, faces, col, recursionDepth, maxRecursion,
+                                    l_system.get_replacement(c),
                                     angle, position, H, L, U, bracketStack);
             }
         }
@@ -891,12 +897,13 @@ void draw3DLSystemHelper(const LParser::LSystem3D &l_system, std::vector<Vector3
     }
 }
 
-Figure draw3DLSystem(const LParser::LSystem3D &l_system, Vector3D &center, Color color, const double& scale, const double &angleX, const double &angleY, const double &angleZ) {
+Figure draw3DLSystem(const LParser::LSystem3D &l_system, Vector3D &center, Color color, const double &scale,
+                     const double &angleX, const double &angleY, const double &angleZ) {
     // Call recursive function
     std::stack<Brackets3D> bracketStack;
     Vector3D position = Vector3D::point(0, 0, 0);
-    std::vector<Vector3D> points {position};
-    std::vector<Face> faces {0};
+    std::vector<Vector3D> points;
+    std::vector<Face> faces;
     Vector3D H = Vector3D::vector(1, 0, 0);
     Vector3D L = Vector3D::vector(0, 1, 0);
     Vector3D U = Vector3D::vector(0, 0, 1);
