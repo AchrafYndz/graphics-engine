@@ -153,9 +153,9 @@ img::EasyImage draw2DLines(const Lines2D &lines, const int size, img::Color bg_c
     return image;
 }
 
-void drawLSystemHelper(const LParser::LSystem2D &l_system, Lines2D &lines, const Color col, int &recursionDepth,
-                       const unsigned int maxRecursion, std::string currentString, double &currentAngle,
-                       const double angleIncrement, double &x0, double &y0, std::stack<Brackets> &bracketStack) {
+void draw2DLSystemHelper(const LParser::LSystem2D &l_system, Lines2D &lines, const Color col, int &recursionDepth,
+                         const unsigned int maxRecursion, std::string currentString, double &currentAngle,
+                         const double angleIncrement, double &x0, double &y0, std::stack<Brackets> &bracketStack) {
     if (recursionDepth == maxRecursion) {
         // Make the lines
         double x1;
@@ -192,15 +192,15 @@ void drawLSystemHelper(const LParser::LSystem2D &l_system, Lines2D &lines, const
                 bracketStack.pop();
             } else if (l_system.draw(c)) {
                 recursionDepth++;
-                drawLSystemHelper(l_system, lines, col, recursionDepth, maxRecursion, l_system.get_replacement(c),
-                                  currentAngle, angleIncrement, x0, y0, bracketStack);
+                draw2DLSystemHelper(l_system, lines, col, recursionDepth, maxRecursion, l_system.get_replacement(c),
+                                    currentAngle, angleIncrement, x0, y0, bracketStack);
             }
         }
         recursionDepth--;
     }
 }
 
-Lines2D drawLSystem(const LParser::LSystem2D &l_system, Color col) {
+Lines2D draw2DLSystem(const LParser::LSystem2D &l_system, Color col) {
     Lines2D lines;
     // Call recursive function
     std::stack<Brackets> bracketStack;
@@ -212,8 +212,8 @@ Lines2D drawLSystem(const LParser::LSystem2D &l_system, Color col) {
     double x0 = 0;
     double y0 = 0;
     int recursionDepth = 0;
-    drawLSystemHelper(l_system, lines, col, recursionDepth, Iterations, Initiator, currentAngle, angleIncrement,
-                      x0, y0, bracketStack);
+    draw2DLSystemHelper(l_system, lines, col, recursionDepth, Iterations, Initiator, currentAngle, angleIncrement,
+                        x0, y0, bracketStack);
     return lines;
 }
 
@@ -818,7 +818,7 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
 //    std::vector<double> bg_col = configuration["General"]["backgroundcolor"];
 //    Color c(color[0], color[1], color[2]);
 //    img::Color bg(bg_col[0] * 255, bg_col[1] * 255, bg_col[2] * 255);
-//    img::EasyImage image = draw2DLines(drawLSystem(l_system, c), configuration["General"]["size"], bg);
+//    img::EasyImage image = draw2DLines(draw2DLSystem(l_system, c), configuration["General"]["size"], bg);
 
 //    ############################# 3D Line drawings #############################
 //    std::vector<double> bg_col = configuration["General"]["backgroundcolor"];
@@ -917,11 +917,11 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
         }
         else if (type == "3DLSystem") {
             l_sys = true;
-            LParser::LSystem2D l_system;
+            LParser::LSystem3D l_system;
             std::ifstream input_stream(configuration["Figure" + std::to_string(i)]["inputfile"]);
             input_stream >> l_system;
             input_stream.close();
-            image = draw2DLines(drawLSystem(l_system, color), configuration["General"]["size"], bg);
+            image = draw2DLines(draw2DLSystem(l_system, color), configuration["General"]["size"], bg);
         }
     }
     std::vector<double> eyepoint_ = configuration["General"]["eye"];
