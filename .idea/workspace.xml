@@ -11,8 +11,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="Refactor Draw2DLsystem()">
+    <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="Set up 3DLsystem functions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/engine.dir/engine.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/engine.dir/engine.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/engine" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/engine" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engine.cc" beforeDir="false" afterPath="$PROJECT_DIR$/engine.cc" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -146,7 +149,7 @@
       <workItem from="1648124577283" duration="1945000" />
       <workItem from="1648158889089" duration="3767000" />
       <workItem from="1648221637046" duration="7431000" />
-      <workItem from="1648286431658" duration="4538000" />
+      <workItem from="1648286431658" duration="6050000" />
     </task>
     <task id="LOCAL-00001" summary="Remove redundant theta+pi">
       <created>1647092291607</created>
@@ -267,7 +270,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648289979042</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Set up 3DLsystem functions">
+      <created>1648291377062</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1648291377062</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -307,7 +317,8 @@
     <MESSAGE value="Add support for cylinder + start working on torus" />
     <MESSAGE value="Backup before dos2unix" />
     <MESSAGE value="Refactor Draw2DLsystem()" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor Draw2DLsystem()" />
+    <MESSAGE value="Set up 3DLsystem functions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Set up 3DLsystem functions" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

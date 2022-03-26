@@ -19,12 +19,24 @@
 
 using Lines2D = std::list<Line2D>;
 
-struct Brackets {
+struct Brackets2D {
     double x;
     double y;
     double angle;
 
-    Brackets(double x_, double y_, double angle_) : x(x_), y(y_), angle(angle_) {};
+    Brackets2D(double x_, double y_, double angle_) : x(x_), y(y_), angle(angle_) {};
+};
+
+struct Brackets3D {
+    double x;
+    double y;
+
+    Vector3D H;
+    Vector3D L;
+    Vector3D U;
+
+    Brackets3D(double x_, double y_, const Vector3D &H_, const Vector3D &L_, const Vector3D &U_) : x(x_), y(y_), H(H_),
+                                                                                                   L(L_), U(U_) {};
 };
 
 void ColorRectangle(img::EasyImage &img) {
@@ -155,7 +167,7 @@ img::EasyImage draw2DLines(const Lines2D &lines, const int size, img::Color bg_c
 
 void draw2DLSystemHelper(const LParser::LSystem2D &l_system, Lines2D &lines, const Color col, int &recursionDepth,
                          const unsigned int maxRecursion, std::string currentString, double &currentAngle,
-                         const double angleIncrement, double &x0, double &y0, std::stack<Brackets> &bracketStack) {
+                         const double angleIncrement, double &x0, double &y0, std::stack<Brackets2D> &bracketStack) {
     if (recursionDepth == maxRecursion) {
         // Make the lines
         double x1;
@@ -163,9 +175,9 @@ void draw2DLSystemHelper(const LParser::LSystem2D &l_system, Lines2D &lines, con
         for (char c: currentString) {
             if (c == '+') currentAngle += angleIncrement;
             else if (c == '-') currentAngle -= angleIncrement;
-            else if (c == '(') bracketStack.push(Brackets(x0, y0, currentAngle));
+            else if (c == '(') bracketStack.push(Brackets2D(x0, y0, currentAngle));
             else if (c == ')') {
-                Brackets brackets = bracketStack.top();
+                Brackets2D brackets = bracketStack.top();
                 x0 = brackets.x;
                 y0 = brackets.y;
                 currentAngle = brackets.angle;
@@ -183,9 +195,9 @@ void draw2DLSystemHelper(const LParser::LSystem2D &l_system, Lines2D &lines, con
         for (char c: currentString) {
             if (c == '+') currentAngle += angleIncrement;
             else if (c == '-') currentAngle -= angleIncrement;
-            else if (c == '(') bracketStack.push(Brackets(x0, y0, currentAngle));
+            else if (c == '(') bracketStack.push(Brackets2D(x0, y0, currentAngle));
             else if (c == ')') {
-                Brackets brackets = bracketStack.top();
+                Brackets2D brackets = bracketStack.top();
                 x0 = brackets.x;
                 y0 = brackets.y;
                 currentAngle = brackets.angle;
@@ -203,7 +215,7 @@ void draw2DLSystemHelper(const LParser::LSystem2D &l_system, Lines2D &lines, con
 Lines2D draw2DLSystem(const LParser::LSystem2D &l_system, Color col) {
     Lines2D lines;
     // Call recursive function
-    std::stack<Brackets> bracketStack;
+    std::stack<Brackets2D> bracketStack;
     unsigned int Iterations = l_system.get_nr_iterations();
     std::string const &Initiator = l_system.get_initiator();
     double startingAngle = l_system.get_starting_angle() / 180 * M_PI;
@@ -794,23 +806,37 @@ createTorus(Color color, Vector3D &center, double scale, double angleX, double a
 }
 
 void draw3DLSystemHelper(const LParser::LSystem3D &l_system, Lines2D &lines, const Color col, int &recursionDepth,
-                         const unsigned int maxRecursion, std::string currentString, double &currentAngle,
-                         const double angleIncrement, double &x0, double &y0, Vector3D H, Vector3D L, Vector3D U) {
+                         const unsigned int maxRecursion, std::string currentString, double &angle, double &x0,
+                         double &y0, Vector3D H, Vector3D L, Vector3D U) {
     if (recursionDepth == maxRecursion) {
         // Make the lines
         double x1;
         double y1;
         for (char c: currentString) {
-            if (c == '+') currentAngle += angleIncrement;
-            else if (c == '-') currentAngle -= angleIncrement;
-            else if (c == '^') "dk";
-            else if (c == '&') "dk";
-            else if (c == '\\') "dk";
-            else if (c == '/') "dk";
-            else if (c == '|') "dk";
-            else if (l_system.draw(c)) {
-                x1 = x0 + cos(currentAngle);
-                y1 = y0 + sin(currentAngle);
+            if (c == '+') {
+                H = H * cos(angle) + L * sin(angle);
+                L = -H * cos(angle) + L * cos(angle);
+            } else if (c == '-') {
+                H = H * cos(-angle) + L * sin(-angle);
+                L = -H * cos(-angle) + L * cos(-angle);
+            } else if (c == '^') {
+                H = H * cos(angle) + U * sin(angle);
+                U = -H * sin(angle) + U * cos(angle);
+            } else if (c == '&') {
+                H = H * cos(-angle) + U * sin(-angle);
+                U = -H * sin(-angle) + U * cos(-angle);
+            } else if (c == '\\') {
+                L = L * cos(angle) - U * sin(angle);
+                U = L * sin(angle) - U * cos(angle);
+            } else if (c == '/') {
+                L = L * cos(-angle) - U * sin(-angle);
+                U = L * sin(-angle) - U * cos(-angle);
+            } else if (c == '|') {
+                H = -H;
+                L = -L;
+            } else if (l_system.draw(c)) {
+                x1 = x0 + cos(angle);
+                y1 = y0 + sin(angle);
                 lines.push_back(Line2D(Point2D(x0, y0), Point2D(x1, y1), col));
                 x0 = x1;
                 y0 = y1;
@@ -819,17 +845,31 @@ void draw3DLSystemHelper(const LParser::LSystem3D &l_system, Lines2D &lines, con
         recursionDepth--;
     } else {
         for (char c: currentString) {
-            if (c == '+') currentAngle += angleIncrement;
-            else if (c == '-') currentAngle -= angleIncrement;
-            else if (c == '^') "dk";
-            else if (c == '&') "dk";
-            else if (c == '\\') "dk";
-            else if (c == '/') "dk";
-            else if (c == '|') "dk";
-            else if (l_system.draw(c)) {
+            if (c == '+') {
+                H = H * cos(angle) + L * sin(angle);
+                L = -H * cos(angle) + L * cos(angle);
+            } else if (c == '-') {
+                H = H * cos(-angle) + L * sin(-angle);
+                L = -H * cos(-angle) + L * cos(-angle);
+            } else if (c == '^') {
+                H = H * cos(angle) + U * sin(angle);
+                U = -H * sin(angle) + U * cos(angle);
+            } else if (c == '&') {
+                H = H * cos(-angle) + U * sin(-angle);
+                U = -H * sin(-angle) + U * cos(-angle);
+            } else if (c == '\\') {
+                L = L * cos(angle) - U * sin(angle);
+                U = L * sin(angle) - U * cos(angle);
+            } else if (c == '/') {
+                L = L * cos(-angle) - U * sin(-angle);
+                U = L * sin(-angle) - U * cos(-angle);
+            } else if (c == '|') {
+                H = -H;
+                L = -L;
+            } else if (l_system.draw(c)) {
                 recursionDepth++;
                 draw3DLSystemHelper(l_system, lines, col, recursionDepth, maxRecursion, l_system.get_replacement(c),
-                                    currentAngle, angleIncrement, x0, y0, H, L, U);
+                                    angle, x0, y0, H, L, U);
             }
         }
         recursionDepth--;
@@ -844,12 +884,11 @@ Lines2D draw3DLSystem(const LParser::LSystem3D &l_system, Color col) {
     Vector3D U = Vector3D::vector(0, 0, 1);
     unsigned int Iterations = l_system.get_nr_iterations();
     std::string const &Initiator = l_system.get_initiator();
-    double currentAngle = 0;
-    double angleIncrement = l_system.get_angle() / 180 * M_PI;
+    double angle = l_system.get_angle();
     double x0 = 0;
     double y0 = 0;
     int recursionDepth = 0;
-    draw3DLSystemHelper(l_system, lines, col, recursionDepth, Iterations, Initiator, currentAngle, angleIncrement,
+    draw3DLSystemHelper(l_system, lines, col, recursionDepth, Iterations, Initiator, angle,
                         x0, y0, H, L, U);
     return lines;
 }
@@ -959,24 +998,20 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
             double height = configuration["Figure" + std::to_string(i)]["height"];
             int n = configuration["Figure" + std::to_string(i)]["n"];
             figures.push_back(createCone(color, center, scale, angleX, angleY, angleZ, n, height));
-        }
-        else if (type == "Cylinder") {
+        } else if (type == "Cylinder") {
             double height = configuration["Figure" + std::to_string(i)]["height"];
             int n = configuration["Figure" + std::to_string(i)]["n"];
             figures.push_back(createCylinder(color, center, scale, angleX, angleY, angleZ, n, height));
-        }
-        else if (type == "Sphere") {
+        } else if (type == "Sphere") {
             int n = configuration["Figure" + std::to_string(i)]["n"];
             figures.push_back(createSphere(color, center, scale, angleX, angleY, angleZ, n));
-        }
-        else if (type == "Torus") {
+        } else if (type == "Torus") {
             double r = configuration["Figure" + std::to_string(i)]["r"];
             double R = configuration["Figure" + std::to_string(i)]["R"];
             int n = configuration["Figure" + std::to_string(i)]["m"];
             int m = configuration["Figure" + std::to_string(i)]["n"];
             figures.push_back(createTorus(color, center, scale, angleX, angleY, angleZ, r, R, n, m));
-        }
-        else if (type == "3DLSystem") {
+        } else if (type == "3DLSystem") {
             l_sys = true;
             LParser::LSystem3D l_system;
             std::ifstream input_stream(configuration["Figure" + std::to_string(i)]["inputfile"]);
