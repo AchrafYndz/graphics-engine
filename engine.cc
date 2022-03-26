@@ -793,6 +793,67 @@ createTorus(Color color, Vector3D &center, double scale, double angleX, double a
     return torus;
 }
 
+void draw3DLSystemHelper(const LParser::LSystem3D &l_system, Lines2D &lines, const Color col, int &recursionDepth,
+                         const unsigned int maxRecursion, std::string currentString, double &currentAngle,
+                         const double angleIncrement, double &x0, double &y0, Vector3D H, Vector3D L, Vector3D U) {
+    if (recursionDepth == maxRecursion) {
+        // Make the lines
+        double x1;
+        double y1;
+        for (char c: currentString) {
+            if (c == '+') currentAngle += angleIncrement;
+            else if (c == '-') currentAngle -= angleIncrement;
+            else if (c == '^') "dk";
+            else if (c == '&') "dk";
+            else if (c == '\\') "dk";
+            else if (c == '/') "dk";
+            else if (c == '|') "dk";
+            else if (l_system.draw(c)) {
+                x1 = x0 + cos(currentAngle);
+                y1 = y0 + sin(currentAngle);
+                lines.push_back(Line2D(Point2D(x0, y0), Point2D(x1, y1), col));
+                x0 = x1;
+                y0 = y1;
+            }
+        }
+        recursionDepth--;
+    } else {
+        for (char c: currentString) {
+            if (c == '+') currentAngle += angleIncrement;
+            else if (c == '-') currentAngle -= angleIncrement;
+            else if (c == '^') "dk";
+            else if (c == '&') "dk";
+            else if (c == '\\') "dk";
+            else if (c == '/') "dk";
+            else if (c == '|') "dk";
+            else if (l_system.draw(c)) {
+                recursionDepth++;
+                draw3DLSystemHelper(l_system, lines, col, recursionDepth, maxRecursion, l_system.get_replacement(c),
+                                    currentAngle, angleIncrement, x0, y0, H, L, U);
+            }
+        }
+        recursionDepth--;
+    }
+}
+
+Lines2D draw3DLSystem(const LParser::LSystem3D &l_system, Color col) {
+    Lines2D lines;
+    // Call recursive function
+    Vector3D H = Vector3D::vector(1, 0, 0);
+    Vector3D L = Vector3D::vector(0, 1, 0);
+    Vector3D U = Vector3D::vector(0, 0, 1);
+    unsigned int Iterations = l_system.get_nr_iterations();
+    std::string const &Initiator = l_system.get_initiator();
+    double currentAngle = 0;
+    double angleIncrement = l_system.get_angle() / 180 * M_PI;
+    double x0 = 0;
+    double y0 = 0;
+    int recursionDepth = 0;
+    draw3DLSystemHelper(l_system, lines, col, recursionDepth, Iterations, Initiator, currentAngle, angleIncrement,
+                        x0, y0, H, L, U);
+    return lines;
+}
+
 img::EasyImage generate_image(const ini::Configuration &configuration) {
 //     ############################# INTRO #############################
 //    img::EasyImage image((int) configuration["ImageProperties"]["width"],
@@ -921,7 +982,7 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
             std::ifstream input_stream(configuration["Figure" + std::to_string(i)]["inputfile"]);
             input_stream >> l_system;
             input_stream.close();
-            image = draw2DLines(draw2DLSystem(l_system, color), configuration["General"]["size"], bg);
+            image = draw2DLines(draw3DLSystem(l_system, color), configuration["General"]["size"], bg);
         }
     }
     std::vector<double> eyepoint_ = configuration["General"]["eye"];
