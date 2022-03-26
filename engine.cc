@@ -812,29 +812,35 @@ createTorus(Color color, Vector3D &center, double scale, double angleX, double a
 void draw3DLSystemHelper(const LParser::LSystem3D &l_system, std::vector<Vector3D> &points, std::vector<Face> &faces,
                          const Color col, int &recursionDepth,
                          const unsigned int maxRecursion, const std::string &currentString, double &angle,
-                         Vector3D position,
+                         Vector3D &position,
                          Vector3D &H, Vector3D &L, Vector3D &U, std::stack<Brackets3D> &bracketStack) {
     if (recursionDepth == maxRecursion) {
         // Make the lines
         for (char c: currentString) {
             if (c == '+') {
+                Vector3D prevH = H;
                 H = H * cos(angle) + L * sin(angle);
-                L = -H * cos(angle) + L * cos(angle);
+                L = -prevH * sin(angle) + L * cos(angle);
             } else if (c == '-') {
+                Vector3D prevH = H;
                 H = H * cos(-angle) + L * sin(-angle);
-                L = -H * cos(-angle) + L * cos(-angle);
+                L = -prevH * sin(-angle) + L * cos(-angle);
             } else if (c == '^') {
+                Vector3D prevH = H;
                 H = H * cos(angle) + U * sin(angle);
-                U = -H * sin(angle) + U * cos(angle);
+                U = -prevH * sin(angle) + U * cos(angle);
             } else if (c == '&') {
+                Vector3D prevH = H;
                 H = H * cos(-angle) + U * sin(-angle);
-                U = -H * sin(-angle) + U * cos(-angle);
+                U = -prevH * sin(-angle) + U * cos(-angle);
             } else if (c == '\\') {
+                Vector3D prevL = L;
                 L = L * cos(angle) - U * sin(angle);
-                U = L * sin(angle) - U * cos(angle);
+                U = prevL * sin(angle) + U * cos(angle);
             } else if (c == '/') {
+                Vector3D prevL = L;
                 L = L * cos(-angle) - U * sin(-angle);
-                U = L * sin(-angle) - U * cos(-angle);
+                U = prevL * sin(-angle) + U * cos(-angle);
             } else if (c == '|') {
                 H = -H;
                 L = -L;
@@ -858,23 +864,29 @@ void draw3DLSystemHelper(const LParser::LSystem3D &l_system, std::vector<Vector3
     } else {
         for (char c: currentString) {
             if (c == '+') {
+                Vector3D prevH = H;
                 H = H * cos(angle) + L * sin(angle);
-                L = -H * cos(angle) + L * cos(angle);
+                L = -prevH * sin(angle) + L * cos(angle);
             } else if (c == '-') {
+                Vector3D prevH = H;
                 H = H * cos(-angle) + L * sin(-angle);
-                L = -H * cos(-angle) + L * cos(-angle);
+                L = -prevH * sin(-angle) + L * cos(-angle);
             } else if (c == '^') {
+                Vector3D prevH = H;
                 H = H * cos(angle) + U * sin(angle);
-                U = -H * sin(angle) + U * cos(angle);
+                U = -prevH * sin(angle) + U * cos(angle);
             } else if (c == '&') {
+                Vector3D prevH = H;
                 H = H * cos(-angle) + U * sin(-angle);
-                U = -H * sin(-angle) + U * cos(-angle);
+                U = -prevH * sin(-angle) + U * cos(-angle);
             } else if (c == '\\') {
+                Vector3D prevL = L;
                 L = L * cos(angle) - U * sin(angle);
-                U = L * sin(angle) - U * cos(angle);
+                U = prevL * sin(angle) + U * cos(angle);
             } else if (c == '/') {
+                Vector3D prevL = L;
                 L = L * cos(-angle) - U * sin(-angle);
-                U = L * sin(-angle) - U * cos(-angle);
+                U = prevL * sin(-angle) + U * cos(-angle);
             } else if (c == '|') {
                 H = -H;
                 L = -L;
@@ -910,6 +922,7 @@ Figure draw3DLSystem(const LParser::LSystem3D &l_system, Vector3D &center, Color
     unsigned int Iterations = l_system.get_nr_iterations();
     std::string const &Initiator = l_system.get_initiator();
     double angle = l_system.get_angle();
+    angle = angle /180 *M_PI;
     int recursionDepth = 0;
     draw3DLSystemHelper(l_system, points, faces, color, recursionDepth, Iterations, Initiator, angle,
                         position, H, L, U, bracketStack);
