@@ -11,19 +11,16 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="Rework 3D L-system logic">
-      <change afterPath="$PROJECT_DIR$/.engine.cc.swp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/wireframe/wireframes010.bmp" afterDir="false" />
+    <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="Start rewriting 3DLsystem logic">
+      <change beforePath="$PROJECT_DIR$/.engine.cc.swp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/engine.dir/engine.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/engine.dir/engine.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/engine.dir/engine.cc.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/engine" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/engine" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/engine" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/engine.cc" beforeDir="false" afterPath="$PROJECT_DIR$/engine.cc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ini/wireframe/out.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/wireframe/out.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/Easy_image/easy_image.h" beforeDir="false" afterPath="$PROJECT_DIR$/util/Easy_image/easy_image.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/Ini_config/ini_configuration.cc" beforeDir="false" afterPath="$PROJECT_DIR$/util/Ini_config/ini_configuration.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/Vector3D/vector3d.cc" beforeDir="false" afterPath="$PROJECT_DIR$/util/Vector3D/vector3d.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/Vector3D/vector3d.h" beforeDir="false" afterPath="$PROJECT_DIR$/util/Vector3D/vector3d.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/wireframe/wireframes010.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/wireframe/wireframes010.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/Face.h" beforeDir="false" afterPath="$PROJECT_DIR$/util/Face.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,14 +88,14 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="engine" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="wireframes010.ini" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$/ini/wireframe" PASS_PARENT_ENVS_2="true" PROJECT_NAME="engine" TARGET_NAME="engine" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="engine" RUN_TARGET_NAME="engine">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="engine" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="wireframes010.ini" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$/ini/wireframe" PASS_PARENT_ENVS_2="true" PROJECT_NAME="engine" TARGET_NAME="engine" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="engine" RUN_TARGET_NAME="engine">
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
   </component>
@@ -156,7 +153,8 @@
       <workItem from="1648124577283" duration="1945000" />
       <workItem from="1648158889089" duration="3767000" />
       <workItem from="1648221637046" duration="7431000" />
-      <workItem from="1648286431658" duration="8649000" />
+      <workItem from="1648286431658" duration="8687000" />
+      <workItem from="1648311199542" duration="4417000" />
     </task>
     <task id="LOCAL-00001" summary="Remove redundant theta+pi">
       <created>1647092291607</created>
@@ -291,7 +289,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648292962278</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Start rewriting 3DLsystem logic">
+      <created>1648296440854</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1648296440854</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -333,7 +338,8 @@
     <MESSAGE value="Refactor Draw2DLsystem()" />
     <MESSAGE value="Set up 3DLsystem functions" />
     <MESSAGE value="Rework 3D L-system logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rework 3D L-system logic" />
+    <MESSAGE value="Start rewriting 3DLsystem logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="Start rewriting 3DLsystem logic" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

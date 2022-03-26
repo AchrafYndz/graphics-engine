@@ -15,6 +15,7 @@
 #include <cmath>
 #include <list>
 #include <stack>
+#include <utility>
 
 //TODO: fix 2D l-systems: update position even if !draw()
 
@@ -35,7 +36,7 @@ struct Brackets3D {
     Vector3D L;
     Vector3D U;
 
-    Brackets3D(Vector3D position_, const Vector3D &H_, const Vector3D &L_, const Vector3D &U_) : position(position_),
+    Brackets3D(const Vector3D& position_, const Vector3D &H_, const Vector3D &L_, const Vector3D &U_) : position(position_),
                                                                                                  H(H_),
                                                                                                  L(L_), U(U_) {};
 };
@@ -72,7 +73,7 @@ Blocks(img::EasyImage &img, int Wi, int Hi, int Nx, int Ny, std::vector<double> 
 }
 
 void QuarterCircle(img::EasyImage &img, int Hi, int Wi, int N, std::vector<double> lineColor,
-                   std::vector<double> backgroundColor, std::string figure = "") {
+                   const std::vector<double>& backgroundColor, const std::string& figure = "") {
     int Hs = Hi / (N - 1);
     int Ws = Wi / (N - 1);
     img::Color li_col;
@@ -113,16 +114,16 @@ void QuarterCircle(img::EasyImage &img, int Hi, int Wi, int N, std::vector<doubl
 
 
 void
-Eye(img::EasyImage &img, int Hi, int Wi, int N, std::vector<double> lineColor, std::vector<double> backgroundColor) {
-    QuarterCircle(img, Hi, Wi, N, lineColor, backgroundColor, "eye");
+Eye(img::EasyImage &img, int Hi, int Wi, int N, std::vector<double> lineColor, const std::vector<double>& backgroundColor) {
+    QuarterCircle(img, Hi, Wi, N, std::move(lineColor), backgroundColor, "eye");
 }
 
 void Diamond(img::EasyImage &img, int Hi, int Wi, int N, std::vector<double> lineColor,
-             std::vector<double> backgroundColor) {
+             const std::vector<double>& backgroundColor) {
     QuarterCircle(img, Hi, Wi, N, lineColor, backgroundColor, "diamond");
 }
 
-img::EasyImage draw2DLines(const Lines2D &lines, const int size, img::Color bg_col) {
+img::EasyImage draw2DLines(const Lines2D &lines, const int size, const img::Color& bg_col) {
     double xmin = lines.front().p1.x;
     double xmax = lines.front().p1.y;
     double ymin = lines.front().p2.x;
@@ -806,8 +807,8 @@ createTorus(Color color, Vector3D &center, double scale, double angleX, double a
     return torus;
 }
 
-void draw3DLSystemHelper(const LParser::LSystem3D &l_system, std::vector<Vector3D> points, std::vector<Face> faces, const Color col, int &recursionDepth,
-                         const unsigned int maxRecursion, std::string currentString, double &angle, Vector3D position,
+void draw3DLSystemHelper(const LParser::LSystem3D &l_system, std::vector<Vector3D> &points, std::vector<Face> &faces, const Color col, int &recursionDepth,
+                         const unsigned int maxRecursion, const std::string& currentString, double &angle, Vector3D position,
                          Vector3D &H, Vector3D &L, Vector3D &U, std::stack<Brackets3D> &bracketStack) {
     if (recursionDepth == maxRecursion) {
         // Make the lines
@@ -842,6 +843,10 @@ void draw3DLSystemHelper(const LParser::LSystem3D &l_system, std::vector<Vector3
                 U = brackets.U;
                 bracketStack.pop();
             } else if (l_system.draw(c)) {
+                points.push_back(position);
+                position += H;
+                points.push_back(position);
+                faces.emplace_back(std::vector<int> {static_cast<int>(points.size())-2, static_cast<int>(points.size())-1});
             }
         }
         recursionDepth--;
@@ -878,7 +883,7 @@ void draw3DLSystemHelper(const LParser::LSystem3D &l_system, std::vector<Vector3
                 bracketStack.pop();
             } else if (l_system.draw(c)) {
                 recursionDepth++;
-                draw3DLSystemHelper(l_system, lines, col, recursionDepth, maxRecursion, l_system.get_replacement(c),
+                draw3DLSystemHelper(l_system, points, faces, col, recursionDepth, maxRecursion, l_system.get_replacement(c),
                                     angle, position, H, L, U, bracketStack);
             }
         }
@@ -886,22 +891,22 @@ void draw3DLSystemHelper(const LParser::LSystem3D &l_system, std::vector<Vector3
     }
 }
 
-Figure draw3DLSystem(const LParser::LSystem3D &l_system, Color col) {
+Figure draw3DLSystem(const LParser::LSystem3D &l_system, Vector3D &center, Color color, const double& scale, const double &angleX, const double &angleY, const double &angleZ) {
     // Call recursive function
     std::stack<Brackets3D> bracketStack;
-    std::vector<Vector3D> points;
-    std::vector<Face> faces;
+    Vector3D position = Vector3D::point(0, 0, 0);
+    std::vector<Vector3D> points {position};
+    std::vector<Face> faces {0};
     Vector3D H = Vector3D::vector(1, 0, 0);
     Vector3D L = Vector3D::vector(0, 1, 0);
     Vector3D U = Vector3D::vector(0, 0, 1);
     unsigned int Iterations = l_system.get_nr_iterations();
     std::string const &Initiator = l_system.get_initiator();
     double angle = l_system.get_angle();
-    Vector3D position = Vector3D::point(0, 0, 0);
     int recursionDepth = 0;
-    draw3DLSystemHelper(l_system, points, faces, col, recursionDepth, Iterations, Initiator, angle,
+    draw3DLSystemHelper(l_system, points, faces, color, recursionDepth, Iterations, Initiator, angle,
                         position, H, L, U, bracketStack);
-    return Figure(points, faces);
+    return {points, faces, color, center, scale, angleX, angleY, angleZ};
 }
 
 img::EasyImage generate_image(const ini::Configuration &configuration) {
@@ -980,7 +985,6 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
     Figures3D figures;
     int nrFigures = configuration["General"]["nrFigures"];
     bool l_sys = false;
-    img::EasyImage image;
     for (int i = 0; i < nrFigures; i++) {
         std::vector<double> col = configuration["Figure" + std::to_string(i)]["color"];
         Color color(col[0], col[1], col[2]);
@@ -1028,12 +1032,12 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
             std::ifstream input_stream(configuration["Figure" + std::to_string(i)]["inputfile"]);
             input_stream >> l_system;
             input_stream.close();
-            image = draw2DLines(draw3DLSystem(l_system, color), configuration["General"]["size"], bg);
+            figures.push_back(draw3DLSystem(l_system, center, color, scale, angleX, angleY, angleZ));
         }
     }
     std::vector<double> eyepoint_ = configuration["General"]["eye"];
     Vector3D eyepoint = Vector3D::point(eyepoint_[0], eyepoint_[1], eyepoint_[2]);
-    if (!l_sys)image = draw2DLines(doProjection(figures, eyepoint), size, bg);
+    img::EasyImage image = draw2DLines(doProjection(figures, eyepoint), size, bg);
     // Output image
     std::ofstream fout("out.bmp", std::ios::binary);
     fout << image;
