@@ -248,7 +248,7 @@ namespace img
 	/**
 	 * \brief Reads an img::EasyImage from an input stream.
 	 *
-	 * Please note: at this point only a limited subset of BMP-file format is supported.
+	 * Please note: at this position only a limited subset of BMP-file format is supported.
 	 * In order to correctly read a BMP file it must:
 	 * 	- Be an uncompressed bitmap
 	 *	- Only contain one plane

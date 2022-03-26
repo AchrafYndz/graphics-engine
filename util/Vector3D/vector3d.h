@@ -169,8 +169,8 @@ std::ostream &operator<<(std::ostream &output_stream,
 /**
  * \brief A class that represents 3D vectors.
  *
- * This class can both represent points and directions.  A point can be
- * constructed using the Vector3D::point pseudo-constructor.  A vector can be
+ * This class can both represent points and directions.  A position can be
+ * constructed using the Vector3D::position pseudo-constructor.  A vector can be
  * constructed using the Vector3D::vector pseudo-constructor.  Transforming a
  * vector will behave accordingly.
  */
@@ -181,7 +181,7 @@ class Vector3D
                 static double Vector3D::*const elts[];
 
                 /**
-                 * \brief A flag that indicates whether this vector is a point (\c false) or a
+                 * \brief A flag that indicates whether this vector is a position (\c false) or a
                  * vector (\c true).
                  */
                 bool infty;
@@ -192,13 +192,13 @@ class Vector3D
                  * \brief Constructs a new Vector3D object given its coordinates.
                  *
                  * This constructor is made protected to avoid it to be called directly.  In
-                 * order to construct a new instance of this class the Vector3D::point or
+                 * order to construct a new instance of this class the Vector3D::position or
                  * Vector3D::vector pseudo-constructors should be used.
                  *
                  * \param x_init The x-coordinate.
                  * \param y_init The y-coordinate.
                  * \param z_init The z-coordinate.
-                 * \param infty_init \c false if the vector represents a point, \c true if it represents a vector.
+                 * \param infty_init \c false if the vector represents a position, \c true if it represents a vector.
                  */
                 Vector3D(const double x_init,
                          const double y_init,
@@ -209,11 +209,11 @@ class Vector3D
                  * \brief Consructs a new Vector3D object by copying another one.
                  *
                  * This constructor is made protected to avoid it to be called direcly.  In order
-                 * to construct a new instance of this class the Vector3D::point or
+                 * to construct a new instance of this class the Vector3D::position or
                  * Vector3D::vector pseudo-constructors should be used.
                  *
                  * \param original The vector that is copied.
-                 * \param infty_init \c false if the vector represents a point, \c true if it represents a vector.
+                 * \param infty_init \c false if the vector represents a position, \c true if it represents a vector.
                  */
                 Vector3D(const Vector3D &original,
                          const bool      infty_init);
@@ -253,7 +253,7 @@ class Vector3D
                 ~Vector3D();
 
                 /**
-                 * \brief Constructs a new Vector3D object that represents a point.
+                 * \brief Constructs a new Vector3D object that represents a position.
                  *
                  * \param x The x-coordinate.
                  * \param y The y-coordinate.
@@ -264,7 +264,7 @@ class Vector3D
                                       const double z);
 
                 /**
-                 * \brief Constructs a new Vector3D object that represents a point.
+                 * \brief Constructs a new Vector3D object that represents a position.
                  *
                  * \param original The vector whose coordinates are copied.
                  */
@@ -289,9 +289,9 @@ class Vector3D
                 static Vector3D vector(const Vector3D &original);
 
                 /**
-                 * \brief Returns whether this object represents a point.
+                 * \brief Returns whether this object represents a position.
                  *
-                 * \return \c true if this object represents a point, \c false otherwise.
+                 * \return \c true if this object represents a position, \c false otherwise.
                  */
                 bool is_point() const;
 
@@ -315,7 +315,7 @@ class Vector3D
                  * \brief Adds another Vector3D object to this one.
                  *
                  * If both objects represent vectors the result will also be a vector.
-                 * Otherwise the result is a point.
+                 * Otherwise the result is a position.
                  *
                  * \param rhs The vector that is added to this vector.
                  *
@@ -326,8 +326,8 @@ class Vector3D
                 /**
                  * \brief Subtracts another Vector3D object from this one.
                  *
-                 * Subtracting a vector from a point or a point from a vector will result
-                 * in a point.  Subtracting two vectors or two points will result in a
+                 * Subtracting a vector from a position or a position from a vector will result
+                 * in a position.  Subtracting two vectors or two points will result in a
                  * vector.
                  *
                  * \param rhs The Vector3D object that is subtracted from this one.
@@ -337,7 +337,7 @@ class Vector3D
                 Vector3D &operator-=(const Vector3D &rhs);
 
                 /**
-                 * \brief Multiplies a scalar with this vector or point.
+                 * \brief Multiplies a scalar with this vector or position.
                  *
                  * \param rhs The scalar that is multiplied with this object.
                  *
@@ -370,8 +370,8 @@ class Vector3D
                  * \brief Calculates the dot-product of this vector and another one.
                  *
                  * This operation will always succeed regardless of whether the operands
-                 * represent points or vectors.  In case this operation is applied to a point
-                 * it will be treated as a vector from the origin to the point.  Note that
+                 * represent points or vectors.  In case this operation is applied to a position
+                 * it will be treated as a vector from the origin to the position.  Note that
                  * performing the dot product on points does not make much sense.
                  *
                  * \param rhs The Vector3D object to be multiplied with this.
@@ -384,8 +384,8 @@ class Vector3D
                  * \brief Calculates the cross-product of this vector and another one.
                  *
                  * This operation will always succeed regardless of whether the operands
-                 * represent points or directions.  In case this operation is applied to a point
-                 * it will be treated as a vector from the origin to the point.  Note that
+                 * represent points or directions.  In case this operation is applied to a position
+                 * it will be treated as a vector from the origin to the position.  Note that
                  * performing the dot product on points does not make much sense.
                  *
                  * \param rhs The vector the is multiplied with this vector.
@@ -397,7 +397,7 @@ class Vector3D
                 /**
                  * \brief Determines the length of the vector.
                  *
-                 * In case the vector represents a point, the distance between the point and the
+                 * In case the vector represents a position, the distance between the position and the
                  * origin is returned.
                  *
                  * \return The length of the vector
@@ -408,7 +408,7 @@ class Vector3D
                  * \brief Normalises the vector.
                  *
                  * This operation scales the vector such that it has a length of 1.  If the
-                 * vector represents a point the point is translated along the line that connects
+                 * vector represents a position the position is translated along the line that connects
                  * it to the origin such that the distance between it and the origin is 1.
                  */
                 void normalise();

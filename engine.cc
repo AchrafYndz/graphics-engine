@@ -16,6 +16,7 @@
 #include <list>
 #include <stack>
 
+//TODO: fix 2D l-systems: update position even if !draw()
 
 using Lines2D = std::list<Line2D>;
 
@@ -28,15 +29,15 @@ struct Brackets2D {
 };
 
 struct Brackets3D {
-    double x;
-    double y;
+    Vector3D position;
 
     Vector3D H;
     Vector3D L;
     Vector3D U;
 
-    Brackets3D(double x_, double y_, const Vector3D &H_, const Vector3D &L_, const Vector3D &U_) : x(x_), y(y_), H(H_),
-                                                                                                   L(L_), U(U_) {};
+    Brackets3D(Vector3D position_, const Vector3D &H_, const Vector3D &L_, const Vector3D &U_) : position(position_),
+                                                                                                 H(H_),
+                                                                                                 L(L_), U(U_) {};
 };
 
 void ColorRectangle(img::EasyImage &img) {
@@ -805,13 +806,11 @@ createTorus(Color color, Vector3D &center, double scale, double angleX, double a
     return torus;
 }
 
-void draw3DLSystemHelper(const LParser::LSystem3D &l_system, Lines2D &lines, const Color col, int &recursionDepth,
-                         const unsigned int maxRecursion, std::string currentString, double &angle, double &x0,
-                         double &y0, Vector3D H, Vector3D L, Vector3D U) {
+void draw3DLSystemHelper(const LParser::LSystem3D &l_system, std::vector<Vector3D> points, std::vector<Face> faces, const Color col, int &recursionDepth,
+                         const unsigned int maxRecursion, std::string currentString, double &angle, Vector3D position,
+                         Vector3D &H, Vector3D &L, Vector3D &U, std::stack<Brackets3D> &bracketStack) {
     if (recursionDepth == maxRecursion) {
         // Make the lines
-        double x1;
-        double y1;
         for (char c: currentString) {
             if (c == '+') {
                 H = H * cos(angle) + L * sin(angle);
@@ -834,12 +833,15 @@ void draw3DLSystemHelper(const LParser::LSystem3D &l_system, Lines2D &lines, con
             } else if (c == '|') {
                 H = -H;
                 L = -L;
+            } else if (c == '(') bracketStack.push(Brackets3D(position, H, L, U));
+            else if (c == ')') {
+                Brackets3D brackets = bracketStack.top();
+                position = brackets.position;
+                H = brackets.H;
+                L = brackets.L;
+                U = brackets.U;
+                bracketStack.pop();
             } else if (l_system.draw(c)) {
-                x1 = x0 + cos(angle);
-                y1 = y0 + sin(angle);
-                lines.push_back(Line2D(Point2D(x0, y0), Point2D(x1, y1), col));
-                x0 = x1;
-                y0 = y1;
             }
         }
         recursionDepth--;
@@ -866,31 +868,40 @@ void draw3DLSystemHelper(const LParser::LSystem3D &l_system, Lines2D &lines, con
             } else if (c == '|') {
                 H = -H;
                 L = -L;
+            } else if (c == '(') bracketStack.push(Brackets3D(position, H, L, U));
+            else if (c == ')') {
+                Brackets3D brackets = bracketStack.top();
+                position = brackets.position;
+                H = brackets.H;
+                L = brackets.L;
+                U = brackets.U;
+                bracketStack.pop();
             } else if (l_system.draw(c)) {
                 recursionDepth++;
                 draw3DLSystemHelper(l_system, lines, col, recursionDepth, maxRecursion, l_system.get_replacement(c),
-                                    angle, x0, y0, H, L, U);
+                                    angle, position, H, L, U, bracketStack);
             }
         }
         recursionDepth--;
     }
 }
 
-Lines2D draw3DLSystem(const LParser::LSystem3D &l_system, Color col) {
-    Lines2D lines;
+Figure draw3DLSystem(const LParser::LSystem3D &l_system, Color col) {
     // Call recursive function
+    std::stack<Brackets3D> bracketStack;
+    std::vector<Vector3D> points;
+    std::vector<Face> faces;
     Vector3D H = Vector3D::vector(1, 0, 0);
     Vector3D L = Vector3D::vector(0, 1, 0);
     Vector3D U = Vector3D::vector(0, 0, 1);
     unsigned int Iterations = l_system.get_nr_iterations();
     std::string const &Initiator = l_system.get_initiator();
     double angle = l_system.get_angle();
-    double x0 = 0;
-    double y0 = 0;
+    Vector3D position = Vector3D::point(0, 0, 0);
     int recursionDepth = 0;
-    draw3DLSystemHelper(l_system, lines, col, recursionDepth, Iterations, Initiator, angle,
-                        x0, y0, H, L, U);
-    return lines;
+    draw3DLSystemHelper(l_system, points, faces, col, recursionDepth, Iterations, Initiator, angle,
+                        position, H, L, U, bracketStack);
+    return Figure(points, faces);
 }
 
 img::EasyImage generate_image(const ini::Configuration &configuration) {
@@ -930,8 +941,8 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
 //        std::vector<Vector3D> points;
 //        int nrPoints = configuration["Figure" + std::to_string(i)]["nrPoints"];
 //        for (int indexp = 0; indexp < nrPoints; indexp++) {
-//            std::vector<double> point = configuration["Figure" + std::to_string(i)]["point" + std::to_string(indexp)];
-//            Vector3D p = Vector3D::point(point[0], point[1], point[2]);
+//            std::vector<double> position = configuration["Figure" + std::to_string(i)]["position" + std::to_string(indexp)];
+//            Vector3D p = Vector3D::position(position[0], position[1], position[2]);
 //            points.push_back(p);
 //        }
 //
@@ -945,7 +956,7 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
 //        std::vector<double> col = configuration["Figure" + std::to_string(i)]["color"];
 //        Color color(col[0], col[1], col[2]);
 //        std::vector<double> centerFetch = configuration["Figure" + std::to_string(i)]["center"];
-//        Vector3D center = Vector3D::point(centerFetch[0], centerFetch[1], centerFetch[2]);
+//        Vector3D center = Vector3D::position(centerFetch[0], centerFetch[1], centerFetch[2]);
 //        double scale = configuration["Figure" + std::to_string(i)]["scale"];
 //
 //        // Get rotation angles
@@ -959,7 +970,7 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
 //        figures.push_back(f);
 //    }
 //    std::vector<double> eyepoint_ = configuration["General"]["eye"];
-//    Vector3D eyepoint = Vector3D::point(eyepoint_[0], eyepoint_[1], eyepoint_[2]);
+//    Vector3D eyepoint = Vector3D::position(eyepoint_[0], eyepoint_[1], eyepoint_[2]);
 //    img::EasyImage image = draw2DLines(doProjection(figures, eyepoint), size, bg);
 
 //    ############################# 3D Figures #############################

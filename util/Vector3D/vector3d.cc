@@ -359,7 +359,7 @@ Vector3D &Vector3D::operator-=(const Vector3D &rhs)
                 this->*elts[i] -= rhs.*elts[i];
         }
 
-        infty = infty == rhs.infty; // if we're subtracting two points or two vectors the result is a vector, otherwise it's a point
+        infty = infty == rhs.infty; // if we're subtracting two points or two vectors the result is a vector, otherwise it's a position
         return *this;
 }
 

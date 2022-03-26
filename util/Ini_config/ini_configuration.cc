@@ -964,7 +964,7 @@ namespace ini
                                 chr = input_stream.get();
                         }
 
-                        // If there is no radix point the number is considered to be an int.
+                        // If there is no radix position the number is considered to be an int.
                         if(chr != '.')
                         {
                                 input_stream.putback(chr);
