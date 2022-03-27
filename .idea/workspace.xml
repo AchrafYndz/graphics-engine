@@ -11,8 +11,255 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="Remove all bmp files from gh">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="Try to remove all bmp files from gh">
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes001.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes001.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes002.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes002.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes003.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes003.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes004.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes004.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes005.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes005.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes006.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes006.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes007.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes007.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes008.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes008.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes009.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes009.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes010.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes010.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes011.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes011.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes012.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes012.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes013.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes013.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes014.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes014.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes015.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes015.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes016.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes016.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes017.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes017.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes018.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes018.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes019.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes019.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes020.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes020.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes021.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes021.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes022.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes022.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes023.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes023.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes024.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes024.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes025.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes025.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes026.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes026.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes027.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes027.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes028.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes028.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes029.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes029.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes030.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes030.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes031.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes031.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes032.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes032.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes033.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes033.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes034.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes034.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes035.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes035.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes036.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes036.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes037.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes037.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes038.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes038.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes039.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes039.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes040.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes040.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes041.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes041.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes042.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes042.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes043.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes043.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes044.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes044.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes045.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes045.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes046.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes046.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes047.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes047.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes048.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes048.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes049.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes049.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes050.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes050.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes051.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes051.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes052.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes052.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes053.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes053.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes054.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes054.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes055.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes055.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes056.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes056.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes057.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes057.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes058.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes058.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes059.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes059.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes060.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes060.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes061.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes061.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes062.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes062.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes063.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes063.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes064.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes064.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes065.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes065.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes066.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes066.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes067.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes067.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes068.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes068.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes069.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes069.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes070.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes070.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes071.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes071.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes072.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes072.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes073.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes073.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes074.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes074.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes075.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes075.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes076.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes076.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes077.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes077.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes078.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes078.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes079.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes079.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes080.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes080.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes081.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes081.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes082.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes082.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes083.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes083.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes084.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes084.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes085.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes085.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes086.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes086.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes087.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes087.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes088.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes088.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes089.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes089.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes090.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes090.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes091.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes091.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes092.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes092.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes093.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes093.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes094.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes094.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes095.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes095.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes096.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes096.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes097.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes097.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes098.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes098.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes099.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes099.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes100.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes100.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes101.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes101.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes102.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes102.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes103.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes103.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes104.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes104.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes105.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes105.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes106.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes106.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes107.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes107.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes108.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes108.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes109.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes109.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes110.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes110.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes111.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes111.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes112.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes112.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes113.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes113.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes114.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes114.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes115.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes115.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes116.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes116.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes117.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes117.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes118.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes118.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes119.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes119.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes120.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes120.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes121.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/z_buffered_wireframes121.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/ZBuffer.cc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/ZBuffer.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine.cc" beforeDir="false" afterPath="$PROJECT_DIR$/engine.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/Line2D.h" beforeDir="false" afterPath="$PROJECT_DIR$/util/Line2D.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +399,7 @@
       <workItem from="1648221637046" duration="7431000" />
       <workItem from="1648286431658" duration="8687000" />
       <workItem from="1648311199542" duration="7048000" />
-      <workItem from="1648408485978" duration="505000" />
+      <workItem from="1648408485978" duration="2073000" />
     </task>
     <task id="LOCAL-00001" summary="Remove redundant theta+pi">
       <created>1647092291607</created>
@@ -322,7 +569,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648408927606</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Try to remove all bmp files from gh">
+      <created>1648409003967</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1648409003967</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -369,7 +623,8 @@
     <MESSAGE value="Commit before switching devices" />
     <MESSAGE value="Repair 3D Line drawings functionality" />
     <MESSAGE value="Remove all bmp files from gh" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove all bmp files from gh" />
+    <MESSAGE value="Try to remove all bmp files from gh" />
+    <option name="LAST_COMMIT_MESSAGE" value="Try to remove all bmp files from gh" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

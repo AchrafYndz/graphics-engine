@@ -7,6 +7,7 @@
 #include "util/Vector3D/vector3d.h"
 #include "util/Figure.h"
 #include "util/Face.h"
+#include "util/ZBuffer.h"
 
 #include <fstream>
 #include <iostream>
@@ -922,11 +923,17 @@ Figure draw3DLSystem(const LParser::LSystem3D &l_system, Vector3D &center, Color
     unsigned int Iterations = l_system.get_nr_iterations();
     std::string const &Initiator = l_system.get_initiator();
     double angle = l_system.get_angle();
-    angle = angle /180 *M_PI;
+    angle = angle / 180 * M_PI;
     int recursionDepth = 0;
     draw3DLSystemHelper(l_system, points, faces, color, recursionDepth, Iterations, Initiator, angle,
                         position, H, L, U, bracketStack);
     return {points, faces, color, center, scale, angleX, angleY, angleZ};
+}
+
+void
+draw_zbuf_line(ZBuffer &zbuffer, img::EasyImage &image, const unsigned int x0, const unsigned int y0, const double z0,
+               const unsigned int x1, const unsigned int y1, const double z1, const Color &color) {
+
 }
 
 img::EasyImage generate_image(const ini::Configuration &configuration) {
@@ -957,46 +964,46 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
 //    img::EasyImage image = draw2DLines(draw2DLSystem(l_system, c), configuration["General"]["size"], bg);
 
 //    ############################# 3D Line drawings #############################
-    std::vector<double> bg_col = configuration["General"]["backgroundcolor"];
-    img::Color bg(bg_col[0] * 255, bg_col[1] * 255, bg_col[2] * 255);
-    int size = configuration["General"]["size"];
-    Figures3D figures;
-    int nrFigures = configuration["General"]["nrFigures"];
-    for (int i = 0; i < nrFigures; i++) {
-        std::vector<Vector3D> points;
-        int nrPoints = configuration["Figure" + std::to_string(i)]["nrPoints"];
-        for (int indexp = 0; indexp < nrPoints; indexp++) {
-            std::vector<double> position = configuration["Figure" + std::to_string(i)]["point" + std::to_string(indexp)];
-            Vector3D p = Vector3D::point(position[0], position[1], position[2]);
-            points.push_back(p);
-        }
-
-        std::vector<Face> faces;
-        int nrLines = configuration["Figure" + std::to_string(i)]["nrLines"];
-        for (int indexl = 0; indexl < nrLines; indexl++) {
-            std::vector<int> indexes = configuration["Figure" + std::to_string(i)]["line" + std::to_string(indexl)];
-            Face f = Face(indexes);
-            faces.push_back(f);
-        }
-        std::vector<double> col = configuration["Figure" + std::to_string(i)]["color"];
-        Color color(col[0], col[1], col[2]);
-        std::vector<double> centerFetch = configuration["Figure" + std::to_string(i)]["center"];
-        Vector3D center = Vector3D::point(centerFetch[0], centerFetch[1], centerFetch[2]);
-        double scale = configuration["Figure" + std::to_string(i)]["scale"];
-
-        // Get rotation angles
-        double degreeX = configuration["Figure" + std::to_string(i)]["rotateX"];
-        double angleX = degreeX / 180 * M_PI;
-        double degreeY = configuration["Figure" + std::to_string(i)]["rotateY"];
-        double angleY = degreeY / 180 * M_PI;
-        double degreeZ = configuration["Figure" + std::to_string(i)]["rotateZ"];
-        double angleZ = degreeZ / 180 * M_PI;
-        Figure f(points, faces, color, center, scale, angleX, angleY, angleZ);
-        figures.push_back(f);
-    }
-    std::vector<double> eyepoint_ = configuration["General"]["eye"];
-    Vector3D eyepoint = Vector3D::point(eyepoint_[0], eyepoint_[1], eyepoint_[2]);
-    img::EasyImage image = draw2DLines(doProjection(figures, eyepoint), size, bg);
+//    std::vector<double> bg_col = configuration["General"]["backgroundcolor"];
+//    img::Color bg(bg_col[0] * 255, bg_col[1] * 255, bg_col[2] * 255);
+//    int size = configuration["General"]["size"];
+//    Figures3D figures;
+//    int nrFigures = configuration["General"]["nrFigures"];
+//    for (int i = 0; i < nrFigures; i++) {
+//        std::vector<Vector3D> points;
+//        int nrPoints = configuration["Figure" + std::to_string(i)]["nrPoints"];
+//        for (int indexp = 0; indexp < nrPoints; indexp++) {
+//            std::vector<double> position = configuration["Figure" + std::to_string(i)]["point" + std::to_string(indexp)];
+//            Vector3D p = Vector3D::point(position[0], position[1], position[2]);
+//            points.push_back(p);
+//        }
+//
+//        std::vector<Face> faces;
+//        int nrLines = configuration["Figure" + std::to_string(i)]["nrLines"];
+//        for (int indexl = 0; indexl < nrLines; indexl++) {
+//            std::vector<int> indexes = configuration["Figure" + std::to_string(i)]["line" + std::to_string(indexl)];
+//            Face f = Face(indexes);
+//            faces.push_back(f);
+//        }
+//        std::vector<double> col = configuration["Figure" + std::to_string(i)]["color"];
+//        Color color(col[0], col[1], col[2]);
+//        std::vector<double> centerFetch = configuration["Figure" + std::to_string(i)]["center"];
+//        Vector3D center = Vector3D::point(centerFetch[0], centerFetch[1], centerFetch[2]);
+//        double scale = configuration["Figure" + std::to_string(i)]["scale"];
+//
+//        // Get rotation angles
+//        double degreeX = configuration["Figure" + std::to_string(i)]["rotateX"];
+//        double angleX = degreeX / 180 * M_PI;
+//        double degreeY = configuration["Figure" + std::to_string(i)]["rotateY"];
+//        double angleY = degreeY / 180 * M_PI;
+//        double degreeZ = configuration["Figure" + std::to_string(i)]["rotateZ"];
+//        double angleZ = degreeZ / 180 * M_PI;
+//        Figure f(points, faces, color, center, scale, angleX, angleY, angleZ);
+//        figures.push_back(f);
+//    }
+//    std::vector<double> eyepoint_ = configuration["General"]["eye"];
+//    Vector3D eyepoint = Vector3D::point(eyepoint_[0], eyepoint_[1], eyepoint_[2]);
+//    img::EasyImage image = draw2DLines(doProjection(figures, eyepoint), size, bg);
 //    ############################# 3D Figures #############################
 //    std::vector<double> bg_col = configuration["General"]["backgroundcolor"];
 //    img::Color bg(bg_col[0] * 255, bg_col[1] * 255, bg_col[2] * 255);
@@ -1057,7 +1064,10 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
 //    std::vector<double> eyepoint_ = configuration["General"]["eye"];
 //    Vector3D eyepoint = Vector3D::point(eyepoint_[0], eyepoint_[1], eyepoint_[2]);
 //    img::EasyImage image = draw2DLines(doProjection(figures, eyepoint), size, bg);
-    // Output image
+
+//    ############################# Z buffering #############################
+
+//    ############################ Output image ############################
     std::ofstream fout("out.bmp", std::ios::binary);
     fout << image;
     fout.close();

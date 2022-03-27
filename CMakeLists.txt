@@ -26,7 +26,7 @@ set(engine_sources
 		util/Figure.cc
 		util/Figure.h
 		util/Vector3D/vector3d.h
-		util/Vector3D/vector3d.cc)
+		util/Vector3D/vector3d.cc util/ZBuffer.cc util/ZBuffer.h)
 
 ############################################################
 # Create an executable
