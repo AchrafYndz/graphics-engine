@@ -957,55 +957,27 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
 //    img::EasyImage image = draw2DLines(draw2DLSystem(l_system, c), configuration["General"]["size"], bg);
 
 //    ############################# 3D Line drawings #############################
-//    std::vector<double> bg_col = configuration["General"]["backgroundcolor"];
-//    img::Color bg(bg_col[0] * 255, bg_col[1] * 255, bg_col[2] * 255);
-//    int size = configuration["General"]["size"];
-//    Figures3D figures;
-//    int nrFigures = configuration["General"]["nrFigures"];
-//    for (int i = 0; i < nrFigures; i++) {
-//        std::vector<Vector3D> points;
-//        int nrPoints = configuration["Figure" + std::to_string(i)]["nrPoints"];
-//        for (int indexp = 0; indexp < nrPoints; indexp++) {
-//            std::vector<double> position = configuration["Figure" + std::to_string(i)]["position" + std::to_string(indexp)];
-//            Vector3D p = Vector3D::position(position[0], position[1], position[2]);
-//            points.push_back(p);
-//        }
-//
-//        std::vector<Face> faces;
-//        int nrLines = configuration["Figure" + std::to_string(i)]["nrLines"];
-//        for (int indexl = 0; indexl < nrLines; indexl++) {
-//            std::vector<int> indexes = configuration["Figure" + std::to_string(i)]["line" + std::to_string(indexl)];
-//            Face f = Face(indexes);
-//            faces.push_back(f);
-//        }
-//        std::vector<double> col = configuration["Figure" + std::to_string(i)]["color"];
-//        Color color(col[0], col[1], col[2]);
-//        std::vector<double> centerFetch = configuration["Figure" + std::to_string(i)]["center"];
-//        Vector3D center = Vector3D::position(centerFetch[0], centerFetch[1], centerFetch[2]);
-//        double scale = configuration["Figure" + std::to_string(i)]["scale"];
-//
-//        // Get rotation angles
-//        double degreeX = configuration["Figure" + std::to_string(i)]["rotateX"];
-//        double angleX = degreeX / 180 * M_PI;
-//        double degreeY = configuration["Figure" + std::to_string(i)]["rotateY"];
-//        double angleY = degreeY / 180 * M_PI;
-//        double degreeZ = configuration["Figure" + std::to_string(i)]["rotateZ"];
-//        double angleZ = degreeZ / 180 * M_PI;
-//        Figure f(points, faces, color, center, scale, angleX, angleY, angleZ);
-//        figures.push_back(f);
-//    }
-//    std::vector<double> eyepoint_ = configuration["General"]["eye"];
-//    Vector3D eyepoint = Vector3D::position(eyepoint_[0], eyepoint_[1], eyepoint_[2]);
-//    img::EasyImage image = draw2DLines(doProjection(figures, eyepoint), size, bg);
-
-//    ############################# 3D Figures #############################
     std::vector<double> bg_col = configuration["General"]["backgroundcolor"];
     img::Color bg(bg_col[0] * 255, bg_col[1] * 255, bg_col[2] * 255);
     int size = configuration["General"]["size"];
     Figures3D figures;
     int nrFigures = configuration["General"]["nrFigures"];
-    bool l_sys = false;
     for (int i = 0; i < nrFigures; i++) {
+        std::vector<Vector3D> points;
+        int nrPoints = configuration["Figure" + std::to_string(i)]["nrPoints"];
+        for (int indexp = 0; indexp < nrPoints; indexp++) {
+            std::vector<double> position = configuration["Figure" + std::to_string(i)]["point" + std::to_string(indexp)];
+            Vector3D p = Vector3D::point(position[0], position[1], position[2]);
+            points.push_back(p);
+        }
+
+        std::vector<Face> faces;
+        int nrLines = configuration["Figure" + std::to_string(i)]["nrLines"];
+        for (int indexl = 0; indexl < nrLines; indexl++) {
+            std::vector<int> indexes = configuration["Figure" + std::to_string(i)]["line" + std::to_string(indexl)];
+            Face f = Face(indexes);
+            faces.push_back(f);
+        }
         std::vector<double> col = configuration["Figure" + std::to_string(i)]["color"];
         Color color(col[0], col[1], col[2]);
         std::vector<double> centerFetch = configuration["Figure" + std::to_string(i)]["center"];
@@ -1019,45 +991,72 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
         double angleY = degreeY / 180 * M_PI;
         double degreeZ = configuration["Figure" + std::to_string(i)]["rotateZ"];
         double angleZ = degreeZ / 180 * M_PI;
-        std::string type = configuration["Figure" + std::to_string(i)]["type"];
-        if (type == "Cube") figures.push_back(createCube(color, center, scale, angleX, angleY, angleZ));
-        else if (type == "Tetrahedron")
-            figures.push_back(createTetrahedron(color, center, scale, angleX, angleY, angleZ));
-        else if (type == "Icosahedron")
-            figures.push_back(createIcosahedron(color, center, scale, angleX, angleY, angleZ));
-        else if (type == "Octahedron")
-            figures.push_back(createOctahedron(color, center, scale, angleX, angleY, angleZ));
-        else if (type == "Dodecahedron")
-            figures.push_back(createDodecahedron(color, center, scale, angleX, angleY, angleZ));
-        else if (type == "Cone") {
-            double height = configuration["Figure" + std::to_string(i)]["height"];
-            int n = configuration["Figure" + std::to_string(i)]["n"];
-            figures.push_back(createCone(color, center, scale, angleX, angleY, angleZ, n, height));
-        } else if (type == "Cylinder") {
-            double height = configuration["Figure" + std::to_string(i)]["height"];
-            int n = configuration["Figure" + std::to_string(i)]["n"];
-            figures.push_back(createCylinder(color, center, scale, angleX, angleY, angleZ, n, height));
-        } else if (type == "Sphere") {
-            int n = configuration["Figure" + std::to_string(i)]["n"];
-            figures.push_back(createSphere(color, center, scale, angleX, angleY, angleZ, n));
-        } else if (type == "Torus") {
-            double r = configuration["Figure" + std::to_string(i)]["r"];
-            double R = configuration["Figure" + std::to_string(i)]["R"];
-            int n = configuration["Figure" + std::to_string(i)]["m"];
-            int m = configuration["Figure" + std::to_string(i)]["n"];
-            figures.push_back(createTorus(color, center, scale, angleX, angleY, angleZ, r, R, n, m));
-        } else if (type == "3DLSystem") {
-            l_sys = true;
-            LParser::LSystem3D l_system;
-            std::ifstream input_stream(configuration["Figure" + std::to_string(i)]["inputfile"]);
-            input_stream >> l_system;
-            input_stream.close();
-            figures.push_back(draw3DLSystem(l_system, center, color, scale, angleX, angleY, angleZ));
-        }
+        Figure f(points, faces, color, center, scale, angleX, angleY, angleZ);
+        figures.push_back(f);
     }
     std::vector<double> eyepoint_ = configuration["General"]["eye"];
     Vector3D eyepoint = Vector3D::point(eyepoint_[0], eyepoint_[1], eyepoint_[2]);
     img::EasyImage image = draw2DLines(doProjection(figures, eyepoint), size, bg);
+//    ############################# 3D Figures #############################
+//    std::vector<double> bg_col = configuration["General"]["backgroundcolor"];
+//    img::Color bg(bg_col[0] * 255, bg_col[1] * 255, bg_col[2] * 255);
+//    int size = configuration["General"]["size"];
+//    Figures3D figures;
+//    int nrFigures = configuration["General"]["nrFigures"];
+//    bool l_sys = false;
+//    for (int i = 0; i < nrFigures; i++) {
+//        std::vector<double> col = configuration["Figure" + std::to_string(i)]["color"];
+//        Color color(col[0], col[1], col[2]);
+//        std::vector<double> centerFetch = configuration["Figure" + std::to_string(i)]["center"];
+//        Vector3D center = Vector3D::point(centerFetch[0], centerFetch[1], centerFetch[2]);
+//        double scale = configuration["Figure" + std::to_string(i)]["scale"];
+//
+//        // Get rotation angles
+//        double degreeX = configuration["Figure" + std::to_string(i)]["rotateX"];
+//        double angleX = degreeX / 180 * M_PI;
+//        double degreeY = configuration["Figure" + std::to_string(i)]["rotateY"];
+//        double angleY = degreeY / 180 * M_PI;
+//        double degreeZ = configuration["Figure" + std::to_string(i)]["rotateZ"];
+//        double angleZ = degreeZ / 180 * M_PI;
+//        std::string type = configuration["Figure" + std::to_string(i)]["type"];
+//        if (type == "Cube") figures.push_back(createCube(color, center, scale, angleX, angleY, angleZ));
+//        else if (type == "Tetrahedron")
+//            figures.push_back(createTetrahedron(color, center, scale, angleX, angleY, angleZ));
+//        else if (type == "Icosahedron")
+//            figures.push_back(createIcosahedron(color, center, scale, angleX, angleY, angleZ));
+//        else if (type == "Octahedron")
+//            figures.push_back(createOctahedron(color, center, scale, angleX, angleY, angleZ));
+//        else if (type == "Dodecahedron")
+//            figures.push_back(createDodecahedron(color, center, scale, angleX, angleY, angleZ));
+//        else if (type == "Cone") {
+//            double height = configuration["Figure" + std::to_string(i)]["height"];
+//            int n = configuration["Figure" + std::to_string(i)]["n"];
+//            figures.push_back(createCone(color, center, scale, angleX, angleY, angleZ, n, height));
+//        } else if (type == "Cylinder") {
+//            double height = configuration["Figure" + std::to_string(i)]["height"];
+//            int n = configuration["Figure" + std::to_string(i)]["n"];
+//            figures.push_back(createCylinder(color, center, scale, angleX, angleY, angleZ, n, height));
+//        } else if (type == "Sphere") {
+//            int n = configuration["Figure" + std::to_string(i)]["n"];
+//            figures.push_back(createSphere(color, center, scale, angleX, angleY, angleZ, n));
+//        } else if (type == "Torus") {
+//            double r = configuration["Figure" + std::to_string(i)]["r"];
+//            double R = configuration["Figure" + std::to_string(i)]["R"];
+//            int n = configuration["Figure" + std::to_string(i)]["m"];
+//            int m = configuration["Figure" + std::to_string(i)]["n"];
+//            figures.push_back(createTorus(color, center, scale, angleX, angleY, angleZ, r, R, n, m));
+//        } else if (type == "3DLSystem") {
+//            l_sys = true;
+//            LParser::LSystem3D l_system;
+//            std::ifstream input_stream(configuration["Figure" + std::to_string(i)]["inputfile"]);
+//            input_stream >> l_system;
+//            input_stream.close();
+//            figures.push_back(draw3DLSystem(l_system, center, color, scale, angleX, angleY, angleZ));
+//        }
+//    }
+//    std::vector<double> eyepoint_ = configuration["General"]["eye"];
+//    Vector3D eyepoint = Vector3D::point(eyepoint_[0], eyepoint_[1], eyepoint_[2]);
+//    img::EasyImage image = draw2DLines(doProjection(figures, eyepoint), size, bg);
     // Output image
     std::ofstream fout("out.bmp", std::ios::binary);
     fout << image;
