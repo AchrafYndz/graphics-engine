@@ -12,7 +12,8 @@ public:
     Color color;
     double z1;
     double z2;
-    Line2D(Point2D point1, Point2D point2, Color col): p1(point1), p2(point2), color(col) {};
+    Line2D(Point2D p1_, Point2D p2_, Color color_): p1(p1_), p2(p2_), color(color_) {};
+    Line2D(Point2D p1_, Point2D p2_, Color color_, double z1_, double z2_): p1(p1_), p2(p2_), color(color_), z1(z1_), z2(z2_) {};
     img::Color getEzColor();
 };
 
