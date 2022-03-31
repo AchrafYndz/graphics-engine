@@ -17,6 +17,7 @@
 #include <list>
 #include <stack>
 #include <utility>
+#include <algorithm>
 #include <assert.h>
 
 //TODO: fix 2D l-systems: update position even if !draw()
@@ -932,58 +933,38 @@ Figure draw3DLSystem(const LParser::LSystem3D &l_system, Vector3D &center, Color
 }
 
 void
-draw_zbuf_line(ZBuffer &zbuffer, img::EasyImage &image, const unsigned int x0, const unsigned int y0, const double z0,
-               const unsigned int x1, const unsigned int y1, const double z1, const Color &color) {
-    const int width = zbuffer.size();
-    const int height = zbuffer.at(0).size()
-
-    assert(x0 < zbuffer.size() && y0 < zbuffer.at(0).size());
-    assert(x1 < zbuffer.size() && y1 < zbuffer.at(0).size());
-    if (x0 == x1)
-    {
+draw_zbuf_line(ZBuffer &zbuffer, img::EasyImage &image, unsigned int x0, unsigned int y0, const double z0,
+               unsigned int x1, unsigned int y1, const double z1, img::Color color) {
+    assert(x0 < image.get_width() && y0 < image.get_height());
+    assert(x1 < image.get_width() && y1 < image.get_height());
+    if (x0 == x1) {
         //special case for x0 == x1
-        for (unsigned int i = std::min(y0, y1); i <= std::max(y0, y1); i++)
-        {
-            zbuffer(x0, i) = color;
-            zbuffer.at(x0 * height + i) = color;
+        for (unsigned int i = std::min(y0, y1); i <= std::max(y0, y1); i++) {
+            (image)(x0, i) = color;
         }
-    }
-    else if (y0 == y1)
-    {
+    } else if (y0 == y1) {
         //special case for y0 == y1
-        for (unsigned int i = std::min(x0, x1); i <= std::max(x0, x1); i++)
-        {
-            (*this)(i, y0) = color;
+        for (unsigned int i = std::min(x0, x1); i <= std::max(x0, x1); i++) {
+            (image)(i, y0) = color;
         }
-    }
-    else
-    {
-        if (x0 > x1)
-        {
+    } else {
+        if (x0 > x1) {
             //flip points if x1>x0: we want x0 to have the lowest value
             std::swap(x0, x1);
             std::swap(y0, y1);
         }
         double m = ((double) y1 - (double) y0) / ((double) x1 - (double) x0);
-        if (-1.0 <= m && m <= 1.0)
-        {
-            for (unsigned int i = 0; i <= (x1 - x0); i++)
-            {
-                (*this)(x0 + i, (unsigned int) round(y0 + m * i)) = color;
+        if (-1.0 <= m && m <= 1.0) {
+            for (unsigned int i = 0; i <= (x1 - x0); i++) {
+                (image)(x0 + i, (unsigned int) round(y0 + m * i)) = color;
             }
-        }
-        else if (m > 1.0)
-        {
-            for (unsigned int i = 0; i <= (y1 - y0); i++)
-            {
-                (*this)((unsigned int) round(x0 + (i / m)), y0 + i) = color;
+        } else if (m > 1.0) {
+            for (unsigned int i = 0; i <= (y1 - y0); i++) {
+                (image)((unsigned int) round(x0 + (i / m)), y0 + i) = color;
             }
-        }
-        else if (m < -1.0)
-        {
-            for (unsigned int i = 0; i <= (y0 - y1); i++)
-            {
-                (*this)((unsigned int) round(x0 - (i / m)), y0 - i) = color;
+        } else if (m < -1.0) {
+            for (unsigned int i = 0; i <= (y0 - y1); i++) {
+                (image)((unsigned int) round(x0 - (i / m)), y0 - i) = color;
             }
         }
     }

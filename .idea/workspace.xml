@@ -11,11 +11,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="Start working on ZBuffer">
+    <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="Add some zbuffering functionality">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engine.cc" beforeDir="false" afterPath="$PROJECT_DIR$/engine.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/Line2D.h" beforeDir="false" afterPath="$PROJECT_DIR$/util/Line2D.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/ZBuffer.cc" beforeDir="false" afterPath="$PROJECT_DIR$/util/ZBuffer.cc" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +150,7 @@
       <workItem from="1648311199542" duration="7048000" />
       <workItem from="1648408485978" duration="2361000" />
       <workItem from="1648457469528" duration="256000" />
-      <workItem from="1648662891943" duration="2450000" />
+      <workItem from="1648662891943" duration="3389000" />
     </task>
     <task id="LOCAL-00001" summary="Remove redundant theta+pi">
       <created>1647092291607</created>
@@ -336,7 +334,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648410945547</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Add some zbuffering functionality">
+      <created>1648666400556</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1648666400556</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -359,7 +364,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="FIx minor bugs" />
     <MESSAGE value="Pass figures by reference rather than value" />
     <MESSAGE value="Change order in which matrices are multiplied" />
     <MESSAGE value="Add Support for Faces that contain more than one line" />
@@ -384,18 +388,10 @@
     <MESSAGE value="Remove all bmp files from gh" />
     <MESSAGE value="Try to remove all bmp files from gh" />
     <MESSAGE value="Start working on ZBuffer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Start working on ZBuffer" />
+    <MESSAGE value="Add some zbuffering functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add some zbuffering functionality" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/util/ZBuffer.cc</url>
-          <line>11</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
         <watch expression="type" language="ObjectiveC" />
