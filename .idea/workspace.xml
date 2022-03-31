@@ -11,18 +11,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="Rewrite engine to support all ini files at once">
+    <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="Fix Cylinder scaling issues">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engine.cc" beforeDir="false" afterPath="$PROJECT_DIR$/engine.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/wireframe/out.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/wireframe/out.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/wireframe/wireframes030.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/wireframe/wireframes030.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/wireframe/wireframes031.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/wireframe/wireframes031.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/wireframe/wireframes043.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/wireframe/wireframes043.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/wireframe/wireframes066.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/wireframe/wireframes066.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/wireframe/wireframes067.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/wireframe/wireframes067.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/wireframe/wireframes068.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/wireframe/wireframes068.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/wireframe/wireframes069.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/wireframe/wireframes069.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/wireframe/wireframes073.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/wireframe/wireframes073.bmp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +152,7 @@
       <workItem from="1648457469528" duration="256000" />
       <workItem from="1648662891943" duration="3550000" />
       <workItem from="1648734607379" duration="1000" />
-      <workItem from="1648752978810" duration="8169000" />
+      <workItem from="1648752978810" duration="9124000" />
     </task>
     <task id="LOCAL-00001" summary="Remove redundant theta+pi">
       <created>1647092291607</created>
@@ -373,7 +364,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648760558659</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Fix Cylinder scaling issues">
+      <created>1648761485356</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1648761485356</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -396,7 +394,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Add 3D line figures up to icosahedron" />
     <MESSAGE value="Add more 3D lines up to Dodecahedron" />
     <MESSAGE value="Add comments" />
     <MESSAGE value="Add points to Dodecahedron" />
@@ -421,7 +418,8 @@
     <MESSAGE value="Copy and modify draw_line method to engine.cc" />
     <MESSAGE value="Start rewriting engine to support all ini files at once" />
     <MESSAGE value="Rewrite engine to support all ini files at once" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rewrite engine to support all ini files at once" />
+    <MESSAGE value="Fix Cylinder scaling issues" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix Cylinder scaling issues" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

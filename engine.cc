@@ -195,6 +195,11 @@ void draw2DLSystemHelper(const LParser::LSystem2D &l_system, Lines2D &lines, con
                 lines.push_back(Line2D(Point2D(x0, y0), Point2D(x1, y1), col));
                 x0 = x1;
                 y0 = y1;
+            } else if (find(l_system.get_alphabet().begin(), l_system.get_alphabet().end(), c) != l_system.get_alphabet().end()) {
+                x1 = x0 + cos(currentAngle);
+                y1 = y0 + sin(currentAngle);
+                x0 = x1;
+                y0 = y1;
             }
         }
         recursionDepth--;
@@ -209,7 +214,7 @@ void draw2DLSystemHelper(const LParser::LSystem2D &l_system, Lines2D &lines, con
                 y0 = brackets.y;
                 currentAngle = brackets.angle;
                 bracketStack.pop();
-            } else if (l_system.draw(c)) {
+            } else if (find(l_system.get_alphabet().begin(), l_system.get_alphabet().end(), c) != l_system.get_alphabet().end()) {
                 recursionDepth++;
                 draw2DLSystemHelper(l_system, lines, col, recursionDepth, maxRecursion, l_system.get_replacement(c),
                                     currentAngle, angleIncrement, x0, y0, bracketStack);
@@ -862,6 +867,8 @@ void draw3DLSystemHelper(const LParser::LSystem3D &l_system, std::vector<Vector3
                 points.push_back(position);
                 faces.emplace_back(
                         std::vector<int>{static_cast<int>(points.size()) - 2, static_cast<int>(points.size()) - 1});
+            } else if (find(l_system.get_alphabet().begin(), l_system.get_alphabet().end(), c) != l_system.get_alphabet().end()) {
+                position += H;
             }
         }
         recursionDepth--;
@@ -902,7 +909,7 @@ void draw3DLSystemHelper(const LParser::LSystem3D &l_system, std::vector<Vector3
                 L = brackets.L;
                 U = brackets.U;
                 bracketStack.pop();
-            } else if (l_system.draw(c)) {
+            } else if (find(l_system.get_alphabet().begin(), l_system.get_alphabet().end(), c) != l_system.get_alphabet().end()) {
                 recursionDepth++;
                 draw3DLSystemHelper(l_system, points, faces, col, recursionDepth, maxRecursion,
                                     l_system.get_replacement(c),
