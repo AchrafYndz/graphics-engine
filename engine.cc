@@ -48,9 +48,9 @@ struct Brackets3D {
 void ColorRectangle(img::EasyImage &img) {
     for (unsigned int i = 0; i < 500; i++) {
         for (unsigned int j = 0; j < 500; j++) {
-            img(i, j).red = i*256/500;
-            img(i, j).green = j*256/500;
-            img(i, j).blue = (i*256/500 + j*256/500) % 255;
+            img(i, j).red = i * 256 / 500;
+            img(i, j).green = j * 256 / 500;
+            img(i, j).blue = (i * 256 / 500 + j * 256 / 500) % 255;
         }
     }
 }
@@ -128,6 +128,69 @@ void Diamond(img::EasyImage &img, int Hi, int Wi, int N, std::vector<double> lin
     QuarterCircle(img, Hi, Wi, N, lineColor, backgroundColor, "diamond");
 }
 
+void
+draw_zbuf_line(ZBuffer &zbuffer, img::EasyImage &image, unsigned int x0, unsigned int y0, const double z0,
+               unsigned int x1, unsigned int y1, const double z1, img::Color color) {
+    assert(x0 < image.get_width() && y0 < image.get_height());
+    assert(x1 < image.get_width() && y1 < image.get_height());
+    if (x0 == x1) {
+        //special case for x0 == x1
+        for (unsigned int i = std::min(y0, y1); i <= std::max(y0, y1); i++) {
+            double p = i / std::max(y0, y1);
+            double Zp = p / z0 + (1 - p) / z1;
+            if (1 / Zp < zbuffer[x0][i]) {
+                (image)(x0, i) = color;
+                zbuffer[x0][i] = 1 / Zp;
+            }
+        }
+    } else if (y0 == y1) {
+        //special case for y0 == y1
+        for (unsigned int i = std::min(x0, x1); i <= std::max(x0, x1); i++) {
+            double p = i / std::max(x0, x1);
+            double Zp = p / z0 + (1 - p) / z1;
+            if (1 / Zp < zbuffer[x0][i]) {
+                (image)(i, y0) = color;
+                zbuffer[i][y0] = 1 / Zp;
+            }
+        }
+    } else {
+        if (x0 > x1) {
+            //flip points if x1>x0: we want x0 to have the lowest value
+            std::swap(x0, x1);
+            std::swap(y0, y1);
+        }
+        double m = ((double) y1 - (double) y0) / ((double) x1 - (double) x0);
+        if (-1.0 <= m && m <= 1.0) {
+            for (unsigned int i = 0; i <= (x1 - x0); i++) {
+                double p = (double) i / (x1 - x0);
+                double Zp = p / z0 + (1 - p) / z1;
+                if (1 / Zp < zbuffer[x0][i]) {
+                    (image)(x0 + i, (unsigned int) round(y0 + m * i)) = color;
+                    zbuffer[x0 + i][(unsigned int) round(y0 + m * i)] = 1 / Zp;
+                }
+            }
+        } else if (m > 1.0) {
+            for (unsigned int i = 0; i <= (y1 - y0); i++) {
+                double p = i / (y1 - y0);
+                double Zp = p / z0 + (1 - p) / z1;
+                if (1 / Zp < zbuffer[x0][i]) {
+                    (image)((unsigned int) round(x0 + (i / m)), y0 + i) = color;
+                    zbuffer[(unsigned int) round(x0 + (i / m))][y0 + i] = 1 / Zp;
+                }
+            }
+        } else if (m < -1.0) {
+            for (unsigned int i = 0; i <= (y0 - y1); i++) {
+                double p = i / (y1 - y0);
+                double Zp = p / z0 + (1 - p) / z1;
+                if (1 / Zp < zbuffer[x0][i]) {
+                    (image)((unsigned int) round(x0 - (i / m)), y0 - i) = color;
+                    zbuffer[(unsigned int) round(x0 - (i / m))][y0 - i] = 1 / Zp;
+                }
+            }
+        }
+    }
+}
+
 img::EasyImage draw2DLines(const Lines2D &lines, const int size, const img::Color &bg_col) {
     double xmin = lines.front().p1.x;
     double xmax = lines.front().p1.y;
@@ -162,9 +225,10 @@ img::EasyImage draw2DLines(const Lines2D &lines, const int size, const img::Colo
     double dx = imagex / 2 - DCx;
     double dy = imagey / 2 - DCy;
 
+    ZBuffer zbuf(image.get_width(), image.get_height());
     for (Line2D line: lines) {
-        image.draw_line(lround(line.p1.x * d + dx), lround(line.p1.y * d + dy), lround(line.p2.x * d + dx),
-                        lround(line.p2.y * d + dy), line.getEzColor());
+        draw_zbuf_line(zbuf, image, lround(line.p1.x * d + dx), lround(line.p1.y * d + dy), line.z1, lround(line.p2.x * d + dx),
+                        lround(line.p2.y * d + dy), line.z2, line.getEzColor());
     }
     std::ofstream fout("out.bmp", std::ios::binary);
     fout << image;
@@ -195,7 +259,8 @@ void draw2DLSystemHelper(const LParser::LSystem2D &l_system, Lines2D &lines, con
                 lines.push_back(Line2D(Point2D(x0, y0), Point2D(x1, y1), col));
                 x0 = x1;
                 y0 = y1;
-            } else if (find(l_system.get_alphabet().begin(), l_system.get_alphabet().end(), c) != l_system.get_alphabet().end()) {
+            } else if (find(l_system.get_alphabet().begin(), l_system.get_alphabet().end(), c) !=
+                       l_system.get_alphabet().end()) {
                 x1 = x0 + cos(currentAngle);
                 y1 = y0 + sin(currentAngle);
                 x0 = x1;
@@ -214,7 +279,8 @@ void draw2DLSystemHelper(const LParser::LSystem2D &l_system, Lines2D &lines, con
                 y0 = brackets.y;
                 currentAngle = brackets.angle;
                 bracketStack.pop();
-            } else if (find(l_system.get_alphabet().begin(), l_system.get_alphabet().end(), c) != l_system.get_alphabet().end()) {
+            } else if (find(l_system.get_alphabet().begin(), l_system.get_alphabet().end(), c) !=
+                       l_system.get_alphabet().end()) {
                 recursionDepth++;
                 draw2DLSystemHelper(l_system, lines, col, recursionDepth, maxRecursion, l_system.get_replacement(c),
                                     currentAngle, angleIncrement, x0, y0, bracketStack);
@@ -766,7 +832,7 @@ createCylinder(Color color, Vector3D &center, double scale, double angleX, doubl
 
     faces.reserve(n + 2);
     for (int i = 0; i <= n; i++) {
-        if (i==0) {
+        if (i == 0) {
             // bottom surface
             std::vector<int> point_indexes_bottom;
             for (int j = n - 1; j >= 0; j--) point_indexes_bottom.push_back(j);
@@ -867,7 +933,8 @@ void draw3DLSystemHelper(const LParser::LSystem3D &l_system, std::vector<Vector3
                 points.push_back(position);
                 faces.emplace_back(
                         std::vector<int>{static_cast<int>(points.size()) - 2, static_cast<int>(points.size()) - 1});
-            } else if (find(l_system.get_alphabet().begin(), l_system.get_alphabet().end(), c) != l_system.get_alphabet().end()) {
+            } else if (find(l_system.get_alphabet().begin(), l_system.get_alphabet().end(), c) !=
+                       l_system.get_alphabet().end()) {
                 position += H;
             }
         }
@@ -909,7 +976,8 @@ void draw3DLSystemHelper(const LParser::LSystem3D &l_system, std::vector<Vector3
                 L = brackets.L;
                 U = brackets.U;
                 bracketStack.pop();
-            } else if (find(l_system.get_alphabet().begin(), l_system.get_alphabet().end(), c) != l_system.get_alphabet().end()) {
+            } else if (find(l_system.get_alphabet().begin(), l_system.get_alphabet().end(), c) !=
+                       l_system.get_alphabet().end()) {
                 recursionDepth++;
                 draw3DLSystemHelper(l_system, points, faces, col, recursionDepth, maxRecursion,
                                     l_system.get_replacement(c),
@@ -940,47 +1008,9 @@ Figure draw3DLSystem(const LParser::LSystem3D &l_system, Vector3D &center, Color
     return {points, faces, color, center, scale, angleX, angleY, angleZ};
 }
 
-void
-draw_zbuf_line(ZBuffer &zbuffer, img::EasyImage &image, unsigned int x0, unsigned int y0, const double z0,
-               unsigned int x1, unsigned int y1, const double z1, img::Color color) {
-    assert(x0 < image.get_width() && y0 < image.get_height());
-    assert(x1 < image.get_width() && y1 < image.get_height());
-    if (x0 == x1) {
-        //special case for x0 == x1
-        for (unsigned int i = std::min(y0, y1); i <= std::max(y0, y1); i++) {
-            (image)(x0, i) = color;
-        }
-    } else if (y0 == y1) {
-        //special case for y0 == y1
-        for (unsigned int i = std::min(x0, x1); i <= std::max(x0, x1); i++) {
-            (image)(i, y0) = color;
-        }
-    } else {
-        if (x0 > x1) {
-            //flip points if x1>x0: we want x0 to have the lowest value
-            std::swap(x0, x1);
-            std::swap(y0, y1);
-        }
-        double m = ((double) y1 - (double) y0) / ((double) x1 - (double) x0);
-        if (-1.0 <= m && m <= 1.0) {
-            for (unsigned int i = 0; i <= (x1 - x0); i++) {
-                (image)(x0 + i, (unsigned int) round(y0 + m * i)) = color;
-            }
-        } else if (m > 1.0) {
-            for (unsigned int i = 0; i <= (y1 - y0); i++) {
-                (image)((unsigned int) round(x0 + (i / m)), y0 + i) = color;
-            }
-        } else if (m < -1.0) {
-            for (unsigned int i = 0; i <= (y0 - y1); i++) {
-                (image)((unsigned int) round(x0 - (i / m)), y0 - i) = color;
-            }
-        }
-    }
-}
-
 img::EasyImage generate_image(const ini::Configuration &configuration) {
-//  ############################# INTRO #########################################################
     if (((std::string) configuration["General"]["type"]).find("Intro") != std::string::npos) {
+        //  ############################# INTRO ####################################
         img::EasyImage image((int) configuration["ImageProperties"]["width"],
                              (int) configuration["ImageProperties"]["height"]);
         if ((std::string) configuration["General"]["type"] == "IntroColorRectangle") {
@@ -1009,9 +1039,8 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
         fout << image;
         fout.close();
         return image;
-    }
-//    ############################# 2D L-systems #############################
-    else if ((std::string) configuration["General"]["type"] == "2DLSystem") {
+    } else if ((std::string) configuration["General"]["type"] == "2DLSystem") {
+        //    ############################# 2D L-systems #############################
         LParser::LSystem2D l_system;
         std::ifstream input_stream(configuration["2DLSystem"]["inputfile"]);
         input_stream >> l_system;
@@ -1025,7 +1054,7 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
         fout << image;
         fout.close();
         return image;
-    } else if ((std::string) configuration["General"]["type"] == "Wireframe") {
+    } else if ((std::string) configuration["General"]["type"] == "Wireframe" || (std::string) configuration["General"]["type"] == "ZBufferedWireframe") {
         std::vector<double> bg_col = configuration["General"]["backgroundcolor"];
         img::Color bg(bg_col[0] * 255, bg_col[1] * 255, bg_col[2] * 255);
         int size = configuration["General"]["size"];
@@ -1125,10 +1154,6 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
         fout.close();
         return image;
     }
-
-//    ############################# Z buffering #############################
-
-//    ############################ Output image ############################
 }
 
 

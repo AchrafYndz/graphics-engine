@@ -4,6 +4,7 @@
 #include <vector>
 
 class ZBuffer : public std::vector<std::vector<double>>{
+public:
     ZBuffer(const int width, const int height);
 };
 

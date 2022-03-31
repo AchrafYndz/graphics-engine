@@ -11,9 +11,13 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="Fix Cylinder scaling issues">
+    <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="Add functionality for characters without draw value (l-systems)">
+      <change afterPath="$PROJECT_DIR$/ini/z-buffering/filelist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.engine.cc.swp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engine.cc" beforeDir="false" afterPath="$PROJECT_DIR$/engine.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/ZBuffer.cc" beforeDir="false" afterPath="$PROJECT_DIR$/util/ZBuffer.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/ZBuffer.h" beforeDir="false" afterPath="$PROJECT_DIR$/util/ZBuffer.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +85,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="engine" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$/ini/wireframe" PASS_PARENT_ENVS_2="true" PROJECT_NAME="engine" TARGET_NAME="engine" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="engine" RUN_TARGET_NAME="engine">
+    <configuration name="engine" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$/ini/z-buffering" PASS_PARENT_ENVS_2="true" PROJECT_NAME="engine" TARGET_NAME="engine" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="engine" RUN_TARGET_NAME="engine">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -152,7 +156,7 @@
       <workItem from="1648457469528" duration="256000" />
       <workItem from="1648662891943" duration="3550000" />
       <workItem from="1648734607379" duration="1000" />
-      <workItem from="1648752978810" duration="9124000" />
+      <workItem from="1648752978810" duration="12349000" />
     </task>
     <task id="LOCAL-00001" summary="Remove redundant theta+pi">
       <created>1647092291607</created>
@@ -371,7 +375,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648761485356</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Add functionality for characters without draw value (l-systems)">
+      <created>1648762417484</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1648762417484</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -394,7 +405,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Add more 3D lines up to Dodecahedron" />
     <MESSAGE value="Add comments" />
     <MESSAGE value="Add points to Dodecahedron" />
     <MESSAGE value="Fix wrong index Icosahedron" />
@@ -419,12 +429,28 @@
     <MESSAGE value="Start rewriting engine to support all ini files at once" />
     <MESSAGE value="Rewrite engine to support all ini files at once" />
     <MESSAGE value="Fix Cylinder scaling issues" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix Cylinder scaling issues" />
+    <MESSAGE value="Add functionality for characters without draw value (l-systems)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add functionality for characters without draw value (l-systems)" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/engine.cc</url>
+          <line>229</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/engine.cc</url>
+          <line>165</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
-        <watch expression="type" language="ObjectiveC" />
+        <watch expression="zbuf.size()" language="ObjectiveC" />
+        <watch expression="zbuf[0].size()" language="ObjectiveC" />
       </configuration>
     </watches-manager>
   </component>
