@@ -971,33 +971,49 @@ draw_zbuf_line(ZBuffer &zbuffer, img::EasyImage &image, unsigned int x0, unsigne
 }
 
 img::EasyImage generate_image(const ini::Configuration &configuration) {
-//     ############################# INTRO #############################
-//    img::EasyImage image((int) configuration["ImageProperties"]["width"],
-//                         (int) configuration["ImageProperties"]["height"]);
-//    ColorRectangle(image);
-//    Blocks(image, configuration["ImageProperties"]["width"], configuration["ImageProperties"]["height"], configuration["BlockProperties"]["nrXBlocks"], configuration["BlockProperties"]["nrYBlocks"], configuration["BlockProperties"]["colorWhite"], configuration["BlockProperties"]["colorBlack"]);
-//    QuarterCircle(image, configuration["ImageProperties"]["height"], configuration["ImageProperties"]["width"],
-//                  configuration["LineProperties"]["nrLines"], configuration["LineProperties"]["lineColor"],
-//                  configuration["LineProperties"]["backgroundcolor"]);
-//    Eye(image, configuration["ImageProperties"]["height"], configuration["ImageProperties"]["width"],
-//        configuration["LineProperties"]["nrLines"], configuration["LineProperties"]["lineColor"],
-//        configuration["LineProperties"]["backgroundcolor"]);
-//    Diamond(image, configuration["ImageProperties"]["height"], configuration["ImageProperties"]["width"],
-//            configuration["LineProperties"]["nrLines"], configuration["LineProperties"]["lineColor"],
-//            configuration["LineProperties"]["backgroundcolor"]);
+//  ############################# INTRO #########################################################
+    if (((std::string) configuration["General"]["type"]).find("Intro") != std::string::npos) {
+        img::EasyImage image((int) configuration["ImageProperties"]["width"],
+                             (int) configuration["ImageProperties"]["height"]);
+        if ((std::string) configuration["General"]["type"] == "IntroColorRectangle") {
 
+            ColorRectangle(image);
+        } else if (((std::string) configuration["General"]["type"] == "IntroBlocks")) {
+            Blocks(image, configuration["ImageProperties"]["width"], configuration["ImageProperties"]["height"],
+                   configuration["BlockProperties"]["nrXBlocks"], configuration["BlockProperties"]["nrYBlocks"],
+                   configuration["BlockProperties"]["colorWhite"], configuration["BlockProperties"]["colorBlack"]);
+        } else if (((std::string) configuration["General"]["type"] == "IntroLines")) {
+            if ((std::string) configuration["LineProperties"]["figure"] == "QuarterCircle") {
+                QuarterCircle(image, configuration["ImageProperties"]["height"],
+                              configuration["ImageProperties"]["width"],
+                              configuration["LineProperties"]["nrLines"], configuration["LineProperties"]["lineColor"],
+                              configuration["LineProperties"]["backgroundcolor"]);
+            } else if ((std::string) configuration["LineProperties"]["figure"] == "Eye") {
+                Eye(image, configuration["ImageProperties"]["height"], configuration["ImageProperties"]["width"],
+                    configuration["LineProperties"]["nrLines"], configuration["LineProperties"]["lineColor"],
+                    configuration["LineProperties"]["backgroundcolor"]);
+            } else if ((std::string) configuration["LineProperties"]["figure"] == "Diamond") {
+                Diamond(image, configuration["ImageProperties"]["height"], configuration["ImageProperties"]["width"],
+                        configuration["LineProperties"]["nrLines"], configuration["LineProperties"]["lineColor"],
+                        configuration["LineProperties"]["backgroundcolor"]);
+            }
+        }
+    }
 //    ############################# 2D L-systems #############################
-//    LParser::LSystem2D l_system;
-//    std::ifstream input_stream(configuration["2DLSystem"]["inputfile"]);
-//    input_stream >> l_system;
-//    input_stream.close();
-//    std::vector<double> color = configuration["2DLSystem"]["color"];
-//    std::vector<double> bg_col = configuration["General"]["backgroundcolor"];
-//    Color c(color[0], color[1], color[2]);
-//    img::Color bg(bg_col[0] * 255, bg_col[1] * 255, bg_col[2] * 255);
-//    img::EasyImage image = draw2DLines(draw2DLSystem(l_system, c), configuration["General"]["size"], bg);
+    else if ((std::string) configuration["General"]["type"] == "2DLSystem") {
+        LParser::LSystem2D l_system;
+        std::ifstream input_stream(configuration["2DLSystem"]["inputfile"]);
+        input_stream >> l_system;
+        input_stream.close();
+        std::vector<double> color = configuration["2DLSystem"]["color"];
+        std::vector<double> bg_col = configuration["General"]["backgroundcolor"];
+        Color c(color[0], color[1], color[2]);
+        img::Color bg(bg_col[0] * 255, bg_col[1] * 255, bg_col[2] * 255);
+        img::EasyImage image = draw2DLines(draw2DLSystem(l_system, c), configuration["General"]["size"], bg);
+    }
 
 //    ############################# 3D Line drawings #############################
+    else if ((std::string) configuration["General"]["type"] == "Wireframe") {
 //    std::vector<double> bg_col = configuration["General"]["backgroundcolor"];
 //    img::Color bg(bg_col[0] * 255, bg_col[1] * 255, bg_col[2] * 255);
 //    int size = configuration["General"]["size"];
@@ -1038,6 +1054,7 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
 //    std::vector<double> eyepoint_ = configuration["General"]["eye"];
 //    Vector3D eyepoint = Vector3D::point(eyepoint_[0], eyepoint_[1], eyepoint_[2]);
 //    img::EasyImage image = draw2DLines(doProjection(figures, eyepoint), size, bg);
+
 //    ############################# 3D Figures #############################
 //    std::vector<double> bg_col = configuration["General"]["backgroundcolor"];
 //    img::Color bg(bg_col[0] * 255, bg_col[1] * 255, bg_col[2] * 255);
@@ -1098,15 +1115,20 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
 //    std::vector<double> eyepoint_ = configuration["General"]["eye"];
 //    Vector3D eyepoint = Vector3D::point(eyepoint_[0], eyepoint_[1], eyepoint_[2]);
 //    img::EasyImage image = draw2DLines(doProjection(figures, eyepoint), size, bg);
-
+    }
 //    ############################# Z buffering #############################
 
 //    ############################ Output image ############################
     img::EasyImage image;
     std::ofstream fout("out.bmp", std::ios::binary);
-    fout << image;
-    fout.close();
-    return image;
+    fout <<
+         image;
+    fout.
+
+            close();
+
+    return
+            image;
 }
 
 

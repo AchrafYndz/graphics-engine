@@ -11,7 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="Add some zbuffering functionality">
+    <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="Copy and modify draw_line method to engine.cc">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engine.cc" beforeDir="false" afterPath="$PROJECT_DIR$/engine.cc" afterDir="false" />
     </list>
@@ -150,7 +150,9 @@
       <workItem from="1648311199542" duration="7048000" />
       <workItem from="1648408485978" duration="2361000" />
       <workItem from="1648457469528" duration="256000" />
-      <workItem from="1648662891943" duration="3389000" />
+      <workItem from="1648662891943" duration="3550000" />
+      <workItem from="1648734607379" duration="1000" />
+      <workItem from="1648752978810" duration="883000" />
     </task>
     <task id="LOCAL-00001" summary="Remove redundant theta+pi">
       <created>1647092291607</created>
@@ -341,7 +343,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648666400556</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Copy and modify draw_line method to engine.cc">
+      <created>1648715933484</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1648715933484</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -364,7 +373,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Pass figures by reference rather than value" />
     <MESSAGE value="Change order in which matrices are multiplied" />
     <MESSAGE value="Add Support for Faces that contain more than one line" />
     <MESSAGE value="Add 3D line figures up to icosahedron" />
@@ -389,7 +397,8 @@
     <MESSAGE value="Try to remove all bmp files from gh" />
     <MESSAGE value="Start working on ZBuffer" />
     <MESSAGE value="Add some zbuffering functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add some zbuffering functionality" />
+    <MESSAGE value="Copy and modify draw_line method to engine.cc" />
+    <option name="LAST_COMMIT_MESSAGE" value="Copy and modify draw_line method to engine.cc" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
