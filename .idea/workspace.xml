@@ -11,9 +11,45 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="Copy and modify draw_line method to engine.cc">
+    <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="Start rewriting engine to support all ini files at once">
+      <change afterPath="$PROJECT_DIR$/.engine.cc.swp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/intro/filelist" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engine.cc" beforeDir="false" afterPath="$PROJECT_DIR$/engine.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/intro/Intro1_ColorRectangle.bmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/intro/Intro3_lines_eye.png" beforeDir="false" afterPath="$PROJECT_DIR$/ini/intro/Intro3_lines_eye.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/intro/Intro3_lines_quartercircle.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/intro/Intro3_lines_quartercircle.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/intro/out.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/intro/out.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems001.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems001.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems002.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems002.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems003.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems003.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems004.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems004.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems005.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems005.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems006.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems006.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems007.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems007.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems008.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems008.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems009.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems009.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems010.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems010.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems011.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems011.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems012.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems012.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems013.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems013.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems014.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems014.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems015.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems015.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems016.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems016.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems017.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems017.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems018.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems018.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems019.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems019.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems020.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems020.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems021.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems021.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems022.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems022.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems023.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems023.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems024.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems024.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems025.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems025.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems026.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems026.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/l-systems/out.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/out.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/wireframe/out.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/wireframe/out.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/wireframe/wireframes011.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/wireframe/wireframes011.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/wireframe/wireframes043.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/wireframe/wireframes043.bmp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +188,7 @@
       <workItem from="1648457469528" duration="256000" />
       <workItem from="1648662891943" duration="3550000" />
       <workItem from="1648734607379" duration="1000" />
-      <workItem from="1648752978810" duration="883000" />
+      <workItem from="1648752978810" duration="7298000" />
     </task>
     <task id="LOCAL-00001" summary="Remove redundant theta+pi">
       <created>1647092291607</created>
@@ -350,7 +386,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648715933484</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Start rewriting engine to support all ini files at once">
+      <created>1648754093186</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1648754093186</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -373,7 +416,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Change order in which matrices are multiplied" />
     <MESSAGE value="Add Support for Faces that contain more than one line" />
     <MESSAGE value="Add 3D line figures up to icosahedron" />
     <MESSAGE value="Add more 3D lines up to Dodecahedron" />
@@ -398,7 +440,8 @@
     <MESSAGE value="Start working on ZBuffer" />
     <MESSAGE value="Add some zbuffering functionality" />
     <MESSAGE value="Copy and modify draw_line method to engine.cc" />
-    <option name="LAST_COMMIT_MESSAGE" value="Copy and modify draw_line method to engine.cc" />
+    <MESSAGE value="Start rewriting engine to support all ini files at once" />
+    <option name="LAST_COMMIT_MESSAGE" value="Start rewriting engine to support all ini files at once" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
