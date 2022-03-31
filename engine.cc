@@ -21,7 +21,6 @@
 #include <assert.h>
 
 //TODO: - fix 2D l-systems: update position even if !draw()
-//      - fix scaling issues
 
 using Lines2D = std::list<Line2D>;
 
@@ -753,20 +752,22 @@ createCylinder(Color color, Vector3D &center, double scale, double angleX, doubl
 
     points.reserve(2 * n);
     // Bottom surface
-    for (int i = 0; i < n; i++) points.push_back(Vector3D::point(cos(2 * i * M_PI / n), sin(2 * i * M_PI / n), h));
+    for (int i = 0; i < n; i++) points.push_back(Vector3D::point(cos(2 * i * M_PI / n), sin(2 * i * M_PI / n), 0));
     // Top surface
-    for (int i = n; i < 2 * n; i++) points.push_back(Vector3D::point(cos(2 * i * M_PI / n), sin(2 * i * M_PI / n), 0));
+    for (int i = n; i < 2 * n; i++) points.push_back(Vector3D::point(cos(2 * i * M_PI / n), sin(2 * i * M_PI / n), h));
 
     // Create faces
     std::vector<Face> faces;
 
     faces.reserve(n + 2);
     for (int i = 0; i <= n; i++) {
-        if (i == n) {
+        if (i==0) {
             // bottom surface
             std::vector<int> point_indexes_bottom;
             for (int j = n - 1; j >= 0; j--) point_indexes_bottom.push_back(j);
             faces.emplace_back(point_indexes_bottom);
+        }
+        if (i == n) {
             // top surface
             std::vector<int> point_indexes_top;
             for (int j = 2 * n - 1; j >= n; j--) point_indexes_top.push_back(j);
