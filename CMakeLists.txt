@@ -15,18 +15,18 @@ set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} ${OWN_GXX_FLAGS}")
 ############################################################
 set(engine_sources
 		util/Easy_image/easy_image.cc
-		engine.cc
+		src/engine.cc
 		util/Ini_config/ini_configuration.cc
-		util/Color.cc
-		util/Line2D.cc
-		util/Point2D.cc
+		src/lib/Color.cc
+		src/lib/Line2D.cc
+		src/lib/Point2D.cc
 		util/Parser/l_parser.cc
-		util/Face.cc
-		util/Face.h
-		util/Figure.cc
-		util/Figure.h
+		src/lib/Face.cc
+		src/lib/Face.h
+		src/lib/Figure.cc
+		src/lib/Figure.h
 		util/Vector3D/vector3d.h
-		util/Vector3D/vector3d.cc util/ZBuffer.cc util/ZBuffer.h)
+		util/Vector3D/vector3d.cc src/include/LSystems2D.cc src/include/LSystems2D.h src/include/LSystems3D.cc src/include/LSystems3D.h src/include/Figures3D.cc src/include/Figures3D.h src/include/Intro.cc src/include/Intro.h src/include/ZBufferWireframes.cc src/include/ZBufferWireframes.h src/include/Logic3D.cc src/include/Logic3D.h)
 
 ############################################################
 # Create an executable

@@ -5,7 +5,7 @@
 #include <list>
 
 #include "Color.h"
-#include "Vector3D/vector3d.h"
+#include "../../util/Vector3D/vector3d.h"
 #include "Face.h"
 
 class Figure {

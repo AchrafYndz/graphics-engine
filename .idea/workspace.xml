@@ -11,9 +11,35 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="Finish 3D L-systems">
+    <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="Fix zbuffering wireframes">
+      <change afterPath="$PROJECT_DIR$/src/include/Figures3D.cc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/include/Figures3D.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/include/Intro.cc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/include/Intro.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/include/LSystems2D.cc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/include/LSystems2D.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/include/LSystems3D.cc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/include/LSystems3D.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/include/Logic3D.cc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/include/Logic3D.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/include/ZBufferWireframes.cc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/include/ZBufferWireframes.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine.cc" beforeDir="false" afterPath="$PROJECT_DIR$/engine.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/Color.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/Color.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/Color.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/Color.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/Face.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/Face.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/Face.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/Face.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/Figure.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/Figure.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/Figure.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/Figure.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/Line2D.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/Line2D.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/Line2D.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/Line2D.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/Point2D.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/Point2D.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/Point2D.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/Point2D.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/ZBuffer.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/ZBuffer.h" beforeDir="false" />
     </list>
     <list id="bab7a8e1-9703-4f08-be94-b31643734fe9" name="Changes by Jonas" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,11 +100,11 @@
       <recent name="C:\Users\Achraf\CLionProjects\graphics-engine\ini\line_drawings" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\yando\CLionProjects\graphics-engine\src\lib" />
+      <recent name="C:\Users\yando\CLionProjects\graphics-engine" />
+      <recent name="C:\Users\yando\CLionProjects\graphics-engine\util\src" />
       <recent name="$PROJECT_DIR$/ini/wireframe" />
       <recent name="C:\Users\Achraf\CLionProjects\graphics-engine\ini\line_drawings" />
-      <recent name="C:\Users\Achraf\CLionProjects\graphics-engine\ini" />
-      <recent name="C:\Users\Achraf\CLionProjects\graphics-engine\util\Vector3D" />
-      <recent name="C:\Users\Achraf\CLionProjects\graphics-engine\util" />
     </key>
   </component>
   <component name="RunManager">
@@ -87,9 +113,9 @@
         <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
     <configuration name="engine" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$/ini/z-buffering" PASS_PARENT_ENVS_2="true" PROJECT_NAME="engine" TARGET_NAME="engine" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="engine" RUN_TARGET_NAME="engine">
@@ -155,7 +181,8 @@
       <workItem from="1648286431658" duration="8687000" />
       <workItem from="1648311199542" duration="6781000" />
       <workItem from="1648324374515" duration="1833000" />
-      <workItem from="1648807252804" duration="1219000" />
+      <workItem from="1648807252804" duration="1452000" />
+      <workItem from="1648824944938" duration="6194000" />
     </task>
     <task id="LOCAL-00001" summary="Remove redundant theta+pi">
       <created>1647092291607</created>
@@ -311,7 +338,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648325648706</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Fix zbuffering wireframes">
+      <created>1648808505126</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1648808505126</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -355,6 +389,11 @@
     <MESSAGE value="Start rewriting 3DLsystem logic" />
     <MESSAGE value="Fix error when compiling" />
     <MESSAGE value="Finish 3D L-systems" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finish 3D L-systems" />
+    <MESSAGE value="Fix zbuffering wireframes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix zbuffering wireframes" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

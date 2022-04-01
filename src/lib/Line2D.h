@@ -3,7 +3,7 @@
 
 #include "Point2D.h"
 #include "Color.h"
-#include "Easy_image/easy_image.h"
+#include "../../util/Easy_image/easy_image.h"
 
 class Line2D {
 public:
