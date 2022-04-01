@@ -136,7 +136,7 @@ draw_zbuf_line(ZBuffer &zbuffer, img::EasyImage &image, unsigned int x0, unsigne
     if (x0 == x1) {
         //special case for x0 == x1
         for (unsigned int i = std::min(y0, y1); i <= std::max(y0, y1); i++) {
-            double p = i / std::max(y0, y1);
+            double p = (double) (i / std::max(y0, y1));
             double Zp = p / z0 + (1 - p) / z1;
             if (1 / Zp < zbuffer[x0][i]) {
                 (image)(x0, i) = color;
@@ -146,7 +146,7 @@ draw_zbuf_line(ZBuffer &zbuffer, img::EasyImage &image, unsigned int x0, unsigne
     } else if (y0 == y1) {
         //special case for y0 == y1
         for (unsigned int i = std::min(x0, x1); i <= std::max(x0, x1); i++) {
-            double p = i / std::max(x0, x1);
+            double p = (double) (i / std::max(x0, x1));
             double Zp = p / z0 + (1 - p) / z1;
             if (1 / Zp < zbuffer[x0][i]) {
                 (image)(i, y0) = color;
@@ -162,7 +162,7 @@ draw_zbuf_line(ZBuffer &zbuffer, img::EasyImage &image, unsigned int x0, unsigne
         double m = ((double) y1 - (double) y0) / ((double) x1 - (double) x0);
         if (-1.0 <= m && m <= 1.0) {
             for (unsigned int i = 0; i <= (x1 - x0); i++) {
-                double p = (double) i / (x1 - x0);
+                double p = (double) (i / (x1 - x0));
                 double Zp = p / z0 + (1 - p) / z1;
                 if (1 / Zp < zbuffer[x0][i]) {
                     (image)(x0 + i, (unsigned int) round(y0 + m * i)) = color;
@@ -171,7 +171,7 @@ draw_zbuf_line(ZBuffer &zbuffer, img::EasyImage &image, unsigned int x0, unsigne
             }
         } else if (m > 1.0) {
             for (unsigned int i = 0; i <= (y1 - y0); i++) {
-                double p = i / (y1 - y0);
+                double p = (double) (i / (y1 - y0));
                 double Zp = p / z0 + (1 - p) / z1;
                 if (1 / Zp < zbuffer[x0][i]) {
                     (image)((unsigned int) round(x0 + (i / m)), y0 + i) = color;
@@ -180,7 +180,7 @@ draw_zbuf_line(ZBuffer &zbuffer, img::EasyImage &image, unsigned int x0, unsigne
             }
         } else if (m < -1.0) {
             for (unsigned int i = 0; i <= (y0 - y1); i++) {
-                double p = i / (y1 - y0);
+                double p = (double) (i / (y1 - y0));
                 double Zp = p / z0 + (1 - p) / z1;
                 if (1 / Zp < zbuffer[x0][i]) {
                     (image)((unsigned int) round(x0 - (i / m)), y0 - i) = color;
