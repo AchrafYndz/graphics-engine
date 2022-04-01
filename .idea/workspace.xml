@@ -11,14 +11,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="Start writing Zbuffer logic">
-      <change afterPath="$PROJECT_DIR$/ini/z-buffering/Fig20_1.L3D" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/z-buffering/Fig20_2.L3D" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/z-buffering/Hilbert.L3D" afterDir="false" />
+    <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="Finish 3D L-systems">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engine.cc" beforeDir="false" afterPath="$PROJECT_DIR$/engine.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/z-buffering/filelist" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z-buffering/filelist" afterDir="false" />
     </list>
+    <list id="bab7a8e1-9703-4f08-be94-b31643734fe9" name="Changes by Jonas" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -85,12 +82,17 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="engine" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="z_buffered_wireframes079.ini" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$/ini/z-buffering" PASS_PARENT_ENVS_2="true" PROJECT_NAME="engine" TARGET_NAME="engine" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="engine" RUN_TARGET_NAME="engine">
+    <configuration name="engine" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$/ini/z-buffering" PASS_PARENT_ENVS_2="true" PROJECT_NAME="engine" TARGET_NAME="engine" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="engine" RUN_TARGET_NAME="engine">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -151,13 +153,9 @@
       <workItem from="1648158889089" duration="3767000" />
       <workItem from="1648221637046" duration="7431000" />
       <workItem from="1648286431658" duration="8687000" />
-      <workItem from="1648311199542" duration="7048000" />
-      <workItem from="1648408485978" duration="2361000" />
-      <workItem from="1648457469528" duration="256000" />
-      <workItem from="1648662891943" duration="3550000" />
-      <workItem from="1648734607379" duration="1000" />
-      <workItem from="1648752978810" duration="12490000" />
-      <workItem from="1648805727430" duration="1196000" />
+      <workItem from="1648311199542" duration="6781000" />
+      <workItem from="1648324374515" duration="1833000" />
+      <workItem from="1648807252804" duration="1219000" />
     </task>
     <task id="LOCAL-00001" summary="Remove redundant theta+pi">
       <created>1647092291607</created>
@@ -306,91 +304,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648315747108</updated>
     </task>
-    <task id="LOCAL-00022" summary="Commit before switching devices">
-      <created>1648324116930</created>
+    <task id="LOCAL-00022" summary="Finish 3D L-systems">
+      <created>1648325648706</created>
       <option name="number" value="00022" />
       <option name="presentableId" value="LOCAL-00022" />
       <option name="project" value="LOCAL" />
-      <updated>1648324116930</updated>
+      <updated>1648325648706</updated>
     </task>
-    <task id="LOCAL-00023" summary="Repair 3D Line drawings functionality">
-      <created>1648408895270</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1648408895270</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Remove all bmp files from gh">
-      <created>1648408927606</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1648408927606</updated>
-    </task>
-    <task id="LOCAL-00025" summary="Try to remove all bmp files from gh">
-      <created>1648409003967</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1648409003967</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Start working on ZBuffer">
-      <created>1648410945547</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1648410945547</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Add some zbuffering functionality">
-      <created>1648666400556</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1648666400556</updated>
-    </task>
-    <task id="LOCAL-00028" summary="Copy and modify draw_line method to engine.cc">
-      <created>1648715933484</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1648715933484</updated>
-    </task>
-    <task id="LOCAL-00029" summary="Start rewriting engine to support all ini files at once">
-      <created>1648754093186</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1648754093186</updated>
-    </task>
-    <task id="LOCAL-00030" summary="Rewrite engine to support all ini files at once">
-      <created>1648760558659</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1648760558659</updated>
-    </task>
-    <task id="LOCAL-00031" summary="Fix Cylinder scaling issues">
-      <created>1648761485356</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1648761485356</updated>
-    </task>
-    <task id="LOCAL-00032" summary="Add functionality for characters without draw value (l-systems)">
-      <created>1648762417484</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1648762417484</updated>
-    </task>
-    <task id="LOCAL-00033" summary="Start writing Zbuffer logic">
-      <created>1648765716583</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1648765716583</updated>
-    </task>
-    <option name="localTasksCounter" value="34" />
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -406,13 +327,20 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
+    <MESSAGE value="Remove redundant theta+pi" />
+    <MESSAGE value="FIx minor bugs" />
+    <MESSAGE value="Pass figures by reference rather than value" />
+    <MESSAGE value="Change order in which matrices are multiplied" />
+    <MESSAGE value="Add Support for Faces that contain more than one line" />
+    <MESSAGE value="Add 3D line figures up to icosahedron" />
+    <MESSAGE value="Add more 3D lines up to Dodecahedron" />
+    <MESSAGE value="Add comments" />
     <MESSAGE value="Add points to Dodecahedron" />
     <MESSAGE value="Fix wrong index Icosahedron" />
     <MESSAGE value="Add circle support" />
@@ -426,18 +354,7 @@
     <MESSAGE value="Rework 3D L-system logic" />
     <MESSAGE value="Start rewriting 3DLsystem logic" />
     <MESSAGE value="Fix error when compiling" />
-    <MESSAGE value="Commit before switching devices" />
-    <MESSAGE value="Repair 3D Line drawings functionality" />
-    <MESSAGE value="Remove all bmp files from gh" />
-    <MESSAGE value="Try to remove all bmp files from gh" />
-    <MESSAGE value="Start working on ZBuffer" />
-    <MESSAGE value="Add some zbuffering functionality" />
-    <MESSAGE value="Copy and modify draw_line method to engine.cc" />
-    <MESSAGE value="Start rewriting engine to support all ini files at once" />
-    <MESSAGE value="Rewrite engine to support all ini files at once" />
-    <MESSAGE value="Fix Cylinder scaling issues" />
-    <MESSAGE value="Add functionality for characters without draw value (l-systems)" />
-    <MESSAGE value="Start writing Zbuffer logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="Start writing Zbuffer logic" />
+    <MESSAGE value="Finish 3D L-systems" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finish 3D L-systems" />
   </component>
 </project>

@@ -136,21 +136,21 @@ draw_zbuf_line(ZBuffer &zbuffer, img::EasyImage &image, unsigned int x0, unsigne
     if (x0 == x1) {
         //special case for x0 == x1
         for (unsigned int i = std::min(y0, y1); i <= std::max(y0, y1); i++) {
-            double p = (double) (i / std::max(y0, y1));
+            double p = i / ((double) std::max(y0, y1));
             double Zp = p / z0 + (1 - p) / z1;
-            if (1 / Zp < zbuffer[x0][i]) {
+            if (Zp < zbuffer[x0][i]) {
                 (image)(x0, i) = color;
-                zbuffer[x0][i] = 1 / Zp;
+                zbuffer[x0][i] = Zp;
             }
         }
     } else if (y0 == y1) {
         //special case for y0 == y1
         for (unsigned int i = std::min(x0, x1); i <= std::max(x0, x1); i++) {
-            double p = (double) (i / std::max(x0, x1));
+            double p = i / ((double) std::max(x0, x1));
             double Zp = p / z0 + (1 - p) / z1;
-            if (1 / Zp < zbuffer[x0][i]) {
+            if (Zp < zbuffer[i][y0]) {
                 (image)(i, y0) = color;
-                zbuffer[i][y0] = 1 / Zp;
+                zbuffer[i][y0] = Zp;
             }
         }
     } else {
@@ -162,29 +162,29 @@ draw_zbuf_line(ZBuffer &zbuffer, img::EasyImage &image, unsigned int x0, unsigne
         double m = ((double) y1 - (double) y0) / ((double) x1 - (double) x0);
         if (-1.0 <= m && m <= 1.0) {
             for (unsigned int i = 0; i <= (x1 - x0); i++) {
-                double p = (double) (i / (x1 - x0));
+                double p = i / ((double) (x1 - x0));
                 double Zp = p / z0 + (1 - p) / z1;
-                if (1 / Zp < zbuffer[x0][i]) {
+                if (Zp < zbuffer[x0 + i][(unsigned int) round(y0 + m * i)]) {
                     (image)(x0 + i, (unsigned int) round(y0 + m * i)) = color;
-                    zbuffer[x0 + i][(unsigned int) round(y0 + m * i)] = 1 / Zp;
+                    zbuffer[x0 + i][(unsigned int) round(y0 + m * i)] = Zp;
                 }
             }
         } else if (m > 1.0) {
             for (unsigned int i = 0; i <= (y1 - y0); i++) {
-                double p = (double) (i / (y1 - y0));
+                double p = i / ((double) (y1 - y0));
                 double Zp = p / z0 + (1 - p) / z1;
-                if (1 / Zp < zbuffer[x0][i]) {
+                if (Zp < zbuffer[(unsigned int) round(x0 + (i / m))][y0 + i]) {
                     (image)((unsigned int) round(x0 + (i / m)), y0 + i) = color;
-                    zbuffer[(unsigned int) round(x0 + (i / m))][y0 + i] = 1 / Zp;
+                    zbuffer[(unsigned int) round(x0 + (i / m))][y0 + i] = Zp;
                 }
             }
         } else if (m < -1.0) {
             for (unsigned int i = 0; i <= (y0 - y1); i++) {
-                double p = (double) (i / (y1 - y0));
+                double p = i / ((double) (y1 - y0));
                 double Zp = p / z0 + (1 - p) / z1;
-                if (1 / Zp < zbuffer[x0][i]) {
+                if (Zp < zbuffer[(unsigned int) round(x0 - (i / m))][y0 - i]) {
                     (image)((unsigned int) round(x0 - (i / m)), y0 - i) = color;
-                    zbuffer[(unsigned int) round(x0 - (i / m))][y0 - i] = 1 / Zp;
+                    zbuffer[(unsigned int) round(x0 - (i / m))][y0 - i] = Zp;
                 }
             }
         }
@@ -227,8 +227,9 @@ img::EasyImage draw2DLines(const Lines2D &lines, const int size, const img::Colo
 
     ZBuffer zbuf(image.get_width(), image.get_height());
     for (Line2D line: lines) {
-        draw_zbuf_line(zbuf, image, lround(line.p1.x * d + dx), lround(line.p1.y * d + dy), line.z1, lround(line.p2.x * d + dx),
-                        lround(line.p2.y * d + dy), line.z2, line.getEzColor());
+        draw_zbuf_line(zbuf, image, lround(line.p1.x * d + dx), lround(line.p1.y * d + dy), line.z1,
+                       lround(line.p2.x * d + dx),
+                       lround(line.p2.y * d + dy), line.z2, line.getEzColor());
     }
     std::ofstream fout("out.bmp", std::ios::binary);
     fout << image;
@@ -1054,7 +1055,8 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
         fout << image;
         fout.close();
         return image;
-    } else if ((std::string) configuration["General"]["type"] == "Wireframe" || (std::string) configuration["General"]["type"] == "ZBufferedWireframe") {
+    } else if ((std::string) configuration["General"]["type"] == "Wireframe" ||
+               (std::string) configuration["General"]["type"] == "ZBufferedWireframe") {
         std::vector<double> bg_col = configuration["General"]["backgroundcolor"];
         img::Color bg(bg_col[0] * 255, bg_col[1] * 255, bg_col[2] * 255);
         int size = configuration["General"]["size"];
