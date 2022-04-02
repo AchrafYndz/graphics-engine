@@ -11,9 +11,13 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="Start working on ZBuffering with triangulation">
+    <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="Write a part of the draw_zbuf_trag() function">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/engine.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/include/Logic3D.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/Logic3D.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/include/Logic3D.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/Logic3D.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/include/ZBufferTriangles.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/ZBufferTriangles.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/include/ZBufferTriangles.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/ZBufferTriangles.h" afterDir="false" />
     </list>
     <list id="bab7a8e1-9703-4f08-be94-b31643734fe9" name="Changes by Jonas" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,7 +68,7 @@
     <property name="cf.first.check.clang-format" value="false" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="cmake.loaded.for.project" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/ini/line_drawings" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/discord-intellij-3.0.0.zip" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="structure.view.defaults.are.configured" value="true" />
@@ -85,11 +89,6 @@
     <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="engine" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$/ini/z-buffering" PASS_PARENT_ENVS_2="true" PROJECT_NAME="engine" TARGET_NAME="engine" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="engine" RUN_TARGET_NAME="engine">
@@ -157,7 +156,15 @@
       <workItem from="1648324374515" duration="1833000" />
       <workItem from="1648807252804" duration="1452000" />
       <workItem from="1648824944938" duration="6337000" />
-      <workItem from="1648903427958" duration="5607000" />
+      <workItem from="1648903427958" duration="5696000" />
+      <workItem from="1648933425867" duration="1022000" />
+      <workItem from="1648934476138" duration="17000" />
+      <workItem from="1648934509925" duration="57000" />
+      <workItem from="1648934581275" duration="239000" />
+      <workItem from="1648934836153" duration="146000" />
+      <workItem from="1648934997819" duration="39000" />
+      <workItem from="1648935050783" duration="30000" />
+      <workItem from="1648935095225" duration="6636000" />
     </task>
     <task id="LOCAL-00001" summary="Remove redundant theta+pi">
       <created>1647092291607</created>
@@ -334,7 +341,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648907298027</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Write a part of the draw_zbuf_trag() function">
+      <created>1648913009556</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1648913009556</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -356,7 +370,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Remove redundant theta+pi" />
     <MESSAGE value="FIx minor bugs" />
     <MESSAGE value="Pass figures by reference rather than value" />
     <MESSAGE value="Change order in which matrices are multiplied" />
@@ -381,7 +394,8 @@
     <MESSAGE value="Fix zbuffering wireframes" />
     <MESSAGE value="Clean up code structure + better coding conventions" />
     <MESSAGE value="Start working on ZBuffering with triangulation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Start working on ZBuffering with triangulation" />
+    <MESSAGE value="Write a part of the draw_zbuf_trag() function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Write a part of the draw_zbuf_trag() function" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

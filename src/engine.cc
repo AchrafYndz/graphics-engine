@@ -11,6 +11,7 @@
 #include "include/LSystems3D.h"
 #include "include/Logic3D.h"
 #include "include/Figures3D.h"
+#include "include/ZBufferTriangles.h"
 
 #include <fstream>
 #include <iostream>

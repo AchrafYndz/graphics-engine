@@ -10,7 +10,9 @@
 std::vector<Face> triangulate(const Face &face);
 
 void
-draw_zbuf_trag(ZBuffer &zbuffer, img::EasyImage &img, Vector3D const &A, Vector3D const &B, Vector3D const &C, double d,
-               double dx, double dy, Color color);
+draw_zbuf_trag(ZBuffer &zbuffer, img::EasyImage &image, Vector3D const &A, Vector3D const &B, Vector3D const &C, double d,
+               double dx, double dy, img::Color color);
+
+
 
 #endif //ENGINE_ZBUFFERTRIANGLES_H

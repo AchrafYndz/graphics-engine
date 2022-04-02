@@ -124,7 +124,7 @@ Matrix eyePointTrans(const Vector3D &eyepoint) {
     return eyePointMatrix;
 }
 
-Point2D doProjection(const Vector3D &point, const int d) {
+Point2D doProjection(const Vector3D &point, const double d) {
     return {-point.x * d / point.z, -point.y * d / point.z};
 }
 

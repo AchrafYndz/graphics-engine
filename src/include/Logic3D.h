@@ -23,7 +23,7 @@ void toPolar(const Vector3D &point, double &theta, double &phi, double &r);
 
 Matrix eyePointTrans(const Vector3D &eyepoint);
 
-Point2D doProjection(const Vector3D &point, const int d);
+Point2D doProjection(const Vector3D &point, double d);
 
 void applyTransformation(Figure &fig, const Matrix &m);
 
