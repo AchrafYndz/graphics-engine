@@ -7,8 +7,8 @@
 
 std::vector<Face> triangulate(const Face &face) {
     std::vector<Face> triangles;
-    for (int i = 1; i <= face.point_indexes.size(); i++) {
-        triangles.emplace_back(std::vector<int>{0, i, i + 1});
+    for (int i = 1; i <= face.point_indexes.size()-2; i++) {
+        triangles.emplace_back(std::vector<int>{face.point_indexes[0], face.point_indexes[i], face.point_indexes[i+1]});
     }
     return triangles;
 }

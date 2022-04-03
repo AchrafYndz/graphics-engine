@@ -12,12 +12,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="Write a part of the draw_zbuf_trag() function">
+      <change afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/out.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering001.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering002.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering003.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering004.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering005.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering006.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering007.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering008.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering009.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering010.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering011.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering012.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering013.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering014.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering015.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering016.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering017.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering018.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering019.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/engine.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/include/Logic3D.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/Logic3D.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/include/Logic3D.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/Logic3D.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/include/Figures3D.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/Figures3D.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/include/Figures3D.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/Figures3D.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/include/ZBufferTriangles.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/ZBufferTriangles.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/include/ZBufferTriangles.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/ZBufferTriangles.h" afterDir="false" />
     </list>
     <list id="bab7a8e1-9703-4f08-be94-b31643734fe9" name="Changes by Jonas" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -86,14 +106,19 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="engine" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$/ini/z_buffering_triangles" PASS_PARENT_ENVS_2="true" PROJECT_NAME="engine" TARGET_NAME="engine" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="engine" RUN_TARGET_NAME="engine">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="engine" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$/ini/z-buffering" PASS_PARENT_ENVS_2="true" PROJECT_NAME="engine" TARGET_NAME="engine" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="engine" RUN_TARGET_NAME="engine">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
   </component>
@@ -364,6 +389,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

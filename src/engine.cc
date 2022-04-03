@@ -67,11 +67,13 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
         fout.close();
         return image;
     } else if ((std::string) configuration["General"]["type"] == "Wireframe" ||
-               (std::string) configuration["General"]["type"] == "ZBufferedWireframe") {
+               (std::string) configuration["General"]["type"] == "ZBufferedWireframe" ||
+               (std::string) configuration["General"]["type"] == "ZBuffering") {
         std::vector<double> bg_col = configuration["General"]["backgroundcolor"];
         img::Color bg(bg_col[0] * 255, bg_col[1] * 255, bg_col[2] * 255);
         int size = configuration["General"]["size"];
         bool zBuffer = ((std::string) configuration["General"]["type"] == "ZBufferedWireframe");
+        bool toTriangulate = ((std::string) configuration["General"]["type"] == "ZBuffering");
         Figures3D figures;
         int nrFigures = configuration["General"]["nrFigures"];
         for (int i = 0; i < nrFigures; i++) {
@@ -125,32 +127,32 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
                 double degreeZ = configuration["Figure" + std::to_string(i)]["rotateZ"];
                 double angleZ = degreeZ / 180 * M_PI;
                 std::string type = configuration["Figure" + std::to_string(i)]["type"];
-                if (type == "Cube") figures.push_back(createCube(color, center, scale, angleX, angleY, angleZ));
+                if (type == "Cube") figures.push_back(createCube(color, center, scale, angleX, angleY, angleZ, toTriangulate));
                 else if (type == "Tetrahedron")
-                    figures.push_back(createTetrahedron(color, center, scale, angleX, angleY, angleZ));
+                    figures.push_back(createTetrahedron(color, center, scale, angleX, angleY, angleZ, toTriangulate));
                 else if (type == "Icosahedron")
-                    figures.push_back(createIcosahedron(color, center, scale, angleX, angleY, angleZ));
+                    figures.push_back(createIcosahedron(color, center, scale, angleX, angleY, angleZ, toTriangulate));
                 else if (type == "Octahedron")
-                    figures.push_back(createOctahedron(color, center, scale, angleX, angleY, angleZ));
+                    figures.push_back(createOctahedron(color, center, scale, angleX, angleY, angleZ, toTriangulate));
                 else if (type == "Dodecahedron")
-                    figures.push_back(createDodecahedron(color, center, scale, angleX, angleY, angleZ));
+                    figures.push_back(createDodecahedron(color, center, scale, angleX, angleY, angleZ, toTriangulate));
                 else if (type == "Cone") {
                     double height = configuration["Figure" + std::to_string(i)]["height"];
                     int n = configuration["Figure" + std::to_string(i)]["n"];
-                    figures.push_back(createCone(color, center, scale, angleX, angleY, angleZ, n, height));
+                    figures.push_back(createCone(color, center, scale, angleX, angleY, angleZ, n, height, toTriangulate));
                 } else if (type == "Cylinder") {
                     double height = configuration["Figure" + std::to_string(i)]["height"];
                     int n = configuration["Figure" + std::to_string(i)]["n"];
-                    figures.push_back(createCylinder(color, center, scale, angleX, angleY, angleZ, n, height));
+                    figures.push_back(createCylinder(color, center, scale, angleX, angleY, angleZ, n, height, toTriangulate));
                 } else if (type == "Sphere") {
                     int n = configuration["Figure" + std::to_string(i)]["n"];
-                    figures.push_back(createSphere(color, center, scale, angleX, angleY, angleZ, n));
+                    figures.push_back(createSphere(color, center, scale, angleX, angleY, angleZ, n, toTriangulate));
                 } else if (type == "Torus") {
                     double r = configuration["Figure" + std::to_string(i)]["r"];
                     double R = configuration["Figure" + std::to_string(i)]["R"];
                     int n = configuration["Figure" + std::to_string(i)]["m"];
                     int m = configuration["Figure" + std::to_string(i)]["n"];
-                    figures.push_back(createTorus(color, center, scale, angleX, angleY, angleZ, r, R, n, m));
+                    figures.push_back(createTorus(color, center, scale, angleX, angleY, angleZ, r, R, n, m, toTriangulate));
                 } else if (type == "3DLSystem") {
                     LParser::LSystem3D l_system;
                     std::ifstream input_stream(configuration["Figure" + std::to_string(i)]["inputfile"]);

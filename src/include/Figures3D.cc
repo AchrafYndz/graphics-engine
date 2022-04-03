@@ -1,10 +1,12 @@
 #define _USE_MATH_DEFINES // Windows only
 
 #include "Figures3D.h"
+#include "ZBufferTriangles.h"
 
 #include <cmath>
 
-Figure createCube(Color color, Vector3D &center, double scale, double angleX, double angleY, double angleZ) {
+Figure
+createCube(Color color, Vector3D &center, double scale, double angleX, double angleY, double angleZ, bool toTriangulate) {
     // Create points
     std::vector<Vector3D> points;
     points.push_back(Vector3D::point(1, -1, -1));
@@ -25,11 +27,21 @@ Figure createCube(Color color, Vector3D &center, double scale, double angleX, do
     faces.emplace_back(std::vector<int>{6, 2, 7, 3});
     faces.emplace_back(std::vector<int>{0, 5, 1, 4});
 
+    // Triangulation
+    if (toTriangulate) {
+        std::vector<Face> triangles;
+        for (const Face &face: faces) {
+            std::vector<Face> newTriangles = triangulate(face);
+            triangles.insert(triangles.end(), newTriangles.begin(), newTriangles.end());
+        }
+        faces = triangles;
+    }
+
     // Create figure
     return {points, faces, color, center, scale, angleX, angleY, angleZ};
 }
 
-Figure createTetrahedron(Color color, Vector3D &center, double scale, double angleX, double angleY, double angleZ) {
+Figure createTetrahedron(Color color, Vector3D &center, double scale, double angleX, double angleY, double angleZ, bool toTriangulate) {
     // Create points
     std::vector<Vector3D> points;
     points.push_back(Vector3D::point(1, -1, -1));
@@ -43,11 +55,21 @@ Figure createTetrahedron(Color color, Vector3D &center, double scale, double ang
     faces.emplace_back(std::vector<int>{0, 3, 1});
     faces.emplace_back(std::vector<int>{0, 2, 3});
 
+    // Triangulation
+    if (toTriangulate) {
+        std::vector<Face> triangles;
+        for (const Face &face: faces) {
+            std::vector<Face> newTriangles = triangulate(face);
+            triangles.insert(triangles.end(), newTriangles.begin(), newTriangles.end());
+        }
+        faces = triangles;
+    }
+
     // Create figure
     return {points, faces, color, center, scale, angleX, angleY, angleZ};
 }
 
-Figure createOctahedron(Color color, Vector3D &center, double scale, double angleX, double angleY, double angleZ) {
+Figure createOctahedron(Color color, Vector3D &center, double scale, double angleX, double angleY, double angleZ, bool toTriangulate) {
     // Create points
     std::vector<Vector3D> points;
     points.push_back(Vector3D::point(1, 0, 0));
@@ -68,11 +90,21 @@ Figure createOctahedron(Color color, Vector3D &center, double scale, double angl
     faces.emplace_back(std::vector<int>{3, 2, 4});
     faces.emplace_back(std::vector<int>{0, 3, 4});
 
+    // Triangulation
+    if (toTriangulate) {
+        std::vector<Face> triangles;
+        for (const Face &face: faces) {
+            std::vector<Face> newTriangles = triangulate(face);
+            triangles.insert(triangles.end(), newTriangles.begin(), newTriangles.end());
+        }
+        faces = triangles;
+    }
+
     // Create figure
     return {points, faces, color, center, scale, angleX, angleY, angleZ};
 }
 
-Figure createIcosahedron(Color color, Vector3D &center, double scale, double angleX, double angleY, double angleZ) {
+Figure createIcosahedron(Color color, Vector3D &center, double scale, double angleX, double angleY, double angleZ, bool toTriangulate) {
     // Create points
     std::vector<Vector3D> points;
 
@@ -111,15 +143,25 @@ Figure createIcosahedron(Color color, Vector3D &center, double scale, double ang
     faces.emplace_back(std::vector<int>{11, 10, 9});
     faces.emplace_back(std::vector<int>{11, 6, 10});
 
+    // Triangulation
+    if (toTriangulate) {
+        std::vector<Face> triangles;
+        for (const Face &face: faces) {
+            std::vector<Face> newTriangles = triangulate(face);
+            triangles.insert(triangles.end(), newTriangles.begin(), newTriangles.end());
+        }
+        faces = triangles;
+    }
+
     // Create figure
     return {points, faces, color, center, scale, angleX, angleY, angleZ};
 }
 
-Figure createDodecahedron(Color color, Vector3D &center, double scale, double angleX, double angleY, double angleZ) {
+Figure createDodecahedron(Color color, Vector3D &center, double scale, double angleX, double angleY, double angleZ, bool toTriangulate) {
     // Create points
     std::vector<Vector3D> points;
 
-    Figure icosahedron = createIcosahedron(color, center, scale, angleX, angleY, angleZ);
+    Figure icosahedron = createIcosahedron(color, center, scale, angleX, angleY, angleZ, toTriangulate);
 
     for (const Face &triangle: icosahedron.faces) {
         Vector3D point1 = icosahedron.points[triangle.point_indexes[0]];
@@ -144,13 +186,23 @@ Figure createDodecahedron(Color color, Vector3D &center, double scale, double an
     faces.emplace_back(std::vector<int>{16, 8, 7, 6, 15});
     faces.emplace_back(std::vector<int>{15, 6, 5, 14, 19});
 
+    // Triangulation
+    if (toTriangulate) {
+        std::vector<Face> triangles;
+        for (const Face &face: faces) {
+            std::vector<Face> newTriangles = triangulate(face);
+            triangles.insert(triangles.end(), newTriangles.begin(), newTriangles.end());
+        }
+        faces = triangles;
+    }
+
     // Create figure
     return {points, faces, color, center, scale, angleX, angleY, angleZ};
 }
 
 Figure
-createSphere(Color color, Vector3D &center, double scale, double angleX, double angleY, double angleZ, const int n) {
-    Figure icosahedron = createIcosahedron(color, center, scale, angleX, angleY, angleZ);
+createSphere(Color color, Vector3D &center, double scale, double angleX, double angleY, double angleZ, const int n, bool toTriangulate) {
+    Figure icosahedron = createIcosahedron(color, center, scale, angleX, angleY, angleZ, toTriangulate);
 
     for (int _ = 0; _ < n; _++) {
         std::vector<Face> faces;
@@ -188,7 +240,17 @@ createSphere(Color color, Vector3D &center, double scale, double angleX, double 
         }
         // Replace points and faces
         icosahedron.points = points;
-        icosahedron.faces = faces;
+        // Triangulation
+        if (toTriangulate) {
+            std::vector<Face> triangles;
+            for (const Face &face: faces) {
+                std::vector<Face> newTriangles = triangulate(face);
+                triangles.insert(triangles.end(), newTriangles.begin(), newTriangles.end());
+            }
+            icosahedron.faces = triangles;
+        }
+        else icosahedron.faces = faces;
+
     }
 
     for (Vector3D &point: icosahedron.points) {
@@ -198,11 +260,12 @@ createSphere(Color color, Vector3D &center, double scale, double angleX, double 
         // Replace coordinates
         point /= r;
     }
+
     return icosahedron;
 }
 
 Figure createCone(Color color, Vector3D &center, double scale, double angleX, double angleY, double angleZ, const int n,
-                  const double h) {
+                  const double h, bool toTriangulate) {
     // Create points
     std::vector<Vector3D> points;
     for (int i = 0; i <= n; i++) {
@@ -220,12 +283,23 @@ Figure createCone(Color color, Vector3D &center, double scale, double angleX, do
             faces.emplace_back(point_indexes);
         }
     }
+
+    // Triangulation
+    if (toTriangulate) {
+        std::vector<Face> triangles;
+        for (const Face &face: faces) {
+            std::vector<Face> newTriangles = triangulate(face);
+            triangles.insert(triangles.end(), newTriangles.begin(), newTriangles.end());
+        }
+        faces = triangles;
+    }
+
     return {points, faces, color, center, scale, angleX, angleY, angleZ};
 }
 
 Figure
 createCylinder(Color color, Vector3D &center, double scale, double angleX, double angleY, double angleZ, const int n,
-               const double h) {
+               const double h, bool toTriangulate) {
     // Create points
     std::vector<Vector3D> points;
 
@@ -255,12 +329,23 @@ createCylinder(Color color, Vector3D &center, double scale, double angleX, doubl
         } else if (i == n - 1) faces.emplace_back(std::vector<int>{i + 1, n + i, i, (i + 1) % n});
         else faces.emplace_back(std::vector<int>{n + i + 1, n + i, i, i + 1});
     }
-    return{points, faces, color, center, scale, angleX, angleY, angleZ};
+
+    // Triangulation
+    if (toTriangulate) {
+        std::vector<Face> triangles;
+        for (const Face &face: faces) {
+            std::vector<Face> newTriangles = triangulate(face);
+            triangles.insert(triangles.end(), newTriangles.begin(), newTriangles.end());
+        }
+        faces = triangles;
+    }
+
+    return {points, faces, color, center, scale, angleX, angleY, angleZ};
 }
 
 Figure
 createTorus(Color color, Vector3D &center, double scale, double angleX, double angleY, double angleZ, const double r,
-            const double R, const int n, const int m) {
+            const double R, const int n, const int m, bool toTriangulate) {
     // Create points
     std::vector<Vector3D> points;
     for (int i = 0; i < n; i++) {
@@ -288,7 +373,17 @@ createTorus(Color color, Vector3D &center, double scale, double angleX, double a
         }
     }
 
-    return{points, faces, color, center, scale, angleX, angleY, angleZ};
+    // Triangulation
+    if (toTriangulate) {
+        std::vector<Face> triangles;
+        for (const Face &face: faces) {
+            std::vector<Face> newTriangles = triangulate(face);
+            triangles.insert(triangles.end(), newTriangles.begin(), newTriangles.end());
+        }
+        faces = triangles;
+    }
+
+    return {points, faces, color, center, scale, angleX, angleY, angleZ};
 }
 
 
