@@ -127,7 +127,8 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
                 double degreeZ = configuration["Figure" + std::to_string(i)]["rotateZ"];
                 double angleZ = degreeZ / 180 * M_PI;
                 std::string type = configuration["Figure" + std::to_string(i)]["type"];
-                if (type == "Cube") figures.push_back(createCube(color, center, scale, angleX, angleY, angleZ, toTriangulate));
+                if (type == "Cube")
+                    figures.push_back(createCube(color, center, scale, angleX, angleY, angleZ, toTriangulate));
                 else if (type == "Tetrahedron")
                     figures.push_back(createTetrahedron(color, center, scale, angleX, angleY, angleZ, toTriangulate));
                 else if (type == "Icosahedron")
@@ -139,11 +140,13 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
                 else if (type == "Cone") {
                     double height = configuration["Figure" + std::to_string(i)]["height"];
                     int n = configuration["Figure" + std::to_string(i)]["n"];
-                    figures.push_back(createCone(color, center, scale, angleX, angleY, angleZ, n, height, toTriangulate));
+                    figures.push_back(
+                            createCone(color, center, scale, angleX, angleY, angleZ, n, height, toTriangulate));
                 } else if (type == "Cylinder") {
                     double height = configuration["Figure" + std::to_string(i)]["height"];
                     int n = configuration["Figure" + std::to_string(i)]["n"];
-                    figures.push_back(createCylinder(color, center, scale, angleX, angleY, angleZ, n, height, toTriangulate));
+                    figures.push_back(
+                            createCylinder(color, center, scale, angleX, angleY, angleZ, n, height, toTriangulate));
                 } else if (type == "Sphere") {
                     int n = configuration["Figure" + std::to_string(i)]["n"];
                     figures.push_back(createSphere(color, center, scale, angleX, angleY, angleZ, n, toTriangulate));
@@ -152,7 +155,8 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
                     double R = configuration["Figure" + std::to_string(i)]["R"];
                     int n = configuration["Figure" + std::to_string(i)]["m"];
                     int m = configuration["Figure" + std::to_string(i)]["n"];
-                    figures.push_back(createTorus(color, center, scale, angleX, angleY, angleZ, r, R, n, m, toTriangulate));
+                    figures.push_back(
+                            createTorus(color, center, scale, angleX, angleY, angleZ, r, R, n, m, toTriangulate));
                 } else if (type == "3DLSystem") {
                     LParser::LSystem3D l_system;
                     std::ifstream input_stream(configuration["Figure" + std::to_string(i)]["inputfile"]);
@@ -164,7 +168,22 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
         }
         std::vector<double> eyepoint_ = configuration["General"]["eye"];
         Vector3D eyepoint = Vector3D::point(eyepoint_[0], eyepoint_[1], eyepoint_[2]);
-        img::EasyImage image = draw2DLines(doProjection(figures, eyepoint), size, bg, zBuffer);
+        img::EasyImage image;
+        if (toTriangulate) {
+            double d;
+            double dx;
+            double dy;
+            double width;
+            double height;
+            getImageSpecs(doProjection(figures, eyepoint), size, d, dx, dy, width, height);
+
+            ZBuffer zbuf(width, height);
+            image = img::EasyImage(width, height);
+            for (Figure triangle: figures) {
+                draw_zbuf_trag(zbuf, image, triangle.points[0], triangle.points[1], triangle.points[2], d, dx, dy,
+                               triangle.getEzColor());
+            }
+        } else image = draw2DLines(doProjection(figures, eyepoint), size, bg, zBuffer);
         std::ofstream fout("out.bmp", std::ios::binary);
         fout << image;
         fout.close();

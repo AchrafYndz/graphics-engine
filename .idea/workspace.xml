@@ -11,33 +11,18 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="Write a part of the draw_zbuf_trag() function">
-      <change afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/out.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering001.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering002.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering003.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering004.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering005.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering006.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering007.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering008.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering009.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering010.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering011.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering012.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering013.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering014.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering015.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering016.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering017.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering018.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering019.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+    <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="Fix triangulation indexes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/out.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/out.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering001.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering001.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering002.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering002.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering003.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering003.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering004.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering004.bmp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/engine.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/include/Figures3D.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/Figures3D.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/include/Figures3D.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/Figures3D.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/include/ZBufferTriangles.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/ZBufferTriangles.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/include/ZBufferTriangles.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/ZBufferTriangles.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/Figure.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/Figure.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/Figure.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/Figure.h" afterDir="false" />
     </list>
     <list id="bab7a8e1-9703-4f08-be94-b31643734fe9" name="Changes by Jonas" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -373,7 +358,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648913009556</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Fix triangulation indexes">
+      <created>1648976114249</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1648976114249</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -396,7 +388,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="FIx minor bugs" />
     <MESSAGE value="Pass figures by reference rather than value" />
     <MESSAGE value="Change order in which matrices are multiplied" />
     <MESSAGE value="Add Support for Faces that contain more than one line" />
@@ -421,7 +412,8 @@
     <MESSAGE value="Clean up code structure + better coding conventions" />
     <MESSAGE value="Start working on ZBuffering with triangulation" />
     <MESSAGE value="Write a part of the draw_zbuf_trag() function" />
-    <option name="LAST_COMMIT_MESSAGE" value="Write a part of the draw_zbuf_trag() function" />
+    <MESSAGE value="Fix triangulation indexes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix triangulation indexes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

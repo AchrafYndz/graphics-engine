@@ -7,6 +7,7 @@
 #include "Color.h"
 #include "../../util/Vector3D/vector3d.h"
 #include "Face.h"
+#include "../../util/Easy_image/easy_image.h"
 
 class Figure {
 public:
@@ -24,6 +25,7 @@ public:
                                                              center(center_), scale(scale_), rotateAngleX(angleX_),
                                                              rotateAngleY(angleY_), rotateAngleZ(angleZ_) {};
 
+    img::Color getEzColor();
 };
 
 typedef std::list<Figure> Figures3D;

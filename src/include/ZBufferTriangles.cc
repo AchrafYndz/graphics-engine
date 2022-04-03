@@ -7,8 +7,9 @@
 
 std::vector<Face> triangulate(const Face &face) {
     std::vector<Face> triangles;
-    for (int i = 1; i <= face.point_indexes.size()-2; i++) {
-        triangles.emplace_back(std::vector<int>{face.point_indexes[0], face.point_indexes[i], face.point_indexes[i+1]});
+    for (int i = 1; i <= face.point_indexes.size() - 2; i++) {
+        triangles.emplace_back(
+                std::vector<int>{face.point_indexes[0], face.point_indexes[i], face.point_indexes[i + 1]});
     }
     return triangles;
 }
@@ -85,4 +86,41 @@ draw_zbuf_trag(ZBuffer &zbuffer, img::EasyImage &image, Vector3D const &A, Vecto
             }
         }
     }
+}
+
+void
+getImageSpecs(const Lines2D &lines, const int size, double &d, double &dx, double &dy, double &width, double &height) {
+    double xmin = lines.front().p1.x;
+    double xmax = lines.front().p1.y;
+    double ymin = lines.front().p2.x;
+    double ymax = lines.front().p2.y;
+    // determine max and min
+    for (Line2D line: lines) {
+        if (line.p1.x < xmin) xmin = line.p1.x;
+        if (line.p2.x < xmin) xmin = line.p2.x;
+        if (line.p1.y < ymin) ymin = line.p1.y;
+        if (line.p2.y < ymin) ymin = line.p2.y;
+
+        if (line.p1.x > xmax) xmax = line.p1.x;
+        if (line.p2.x > xmax) xmax = line.p2.x;
+        if (line.p1.y > ymax) ymax = line.p1.y;
+        if (line.p2.y > ymax) ymax = line.p2.y;
+    }
+
+    double xrange = std::abs(xmax - xmin);
+    double yrange = std::abs(ymax - ymin);
+
+    double imagex = size * xrange / std::max(xrange, yrange);
+    double imagey = size * yrange / std::max(xrange, yrange);
+
+    d = 0.95 * imagex / xrange;
+
+    double DCx = d * (xmin + xmax) / 2;
+    double DCy = d * (ymin + ymax) / 2;
+
+    dx = imagex / 2 - DCx;
+    dy = imagey / 2 - DCy;
+
+    width = lround(imagex);
+    height = lround(imagey);
 }
