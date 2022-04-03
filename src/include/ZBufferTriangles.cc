@@ -3,7 +3,6 @@
 #include <limits>
 
 #include "ZBufferTriangles.h"
-#include "Logic3D.h"
 
 std::vector<Face> triangulate(const Face &face) {
     std::vector<Face> triangles;
@@ -19,48 +18,11 @@ draw_zbuf_trag(ZBuffer &zbuffer, img::EasyImage &image, Vector3D const &A, Vecto
                double d,
                double dx, double dy, img::Color color) {
     // Project the triangle
-    Point2D AProjected = doProjection(A, d);
-    Point2D BProjected = doProjection(B, d);
-    Point2D CProjected = doProjection(C, d);
+    Point2D AProjected = doProjection(A, d, dx, dy);
+    Point2D BProjected = doProjection(B, d, dx, dy);
+    Point2D CProjected = doProjection(C, d, dx, dy);
 
-    // Determine which pixels belong to the triangle
-    int y_min = round(std::min({AProjected.y, BProjected.y, CProjected.y}) + 0.5);
-    int y_max = round(std::max({AProjected.y, BProjected.y, CProjected.y}) - 0.5);
-
-    int x_L_AB = std::numeric_limits<int>::max();
-    int x_L_AC = std::numeric_limits<int>::max();
-    int x_L_BC = std::numeric_limits<int>::max();
-
-    int x_R_AB = -std::numeric_limits<int>::max();
-    int x_R_AC = -std::numeric_limits<int>::max();
-    int x_R_BC = -std::numeric_limits<int>::max();
-
-    Vector3D P = A;
-    Vector3D Q = B;
-    if ((-P.y) * (-Q.y) <= 0 && P.y != Q.y) {
-        double x_I = Q.x + (P.x - Q.x) * (-Q.y) / (P.y - Q.y);
-        x_L_AB = x_I;
-        x_R_AB = x_I;
-    }
-    P = A;
-    Q = C;
-    if ((-P.y) * (-Q.y) <= 0 && P.y != Q.y) {
-        double x_I = Q.x + (P.x - Q.x) * (-Q.y) / (P.y - Q.y);
-        x_L_AC = x_I;
-        x_R_AC = x_I;
-    }
-    P = B;
-    Q = C;
-    if ((-P.y) * (-Q.y) <= 0 && P.y != Q.y) {
-        double x_I = Q.x + (P.x - Q.x) * (-Q.y) / (P.y - Q.y);
-        x_L_BC = x_I;
-        x_R_BC = x_I;
-    }
-
-    int x_L = round(std::min({x_L_AB, x_L_AC, x_L_BC}) + 0.5);
-    int x_R = round(std::max({x_R_AB, x_R_AC, x_R_BC}) - 0.5);
-
-    // Calculate the 1/z values
+    // Calculations needed for the 1/z values
     double x_G = (AProjected.x + BProjected.x + CProjected.x) / 3;
     double y_G = (AProjected.y + BProjected.y + CProjected.y) / 3;
     double z_GReciprocal = (1 / A.z + 1 / B.z + 1 / C.z) / 3;
@@ -76,14 +38,49 @@ draw_zbuf_trag(ZBuffer &zbuffer, img::EasyImage &image, Vector3D const &A, Vecto
     double dzdx = -w.x / k * d;
     double dzdy = -w.y / k * d;
 
-    // zbuffer
-    for (int y = y_min; y <= y_max; y++) {
+    // Determine which pixels belong to the triangle
+    int y_min = round(std::min({AProjected.y, BProjected.y, CProjected.y}) + 0.5);
+    int y_max = round(std::max({AProjected.y, BProjected.y, CProjected.y}) - 0.5);
+
+    int x_L_AB = std::numeric_limits<int>::max();
+    int x_L_AC = std::numeric_limits<int>::max();
+    int x_L_BC = std::numeric_limits<int>::max();
+
+    int x_R_AB = -std::numeric_limits<int>::max();
+    int x_R_AC = -std::numeric_limits<int>::max();
+    int x_R_BC = -std::numeric_limits<int>::max();
+
+    for (int y_I = y_min; y_I <= y_max; y_I++) {
+        // AB
+        Point2D P = AProjected;
+        Point2D Q = BProjected;
+        if ((y_I - P.y) * (y_I - Q.y) <= 0 && P.y != Q.y) {
+            double x_I = Q.x + (P.x - Q.x) * (y_I - Q.y) / (P.y - Q.y);
+            x_L_AB = x_I;
+            x_R_AB = x_I;
+        }
+        // AC
+        Q = CProjected;
+        if ((y_I - P.y) * (y_I - Q.y) <= 0 && P.y != Q.y) {
+            double x_I = Q.x + (P.x - Q.x) * (y_I - Q.y) / (P.y - Q.y);
+            x_L_AC = x_I;
+            x_R_AC = x_I;
+        }
+        // BC
+        P = BProjected;
+        if ((y_I - P.y) * (y_I - Q.y) <= 0 && P.y != Q.y) {
+            double x_I = Q.x + (P.x - Q.x) * (y_I - Q.y) / (P.y - Q.y);
+            x_L_BC = x_I;
+            x_R_BC = x_I;
+        }
+        int x_L = round(std::min({x_L_AB, x_L_AC, x_L_BC}) + 0.5);
+        int x_R = round(std::max({x_R_AB, x_R_AC, x_R_BC}) - 0.5);
         for (int x = x_L; x <= x_R; x++) {
-            double zReciprocal = z_GReciprocal + (x - x_G) * dzdx + (y - y_G) * dzdy;
-            if (zReciprocal < zbuffer[x][y]) {
-                (image)(x, y) = color;
-                zbuffer[x][y] = zReciprocal;
-            }
+//            double zReciprocal = z_GReciprocal + (x - x_G) * dzdx + (y - y_G) * dzdy;
+//            if (zReciprocal < zbuffer[x][y]) {
+            (image)(x, y_I) = color;
+//                zbuffer[x][y] = zReciprocal;
+//            }
         }
     }
 }
@@ -123,4 +120,8 @@ getImageSpecs(const Lines2D &lines, const int size, double &d, double &dx, doubl
 
     width = lround(imagex);
     height = lround(imagey);
+}
+
+Point2D doProjection(const Vector3D point, const double d, const double dx, const double dy) {
+    return {-(point.x * d / point.z) + dx, -(point.y * d / point.z) + dy};
 }

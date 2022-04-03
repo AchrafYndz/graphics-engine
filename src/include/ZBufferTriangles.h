@@ -6,7 +6,7 @@
 #include "ZBufferWireframes.h"
 #include "../../util/Vector3D/vector3d.h"
 #include "../lib/Color.h"
-#include "Logic3D.h"
+#include "LSystems2D.h"
 
 
 std::vector<Face> triangulate(const Face &face);
@@ -17,5 +17,6 @@ draw_zbuf_trag(ZBuffer &zbuffer, img::EasyImage &image, Vector3D const &A, Vecto
 
 void getImageSpecs(const Lines2D &lines, int size, double &d, double &dx, double &dy, double &width, double &height);
 
+Point2D doProjection(const Vector3D point, const double d, const double dx, const double dy);
 
 #endif //ENGINE_ZBUFFERTRIANGLES_H
