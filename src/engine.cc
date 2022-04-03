@@ -179,9 +179,13 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
 
             ZBuffer zbuf(width, height);
             image = img::EasyImage(width, height);
-            for (Figure triangle: figures) {
-                draw_zbuf_trag(zbuf, image, triangle.points[0], triangle.points[1], triangle.points[2], d, dx, dy,
-                               triangle.getEzColor());
+            for (Figure &figure: figures) {
+                for (const Face &triangle: figure.faces) {
+                    draw_zbuf_trag(zbuf, image, figure.points[triangle.point_indexes[0]],
+                                   figure.points[triangle.point_indexes[1]], figure.points[triangle.point_indexes[2]],
+                                   d, dx, dy,
+                                   figure.getEzColor());
+                }
             }
         } else image = draw2DLines(doProjection(figures, eyepoint), size, bg, zBuffer);
         std::ofstream fout("out.bmp", std::ios::binary);

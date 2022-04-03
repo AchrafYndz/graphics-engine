@@ -1,6 +1,7 @@
 #include <cmath>
 #include <algorithm>
 #include <limits>
+#include <cassert>
 
 #include "ZBufferTriangles.h"
 
@@ -21,6 +22,12 @@ draw_zbuf_trag(ZBuffer &zbuffer, img::EasyImage &image, Vector3D const &A, Vecto
     Point2D AProjected = doProjection(A, d, dx, dy);
     Point2D BProjected = doProjection(B, d, dx, dy);
     Point2D CProjected = doProjection(C, d, dx, dy);
+
+    if (AProjected.x == image.get_width() ||
+        BProjected.x == image.get_width() ||
+        CProjected.x == image.get_width()) {
+        std::cout << "ohoh stinky" << std::endl;
+    }
 
     // Calculations needed for the 1/z values
     double x_G = (AProjected.x + BProjected.x + CProjected.x) / 3;
@@ -76,11 +83,11 @@ draw_zbuf_trag(ZBuffer &zbuffer, img::EasyImage &image, Vector3D const &A, Vecto
         int x_L = round(std::min({x_L_AB, x_L_AC, x_L_BC}) + 0.5);
         int x_R = round(std::max({x_R_AB, x_R_AC, x_R_BC}) - 0.5);
         for (int x = x_L; x <= x_R; x++) {
-//            double zReciprocal = z_GReciprocal + (x - x_G) * dzdx + (y - y_G) * dzdy;
-//            if (zReciprocal < zbuffer[x][y]) {
-            (image)(x, y_I) = color;
-//                zbuffer[x][y] = zReciprocal;
-//            }
+            double zReciprocal = z_GReciprocal + (x - x_G) * dzdx + (y_I - y_G) * dzdy;
+            if (zReciprocal < zbuffer[x][y_I]) {
+                (image)(x, y_I) = color;
+                zbuffer[x][y_I] = zReciprocal;
+            }
         }
     }
 }
