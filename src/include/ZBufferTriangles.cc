@@ -23,12 +23,6 @@ draw_zbuf_trag(ZBuffer &zbuffer, img::EasyImage &image, Vector3D const &A, Vecto
     Point2D BProjected = doProjection(B, d, dx, dy);
     Point2D CProjected = doProjection(C, d, dx, dy);
 
-    if (AProjected.x == image.get_width() ||
-        BProjected.x == image.get_width() ||
-        CProjected.x == image.get_width()) {
-        std::cout << "ohoh stinky" << std::endl;
-    }
-
     // Calculations needed for the 1/z values
     double x_G = (AProjected.x + BProjected.x + CProjected.x) / 3;
     double y_G = (AProjected.y + BProjected.y + CProjected.y) / 3;
