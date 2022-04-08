@@ -70,8 +70,8 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
                (std::string) configuration["General"]["type"] == "ZBufferedWireframe" ||
                (std::string) configuration["General"]["type"] == "ZBuffering") {
         std::vector<double> bg_col = configuration["General"]["backgroundcolor"];
-//        img::Color bg(bg_col[0] * 255, bg_col[1] * 255, bg_col[2] * 255);
-        img::Color bg(0, 255, 0);
+        img::Color bg(bg_col[0] * 255, bg_col[1] * 255, bg_col[2] * 255);
+//        img::Color bg(0, 255, 0);
         int size = configuration["General"]["size"];
         bool zBuffer = ((std::string) configuration["General"]["type"] == "ZBufferedWireframe");
         bool toTriangulate = ((std::string) configuration["General"]["type"] == "ZBuffering");

@@ -8,8 +8,8 @@
 
 img::EasyImage draw2DLines(const Lines2D &lines, const int size, img::Color &bg_col, const bool zBuffer) {
     double xmin = lines.front().p1.x;
-    double xmax = lines.front().p1.y;
-    double ymin = lines.front().p2.x;
+    double xmax = lines.front().p1.x;
+    double ymin = lines.front().p2.y;
     double ymax = lines.front().p2.y;
     // determine max and min
     for (Line2D line: lines) {

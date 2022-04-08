@@ -12,12 +12,116 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="Fix some ZBuffering with triangles logic flaws">
+      <change afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings001.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings002.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings003.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings004.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings005.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings006.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings007.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings008.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings009.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings010.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings011.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings012.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings013.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings014.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings015.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings016.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings017.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings018.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings019.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings020.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings021.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings022.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings023.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings024.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings025.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings026.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings027.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/line_drawings/out.bmp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/z-buffering_wireframe/out.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z-buffering_wireframe/out.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes001.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes001.bmp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/out.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/out.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering001.ini" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering001.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering002.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering002.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering003.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering003.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering004.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering004.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering005.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering005.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering006.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering006.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering007.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering007.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering008.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering008.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering009.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering009.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering010.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering010.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering011.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering011.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering012.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering012.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering013.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering013.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering014.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering014.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering015.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering015.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering016.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering016.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering017.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering017.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering018.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering018.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering019.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering019.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering020.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering020.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering021.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering021.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering022.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering022.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering023.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering023.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering024.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering024.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering025.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering025.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering026.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering026.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering027.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering027.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering028.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering028.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering029.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering029.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering030.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering030.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering031.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering031.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering032.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering032.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering033.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering033.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering034.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering034.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering035.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering035.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering036.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering036.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering037.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering037.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering038.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering038.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering039.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering039.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering040.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering040.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering041.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering041.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering042.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering042.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering043.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering043.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering044.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering044.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering045.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering045.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering046.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering046.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering047.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering047.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering048.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering048.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering049.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering049.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering050.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering050.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering051.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering051.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering052.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering052.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering053.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering053.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering054.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering054.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering055.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering055.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering056.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering056.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering057.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering057.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering058.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering058.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering059.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering059.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering060.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering060.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering061.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering061.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering062.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering062.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering063.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering063.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering064.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering064.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering065.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering065.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering066.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering066.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering067.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering067.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering068.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering068.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering069.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering069.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering070.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering070.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering071.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering071.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering072.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering072.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering073.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering073.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering074.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering074.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering075.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering075.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering076.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering076.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering077.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering077.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering078.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering078.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering079.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering079.bmp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/engine.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/include/Logic3D.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/Logic3D.cc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/include/ZBufferTriangles.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/ZBufferTriangles.cc" afterDir="false" />
     </list>
     <list id="bab7a8e1-9703-4f08-be94-b31643734fe9" name="Changes by Jonas" comment="" />
@@ -87,19 +191,14 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="engine" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="z_buffering001.ini" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$/ini/z_buffering_triangles" PASS_PARENT_ENVS_2="true" PROJECT_NAME="engine" TARGET_NAME="engine" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="engine" RUN_TARGET_NAME="engine">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="engine" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$/ini/z_buffering_triangles" PASS_PARENT_ENVS_2="true" PROJECT_NAME="engine" TARGET_NAME="engine" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="engine" RUN_TARGET_NAME="engine">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
   </component>
@@ -392,7 +491,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

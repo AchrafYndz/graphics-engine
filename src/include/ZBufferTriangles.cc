@@ -89,8 +89,8 @@ draw_zbuf_trag(ZBuffer &zbuffer, img::EasyImage &image, Vector3D const &A, Vecto
 void
 getImageSpecs(const Lines2D &lines, const int size, double &d, double &dx, double &dy, double &width, double &height) {
     double xmin = lines.front().p1.x;
-    double xmax = lines.front().p1.y;
-    double ymin = lines.front().p2.x;
+    double xmax = lines.front().p1.x;
+    double ymin = lines.front().p2.y;
     double ymax = lines.front().p2.y;
     // determine max and min
     for (Line2D line: lines) {
