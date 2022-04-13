@@ -183,7 +183,8 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
             for (Figure &figure: figures) {
                 for (const Face &triangle: figure.faces) {
                     draw_zbuf_trag(zbuf, image, figure.points[triangle.point_indexes[0]],
-                                   figure.points[triangle.point_indexes[1]], figure.points[triangle.point_indexes[2]],
+                                   figure.points[triangle.point_indexes[1]],
+                                   figure.points[triangle.point_indexes[2]],
                                    d, dx, dy,
                                    figure.getEzColor());
                 }

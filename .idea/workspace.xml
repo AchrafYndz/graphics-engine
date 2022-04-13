@@ -11,37 +11,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="Fix some ZBuffering with triangles logic flaws">
-      <change afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings001.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings002.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings003.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings004.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings005.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings006.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings007.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings008.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings009.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings010.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings011.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings012.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings013.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings014.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings015.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings016.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings017.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings018.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings019.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings020.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings021.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings022.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings023.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings024.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings025.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings026.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings027.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/line_drawings/out.bmp" afterDir="false" />
+    <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="Fix initialization of xmin, xmax, ymin and ymax">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/out.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/out.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering001.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering001.bmp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering002.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering002.bmp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering003.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering003.bmp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering004.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering004.bmp" afterDir="false" />
@@ -121,7 +94,6 @@
       <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering078.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering078.bmp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering079.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering079.bmp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/engine.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/include/Logic3D.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/Logic3D.cc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/include/ZBufferTriangles.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/ZBufferTriangles.cc" afterDir="false" />
     </list>
     <list id="bab7a8e1-9703-4f08-be94-b31643734fe9" name="Changes by Jonas" comment="" />
@@ -191,12 +163,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="engine" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="z_buffering001.ini" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$/ini/z_buffering_triangles" PASS_PARENT_ENVS_2="true" PROJECT_NAME="engine" TARGET_NAME="engine" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="engine" RUN_TARGET_NAME="engine">
+    <configuration name="engine" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="z_buffering072.ini" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$/ini/z_buffering_triangles" PASS_PARENT_ENVS_2="true" PROJECT_NAME="engine" TARGET_NAME="engine" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="engine" RUN_TARGET_NAME="engine">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -271,6 +238,9 @@
       <workItem from="1648935050783" duration="30000" />
       <workItem from="1648935095225" duration="6636000" />
       <workItem from="1649257333079" duration="454000" />
+      <workItem from="1649434181663" duration="3163000" />
+      <workItem from="1649447761213" duration="1048000" />
+      <workItem from="1649881073036" duration="3000" />
     </task>
     <task id="LOCAL-00001" summary="Remove redundant theta+pi">
       <created>1647092291607</created>
@@ -475,7 +445,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648990102940</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Fix initialization of xmin, xmax, ymin and ymax">
+      <created>1649412984742</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1649412984742</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -497,7 +474,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Add Support for Faces that contain more than one line" />
     <MESSAGE value="Add 3D line figures up to icosahedron" />
     <MESSAGE value="Add more 3D lines up to Dodecahedron" />
     <MESSAGE value="Add comments" />
@@ -522,7 +498,8 @@
     <MESSAGE value="Fix triangulation indexes" />
     <MESSAGE value="Write more zbuffering logic" />
     <MESSAGE value="Fix some ZBuffering with triangles logic flaws" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix some ZBuffering with triangles logic flaws" />
+    <MESSAGE value="Fix initialization of xmin, xmax, ymin and ymax" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix initialization of xmin, xmax, ymin and ymax" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

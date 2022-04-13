@@ -26,13 +26,13 @@ draw_zbuf_trag(ZBuffer &zbuffer, img::EasyImage &image, Vector3D const &A, Vecto
     // Calculations needed for the 1/z values
     double x_G = (AProjected.x + BProjected.x + CProjected.x) / 3;
     double y_G = (AProjected.y + BProjected.y + CProjected.y) / 3;
-    double z_GReciprocal = (1 / A.z + 1 / B.z + 1 / C.z) / 3;
+    double z_GReciprocal = (1 / (3 * A.z)) + (1 / (3 * B.z)) + (1 / (3 * C.z));
 
-    // Determine dzdx and dzdy values
+//     Determine dzdx and dzdy values
     Vector3D u = B - A;
     Vector3D v = C - A;
-    // scalar product u*v
-    Vector3D w = Vector3D::vector(u.y * u.z - u.z * v.y, u.z * v.x - u.x * v.z, u.x * v.y - u.y * v.x);
+//     scalar product u*v
+    Vector3D w = Vector3D::cross(u, v);
 
     double k = w.x * A.x + w.y * A.y + w.z * A.z;
 
@@ -40,44 +40,43 @@ draw_zbuf_trag(ZBuffer &zbuffer, img::EasyImage &image, Vector3D const &A, Vecto
     double dzdy = -w.y / k * d;
 
     // Determine which pixels belong to the triangle
-    int y_min = round(std::min({AProjected.y, BProjected.y, CProjected.y}) + 0.5);
-    int y_max = round(std::max({AProjected.y, BProjected.y, CProjected.y}) - 0.5);
-
-    int x_L_AB = std::numeric_limits<int>::max();
-    int x_L_AC = std::numeric_limits<int>::max();
-    int x_L_BC = std::numeric_limits<int>::max();
-
-    int x_R_AB = -std::numeric_limits<int>::max();
-    int x_R_AC = -std::numeric_limits<int>::max();
-    int x_R_BC = -std::numeric_limits<int>::max();
+    int y_min = lround(std::min({AProjected.y, BProjected.y, CProjected.y}) + 0.5);
+    int y_max = lround(std::max({AProjected.y, BProjected.y, CProjected.y}) - 0.5);
 
     for (int y_I = y_min; y_I <= y_max; y_I++) {
+        int x_L_AB = std::numeric_limits<int>::max();
+        int x_L_AC = std::numeric_limits<int>::max();
+        int x_L_BC = std::numeric_limits<int>::max();
+
+        int x_R_AB = -std::numeric_limits<int>::max();
+        int x_R_AC = -std::numeric_limits<int>::max();
+        int x_R_BC = -std::numeric_limits<int>::max();
         // AB
         Point2D P = AProjected;
         Point2D Q = BProjected;
         if ((y_I - P.y) * (y_I - Q.y) <= 0 && P.y != Q.y) {
-            double x_I = Q.x + (P.x - Q.x) * (y_I - Q.y) / (P.y - Q.y);
-            x_L_AB = x_I;
-            x_R_AB = x_I;
+            double x_I = Q.x + ((P.x - Q.x) * (y_I - Q.y) / (P.y - Q.y));
+            x_L_AB = lround(x_I);
+            x_R_AB = lround(x_I);
         }
         // AC
         Q = CProjected;
         if ((y_I - P.y) * (y_I - Q.y) <= 0 && P.y != Q.y) {
-            double x_I = Q.x + (P.x - Q.x) * (y_I - Q.y) / (P.y - Q.y);
-            x_L_AC = x_I;
-            x_R_AC = x_I;
+            double x_I = Q.x + ((P.x - Q.x) * (y_I - Q.y) / (P.y - Q.y));
+            x_L_AC = lround(x_I);
+            x_R_AC = lround(x_I);
         }
         // BC
         P = BProjected;
         if ((y_I - P.y) * (y_I - Q.y) <= 0 && P.y != Q.y) {
-            double x_I = Q.x + (P.x - Q.x) * (y_I - Q.y) / (P.y - Q.y);
-            x_L_BC = x_I;
-            x_R_BC = x_I;
+            double x_I = Q.x + ((P.x - Q.x) * (y_I - Q.y) / (P.y - Q.y));
+            x_L_BC = lround(x_I);
+            x_R_BC = lround(x_I);
         }
-        int x_L = round(std::min({x_L_AB, x_L_AC, x_L_BC}) + 0.5);
-        int x_R = round(std::max({x_R_AB, x_R_AC, x_R_BC}) - 0.5);
+        int x_L = lround(std::min({x_L_AB, x_L_AC, x_L_BC}) + 0.5);
+        int x_R = lround(std::max({x_R_AB, x_R_AC, x_R_BC}) - 0.5);
         for (int x = x_L; x <= x_R; x++) {
-            double zReciprocal = z_GReciprocal + (x - x_G) * dzdx + (y_I - y_G) * dzdy;
+            double zReciprocal = (1.0001 * z_GReciprocal) + ((x - x_G) * dzdx) + ((y_I - y_G) * dzdy);
             if (zReciprocal < zbuffer[x][y_I]) {
                 (image)(x, y_I) = color;
                 zbuffer[x][y_I] = zReciprocal;
