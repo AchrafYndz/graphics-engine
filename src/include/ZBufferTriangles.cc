@@ -28,16 +28,16 @@ draw_zbuf_trag(ZBuffer &zbuffer, img::EasyImage &image, Vector3D const &A, Vecto
     double y_G = (AProjected.y + BProjected.y + CProjected.y) / 3;
     double z_GReciprocal = (1 / (3 * A.z)) + (1 / (3 * B.z)) + (1 / (3 * C.z));
 
-//     Determine dzdx and dzdy values
+    // Determine dzdx and dzdy values
     Vector3D u = B - A;
     Vector3D v = C - A;
-//     scalar product u*v
+    // scalar product u*v
     Vector3D w = Vector3D::cross(u, v);
 
     double k = w.x * A.x + w.y * A.y + w.z * A.z;
 
-    double dzdx = -w.x / k * d;
-    double dzdy = -w.y / k * d;
+    double dzdx = -w.x / (k * d);
+    double dzdy = -w.y / (k * d);
 
     // Determine which pixels belong to the triangle
     int y_min = lround(std::min({AProjected.y, BProjected.y, CProjected.y}) + 0.5);

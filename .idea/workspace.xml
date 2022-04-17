@@ -11,17 +11,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="Reset x_*_* on every triangle row">
+    <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="Commit for grading">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/z-buffering_wireframe/out.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z-buffering_wireframe/out.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes001.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes001.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes005.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes005.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes054.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes054.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes056.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes056.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes058.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes058.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes082.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes082.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes085.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes085.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes086.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes086.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/out.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/out.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering072.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/z_buffering072.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/include/ZBufferTriangles.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/ZBufferTriangles.cc" afterDir="false" />
     </list>
     <list id="bab7a8e1-9703-4f08-be94-b31643734fe9" name="Changes by Jonas" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -90,7 +84,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="engine" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$/ini/z-buffering_wireframe" PASS_PARENT_ENVS_2="true" PROJECT_NAME="engine" TARGET_NAME="engine" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="engine" RUN_TARGET_NAME="engine">
+    <configuration name="engine" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$/ini/z_buffering_triangles" PASS_PARENT_ENVS_2="true" PROJECT_NAME="engine" TARGET_NAME="engine" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="engine" RUN_TARGET_NAME="engine">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -169,7 +163,7 @@
       <workItem from="1649447761213" duration="1048000" />
       <workItem from="1649881073036" duration="85000" />
       <workItem from="1650123503656" duration="344000" />
-      <workItem from="1650225705355" duration="663000" />
+      <workItem from="1650225705355" duration="2759000" />
     </task>
     <task id="LOCAL-00001" summary="Remove redundant theta+pi">
       <created>1647092291607</created>
@@ -388,7 +382,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649881129273</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Commit for grading">
+      <created>1650226418340</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1650226418340</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -410,7 +411,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Add more 3D lines up to Dodecahedron" />
     <MESSAGE value="Add comments" />
     <MESSAGE value="Add points to Dodecahedron" />
     <MESSAGE value="Fix wrong index Icosahedron" />
@@ -435,7 +435,8 @@
     <MESSAGE value="Fix some ZBuffering with triangles logic flaws" />
     <MESSAGE value="Fix initialization of xmin, xmax, ymin and ymax" />
     <MESSAGE value="Reset x_*_* on every triangle row" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reset x_*_* on every triangle row" />
+    <MESSAGE value="Commit for grading" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit for grading" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
