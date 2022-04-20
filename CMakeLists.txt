@@ -26,7 +26,7 @@ set(engine_sources
 		src/lib/Figure.cc
 		src/lib/Figure.h
 		util/Vector3D/vector3d.h
-		util/Vector3D/vector3d.cc src/include/LSystems2D.cc src/include/LSystems2D.h src/include/LSystems3D.cc src/include/LSystems3D.h src/include/Figures3D.cc src/include/Figures3D.h src/include/Intro.cc src/include/Intro.h src/include/ZBufferWireframes.cc src/include/ZBufferWireframes.h src/include/Logic3D.cc src/include/Logic3D.h src/include/ZBufferTriangles.cc src/include/ZBufferTriangles.h)
+		util/Vector3D/vector3d.cc src/include/LSystems2D.cc src/include/LSystems2D.h src/include/LSystems3D.cc src/include/LSystems3D.h src/include/Figures3D.cc src/include/Figures3D.h src/include/Intro.cc src/include/Intro.h src/include/ZBufferWireframes.cc src/include/ZBufferWireframes.h src/include/Logic3D.cc src/include/Logic3D.h src/include/ZBufferTriangles.cc src/include/ZBufferTriangles.h src/include/Fractals3D.cc src/include/Fractals3D.h)
 
 ############################################################
 # Create an executable
