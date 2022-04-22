@@ -6,7 +6,8 @@
 #include <cmath>
 
 Figure
-createCube(Color color, Vector3D &center, double scale, double angleX, double angleY, double angleZ, bool toTriangulate) {
+createCube(Color color, Vector3D &center, double scale, double angleX, double angleY, double angleZ,
+           bool toTriangulate) {
     // Create points
     std::vector<Vector3D> points;
     points.push_back(Vector3D::point(1, -1, -1));
@@ -41,7 +42,8 @@ createCube(Color color, Vector3D &center, double scale, double angleX, double an
     return {points, faces, color, center, scale, angleX, angleY, angleZ};
 }
 
-Figure createTetrahedron(Color color, Vector3D &center, double scale, double angleX, double angleY, double angleZ, bool toTriangulate) {
+Figure createTetrahedron(Color color, Vector3D &center, double scale, double angleX, double angleY, double angleZ,
+                         bool toTriangulate) {
     // Create points
     std::vector<Vector3D> points;
     points.push_back(Vector3D::point(1, -1, -1));
@@ -69,7 +71,8 @@ Figure createTetrahedron(Color color, Vector3D &center, double scale, double ang
     return {points, faces, color, center, scale, angleX, angleY, angleZ};
 }
 
-Figure createOctahedron(Color color, Vector3D &center, double scale, double angleX, double angleY, double angleZ, bool toTriangulate) {
+Figure createOctahedron(Color color, Vector3D &center, double scale, double angleX, double angleY, double angleZ,
+                        bool toTriangulate) {
     // Create points
     std::vector<Vector3D> points;
     points.push_back(Vector3D::point(1, 0, 0));
@@ -104,7 +107,8 @@ Figure createOctahedron(Color color, Vector3D &center, double scale, double angl
     return {points, faces, color, center, scale, angleX, angleY, angleZ};
 }
 
-Figure createIcosahedron(Color color, Vector3D &center, double scale, double angleX, double angleY, double angleZ, bool toTriangulate) {
+Figure createIcosahedron(Color color, Vector3D &center, double scale, double angleX, double angleY, double angleZ,
+                         bool toTriangulate) {
     // Create points
     std::vector<Vector3D> points;
 
@@ -157,7 +161,8 @@ Figure createIcosahedron(Color color, Vector3D &center, double scale, double ang
     return {points, faces, color, center, scale, angleX, angleY, angleZ};
 }
 
-Figure createDodecahedron(Color color, Vector3D &center, double scale, double angleX, double angleY, double angleZ, bool toTriangulate) {
+Figure createDodecahedron(Color color, Vector3D &center, double scale, double angleX, double angleY, double angleZ,
+                          bool toTriangulate) {
     // Create points
     std::vector<Vector3D> points;
 
@@ -201,7 +206,8 @@ Figure createDodecahedron(Color color, Vector3D &center, double scale, double an
 }
 
 Figure
-createSphere(Color color, Vector3D &center, double scale, double angleX, double angleY, double angleZ, const int n, bool toTriangulate) {
+createSphere(Color color, Vector3D &center, double scale, double angleX, double angleY, double angleZ, const int n,
+             bool toTriangulate) {
     Figure icosahedron = createIcosahedron(color, center, scale, angleX, angleY, angleZ, toTriangulate);
 
     for (int _ = 0; _ < n; _++) {
@@ -248,8 +254,7 @@ createSphere(Color color, Vector3D &center, double scale, double angleX, double 
                 triangles.insert(triangles.end(), newTriangles.begin(), newTriangles.end());
             }
             icosahedron.faces = triangles;
-        }
-        else icosahedron.faces = faces;
+        } else icosahedron.faces = faces;
 
     }
 

@@ -11,401 +11,106 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="Commit before switching devices">
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals001.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals001.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals002.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals002.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals002.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals003.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals003.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals004.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals004.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals005.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals005.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals006.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals006.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals006.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals007.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals007.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals008.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals008.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals009.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals009.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals010.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals010.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals011.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals011.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals012.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals012.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals012.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals013.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals013.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals014.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals014.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals015.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals015.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals016.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals016.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals017.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals017.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals018.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals018.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals019.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals019.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals020.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals020.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals021.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals021.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals022.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals022.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals023.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals023.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals024.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals024.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals024_extra.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals025.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals025.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals025_extra.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals026.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals026.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals026_extra.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals027.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals027.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals027_extra.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals028.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals028.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals029.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals029.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals030.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals030.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals031.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals031.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals032.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals032.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals033.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals033.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals034.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals034.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals035.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals035.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals036.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals036.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals037.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals037.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals038.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals038.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals039.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals039.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals040.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals040.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals041.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals041.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals042.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals042.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals043.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals043.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals044.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals044.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals045.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals045.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals046.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals046.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals047.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals047.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals048.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals048.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals049.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals049.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals050.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals050.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals051.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals051.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals051_extra.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals052.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals052.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals052_extra.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals053.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals053.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals053_extra.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals054.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals054_extra.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals055.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals055.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals056.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals056.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals057.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals057.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals058.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals058.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals059.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals059.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals060.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals060.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals061.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals061.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals062.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals062.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals063.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals063.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals064.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals064.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals065.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals065.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals066.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals066.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals067.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals067.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals068.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals068.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals069.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals069.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals070.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals070.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals071.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals071.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals072.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals072.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals073.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals073.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals074.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals074.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals075.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals075.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals076.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals076.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals077.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals077.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals078.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals078.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals078_extra.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals079.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals079.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals079_extra.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals080.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals080.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals080_extra.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals081.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals081.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals081_extra.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals082.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals082.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals083.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals083.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals084.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals084.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals085.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals085.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals086.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals086.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals087.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals087.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals088.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals088.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals089.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals089.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals090.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals090.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals091.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals091.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals092.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals092.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals093.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals093.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals094.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals094.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals095.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals095.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals096.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals096.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals097.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals097.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals098.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals098.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals099.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals099.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals100.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals100.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals101.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals101.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals102.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals102.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals103.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals103.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals104.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals104.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals105.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals105.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals105_extra.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals106.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals106.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals106_extra.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals107.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals107.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals107_extra.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals108.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals108.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals108_extra.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals109.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals109.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals110.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals110.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals111.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals111.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals112.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals112.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals113.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals113.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals114.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals114.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals115.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals115.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals116.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals116.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals117.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals117.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals118.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals118.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals119.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals119.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals120.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals120.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals121.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals121.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals122.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals122.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals123.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals123.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals124.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals124.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals125.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals125.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals126.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals126.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals127.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals127.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals128.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals128.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals129.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals129.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals130.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals130.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals131.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals131.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals132.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals132.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals132_extra.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals133.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals133.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals133_extra.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals134.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals134.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals134_extra.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals135.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals135.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals135_extra.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals136.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals136.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals137.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals137.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals138.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals138.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals139.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals139.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals140.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals140.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals141.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals141.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals142.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals142.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals143.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals143.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals144.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals144.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals145.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals145.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals146.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals146.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals147.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals147.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals148.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals148.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals149.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals149.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals150.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals150.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals151.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals151.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals152.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals152.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals153.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals153.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals154.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals154.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals155.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals155.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals156.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals156.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals157.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals157.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals158.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals158.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals159.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals159.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals159_extra.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals160.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals160.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals160_extra.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals161.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals161.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals161_extra.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals162.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals162.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals162_extra.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals163.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals163.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals164.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals164.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals165.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals165.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals166.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals166.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals167.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals167.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals168.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals168.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals169.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals169.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals170.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals170.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals171.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals171.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals172.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals172.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals173.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals173.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals174.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals174.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals175.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals175.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals175_extra.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals176.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals176.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals176_extra.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals177.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals177.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals177_extra.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals178.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals178.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals178_extra.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/filelist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/out.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/include/Fractals3D.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/include/Fractals3D.h" afterDir="false" />
+    <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="Add 3D fractals support for basic shapes">
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals001.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals003.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals004.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals005.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals007.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals008.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals009.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals010.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals011.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals013.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals014.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals015.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals016.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals028.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals029.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals030.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals031.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals032.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals033.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals034.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals035.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals036.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals037.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals038.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals039.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals040.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals041.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals042.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals043.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals055.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals056.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals057.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals058.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals059.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals060.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals061.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals062.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals063.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals064.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals065.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals066.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals067.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals068.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals069.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals070.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals082.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals083.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals084.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals085.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals086.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals087.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals088.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals089.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals090.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals091.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals092.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals093.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals094.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals095.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals096.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals097.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals109.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals110.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals111.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals112.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals113.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals114.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals115.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals116.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals117.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals118.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals119.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals120.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals121.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals122.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals123.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals124.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals136.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals137.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals138.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals139.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals140.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals141.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals142.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals143.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals144.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals145.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals146.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals147.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals148.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals149.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals150.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals151.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/out.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe_debugging.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/wireframe_debugging.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/out.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z_buffering_triangles/out.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/engine.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/include/Figures3D.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/Figures3D.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/include/ZBufferWireframes.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/ZBufferWireframes.cc" afterDir="false" />
     </list>
     <list id="bab7a8e1-9703-4f08-be94-b31643734fe9" name="Changes by Jonas" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -474,12 +179,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="engine" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$/ini/3d_fractals" PASS_PARENT_ENVS_2="true" PROJECT_NAME="engine" TARGET_NAME="engine" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="engine" RUN_TARGET_NAME="engine">
+    <configuration name="engine" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$/ini/z-buffering_wireframe" PASS_PARENT_ENVS_2="true" PROJECT_NAME="engine" TARGET_NAME="engine" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="engine" RUN_TARGET_NAME="engine">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -564,6 +264,8 @@
       <workItem from="1649881073036" duration="85000" />
       <workItem from="1650123503656" duration="344000" />
       <workItem from="1650225705355" duration="2759000" />
+      <workItem from="1650462968607" duration="1346000" />
+      <workItem from="1650628015532" duration="7249000" />
     </task>
     <task id="LOCAL-00001" summary="Remove redundant theta+pi">
       <created>1647092291607</created>
@@ -789,7 +491,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650226418340</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Add 3D fractals support for basic shapes">
+      <created>1650460993026</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1650460993026</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -812,7 +521,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Add comments" />
     <MESSAGE value="Add points to Dodecahedron" />
     <MESSAGE value="Fix wrong index Icosahedron" />
     <MESSAGE value="Add circle support" />
@@ -837,7 +545,15 @@
     <MESSAGE value="Fix initialization of xmin, xmax, ymin and ymax" />
     <MESSAGE value="Reset x_*_* on every triangle row" />
     <MESSAGE value="Commit for grading" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit for grading" />
+    <MESSAGE value="Add 3D fractals support for basic shapes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add 3D fractals support for basic shapes" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="CMakeRunConfiguration">
+        <watch expression="zbuffer[0].size()" language="ObjectiveC" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
