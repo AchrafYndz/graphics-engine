@@ -159,6 +159,8 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
                     int m = configuration["Figure" + std::to_string(i)]["n"];
                     figures.push_back(
                             createTorus(color, center, scale, angleX, angleY, angleZ, r, R, n, m, toTriangulate));
+                } else if (type == "BuckyBall") {
+                    figures.push_back(createBuckyBall(color, center, scale, angleX, angleY, angleZ, toTriangulate));
                 } else if (type == "FractalTetrahedron") {
                     int nrIterations = configuration["Figure" + std::to_string(i)]["nrIterations"];
                     Figure tetrahedron = createTetrahedron(color, center, scale, angleX, angleY, angleZ, toTriangulate);
@@ -189,7 +191,8 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
                     figures.insert(figures.end(), fractal.begin(), fractal.end());
                 } else if (type == "FractalDedocahedron") {
                     int nrIterations = configuration["Figure" + std::to_string(i)]["nrIterations"];
-                    Figure dodecahedron = createDodecahedron(color, center, scale, angleX, angleY, angleZ, toTriangulate);
+                    Figure dodecahedron = createDodecahedron(color, center, scale, angleX, angleY, angleZ,
+                                                             toTriangulate);
                     Figures3D fractal;
                     int fractalScale = configuration["Figure" + std::to_string(i)]["fractalScale"];
                     generateFractal(dodecahedron, fractal, nrIterations, fractalScale);
@@ -231,7 +234,9 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
         fout.close();
         return image;
     }
+
 }
+
 
 
 int main(int argc, char const *argv[]) {
