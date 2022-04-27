@@ -64,3 +64,38 @@ Figure createBuckyBall(Color color, Vector3D &center, double scale, double angle
 
     return buckyBall;
 }
+
+void createMengerSponge(Color color, Vector3D &center, double scale, double angleX, double angleY, double angleZ,
+                        bool toTriangulate, int nrIterations, Figures3D &sponges) {
+    Figure mengerSponge = createCube(color, center, scale, angleX, angleY, angleZ, toTriangulate);
+
+    sponges.push_back(mengerSponge);
+    for (int i = 0; i < nrIterations; i++) {
+        Figures3D newSponges;
+        Matrix scaleMatrix = scaleFigure(1.0 / 3);
+        for (Figure sponge: sponges) {
+            for (int j = 0; j < 8; j++) {
+                Figure copySponge = mengerSponge;
+                applyTransformation(copySponge, scaleMatrix);
+                Matrix translationMatrix = translate(sponge.points[j] - copySponge.points[j]);
+                applyTransformation(copySponge, translationMatrix);
+                newSponges.push_back(copySponge);
+            }
+            for (Face square: sponge.faces) {
+                if (&square == &sponge.faces.back()) return;
+                for (int p = 0; p < 4; p++) {
+                    Figure copySponge = mengerSponge;
+                    applyTransformation(copySponge, scaleMatrix);
+
+                    Vector3D midPointOuter = (sponge.points[p] + sponge.points[p + 1]) / 2;
+                    Vector3D midPointInner = (copySponge.points[p] + copySponge.points[p + 1]) / 2;
+
+                    Matrix translationMatrix = translate(midPointOuter - midPointInner);
+                    applyTransformation(copySponge, translationMatrix);
+                    newSponges.push_back(copySponge);
+                }
+            }
+        }
+        sponges = newSponges;
+    }
+}

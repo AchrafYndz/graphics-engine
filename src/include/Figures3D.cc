@@ -10,14 +10,14 @@ createCube(Color color, Vector3D &center, double scale, double angleX, double an
            bool toTriangulate) {
     // Create points
     std::vector<Vector3D> points;
-    points.push_back(Vector3D::point(1, -1, -1));
-    points.push_back(Vector3D::point(-1, 1, -1));
-    points.push_back(Vector3D::point(1, 1, 1));
-    points.push_back(Vector3D::point(-1, -1, 1));
-    points.push_back(Vector3D::point(1, 1, -1));
-    points.push_back(Vector3D::point(-1, -1, -1));
-    points.push_back(Vector3D::point(1, -1, 1));
-    points.push_back(Vector3D::point(-1, 1, 1));
+    points.push_back(Vector3D::point(1, -1, -1)); // 0
+    points.push_back(Vector3D::point(-1, 1, -1)); // 1
+    points.push_back(Vector3D::point(1, 1, 1)); // 2
+    points.push_back(Vector3D::point(-1, -1, 1)); // 3
+    points.push_back(Vector3D::point(1, 1, -1)); // 4
+    points.push_back(Vector3D::point(-1, -1, -1)); // 5
+    points.push_back(Vector3D::point(1, -1, 1)); // 6
+    points.push_back(Vector3D::point(-1, 1, 1)); // 7
 
     // Create faces
     std::vector<Face> faces;

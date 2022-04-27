@@ -161,6 +161,12 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
                             createTorus(color, center, scale, angleX, angleY, angleZ, r, R, n, m, toTriangulate));
                 } else if (type == "BuckyBall") {
                     figures.push_back(createBuckyBall(color, center, scale, angleX, angleY, angleZ, toTriangulate));
+                } else if (type == "MengerSponge") {
+                    Figures3D sponges;
+                    int nrIterations = configuration["Figure" + std::to_string(i)]["nrIterations"];
+                    createMengerSponge(color, center, scale, angleX, angleY, angleZ, toTriangulate,
+                                       nrIterations, sponges);
+                    figures.insert(figures.end(), sponges.begin(), sponges.end());
                 } else if (type == "FractalTetrahedron") {
                     int nrIterations = configuration["Figure" + std::to_string(i)]["nrIterations"];
                     Figure tetrahedron = createTetrahedron(color, center, scale, angleX, angleY, angleZ, toTriangulate);
@@ -236,7 +242,6 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
     }
 
 }
-
 
 
 int main(int argc, char const *argv[]) {
