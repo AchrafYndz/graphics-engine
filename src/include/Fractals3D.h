@@ -3,7 +3,7 @@
 
 #include "../lib/Figure.h"
 
-void generateFractal(Figure& fig, Figures3D& fractal, int nr_iterations, double scale);
+void generateFractal(Figure& fig, Figures3D& fractal, int nrIterations, double scale);
 
 Figure createBuckyBall(Color color, Vector3D &center, double scale, double angleX, double angleY, double angleZ,
                         bool toTriangulate);

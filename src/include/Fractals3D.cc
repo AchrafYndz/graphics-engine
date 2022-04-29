@@ -2,9 +2,9 @@
 #include "Logic3D.h"
 #include "Figures3D.h"
 
-void generateFractal(Figure &fig, Figures3D &fractal, const int nr_iterations, const double scale) {
+void generateFractal(Figure &fig, Figures3D &fractal, const int nrIterations, const double scale) {
     fractal.push_back(fig);
-    for (int i = 0; i < nr_iterations; i++) {
+    for (int i = 0; i < nrIterations; i++) {
         Figures3D newFractals;
         for (Figure fracFig: fractal) {
             for (int j = 0; j < fig.points.size(); j++) {
@@ -74,16 +74,17 @@ void createMengerSponge(Color color, Vector3D &center, double scale, double angl
         Figures3D newSponges;
         Matrix scaleMatrix = scaleFigure(1.0 / 3);
         for (Figure sponge: sponges) {
-            for (int j = 0; j < 8; j++) {
-                Figure copySponge = mengerSponge;
-                applyTransformation(copySponge, scaleMatrix);
-                Matrix translationMatrix = translate(sponge.points[j] - copySponge.points[j]);
-                applyTransformation(copySponge, translationMatrix);
-                newSponges.push_back(copySponge);
-            }
+            generateFractal(sponge, sponges, nrIterations, )
+//            for (int j = 0; j < 8; j++) {
+//                Figure copySponge = mengerSponge;
+//                applyTransformation(copySponge, scaleMatrix);
+//                Matrix translationMatrix = translate(sponge.points[j] - copySponge.points[j]);
+//                applyTransformation(copySponge, translationMatrix);
+//                newSponges.push_back(copySponge);
+//            }
             for (Face square: sponge.faces) {
-                if (&square == &sponge.faces.back()) return;
                 for (int p = 0; p < 4; p++) {
+                    // 1
                     Figure copySponge = mengerSponge;
                     applyTransformation(copySponge, scaleMatrix);
 
