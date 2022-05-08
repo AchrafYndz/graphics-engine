@@ -11,7 +11,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="Fix crucial typo">
+    <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="Change fractal scale from int to double">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals017.bmp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals018.bmp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals019.bmp" afterDir="false" />
@@ -25,19 +26,59 @@
       <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals052.bmp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals053.bmp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals054.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals071.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals072.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals073.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals074.bmp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals077.bmp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals078.bmp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals079.bmp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals080.bmp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals081.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals098.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals099.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals100.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals101.bmp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals104.bmp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals105.bmp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals106.bmp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals107.bmp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals108.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals125.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals126.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals127.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals128.bmp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals131.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals132.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals133.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals134.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals135.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals152.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals153.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals154.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals155.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals158.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals159.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals160.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals161.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals162.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals163.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals164.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals165.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals166.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals167.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals168.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals169.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals170.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals171.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals172.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals173.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals175.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals176.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals177.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals178.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ini/3d_fractals/out.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/3d_fractals/out.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/engine.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine.cc" afterDir="false" />
     </list>
     <list id="bab7a8e1-9703-4f08-be94-b31643734fe9" name="Changes by Jonas" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -223,7 +264,7 @@
       <workItem from="1651864663975" duration="23000" />
       <workItem from="1652011351774" duration="860000" />
       <workItem from="1652013032606" duration="1613000" />
-      <workItem from="1652015746813" duration="516000" />
+      <workItem from="1652015746813" duration="1788000" />
     </task>
     <task id="LOCAL-00001" summary="Remove redundant theta+pi">
       <created>1647092291607</created>
@@ -484,7 +525,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652016089820</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Change fractal scale from int to double">
+      <created>1652016313892</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1652016313892</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -506,7 +554,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Start working on Cone" />
     <MESSAGE value="Fix cone" />
     <MESSAGE value="Add support for cylinder + start working on torus" />
     <MESSAGE value="Backup before dos2unix" />
@@ -531,7 +578,8 @@
     <MESSAGE value="Fix MengerSponge" />
     <MESSAGE value="dos2unix" />
     <MESSAGE value="Fix crucial typo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix crucial typo" />
+    <MESSAGE value="Change fractal scale from int to double" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change fractal scale from int to double" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
