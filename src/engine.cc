@@ -163,7 +163,7 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
                     figures.push_back(createBuckyBall(color, center, scale, angleX, angleY, angleZ, toTriangulate));
                 } else if (type == "MengerSponge") {
                     Figures3D sponges;
-//                    toTriangulate = true;
+                    toTriangulate = true;
                     int nrIterations = configuration["Figure" + std::to_string(i)]["nrIterations"];
                     createMengerSponge(color, center, scale, angleX, angleY, angleZ, toTriangulate,
                                        nrIterations, sponges);

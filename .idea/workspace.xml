@@ -11,12 +11,17 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="Implement bucky ball generation">
+    <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="snake_case -&gt; camelCase">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals026.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals026.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/3d_fractals/filelist" beforeDir="false" afterPath="$PROJECT_DIR$/ini/3d_fractals/filelist" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ini/3d_fractals/out.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/3d_fractals/out.bmp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/engine.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine.cc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/include/Fractals3D.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/Fractals3D.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/include/Fractals3D.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/Fractals3D.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/diffScript/out.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/util/diffScript/out.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/diffScript/script.sh" beforeDir="false" afterPath="$PROJECT_DIR$/util/diffScript/script.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/diffScript/temp.png" beforeDir="false" afterPath="$PROJECT_DIR$/util/diffScript/temp.png" afterDir="false" />
     </list>
     <list id="bab7a8e1-9703-4f08-be94-b31643734fe9" name="Changes by Jonas" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -84,12 +89,36 @@
       <recent name="C:\Users\Achraf\CLionProjects\graphics-engine\ini\line_drawings" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="engine" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="3d_fractals026.ini" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$/ini/3d_fractals" PASS_PARENT_ENVS_2="true" PROJECT_NAME="engine" TARGET_NAME="engine" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="engine" RUN_TARGET_NAME="engine">
+  <component name="RunManager" selected="CMake Application.engine">
+    <configuration name="engine" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$/ini/3d_fractals" PASS_PARENT_ENVS_2="true" PROJECT_NAME="engine" TARGET_NAME="engine" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="engine" RUN_TARGET_NAME="engine">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="script.sh" type="ShConfigurationType" temporary="true">
+      <option name="SCRIPT_TEXT" value="" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/util/diffScript/script.sh" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$/util/diffScript" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="true" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application.engine" />
+      <item itemvalue="Shell Script.script.sh" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Shell Script.script.sh" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -170,7 +199,14 @@
       <workItem from="1651060203678" duration="6749000" />
       <workItem from="1651067086294" duration="4057000" />
       <workItem from="1651071701972" duration="2120000" />
-      <workItem from="1651242209474" duration="12000" />
+      <workItem from="1651242209474" duration="2560000" />
+      <workItem from="1651269250385" duration="13000" />
+      <workItem from="1651789251367" duration="3757000" />
+      <workItem from="1651834996674" duration="549000" />
+      <workItem from="1651839066504" duration="358000" />
+      <workItem from="1651864663975" duration="23000" />
+      <workItem from="1652011351774" duration="860000" />
+      <workItem from="1652013032606" duration="1565000" />
     </task>
     <task id="LOCAL-00001" summary="Remove redundant theta+pi">
       <created>1647092291607</created>
@@ -403,7 +439,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650460993026</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="snake_case -&gt; camelCase">
+      <created>1651242309448</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1651242309448</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -425,7 +468,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Add points to Dodecahedron" />
     <MESSAGE value="Fix wrong index Icosahedron" />
     <MESSAGE value="Add circle support" />
     <MESSAGE value="Use Vector3D arithmetic" />
@@ -450,14 +492,8 @@
     <MESSAGE value="Reset x_*_* on every triangle row" />
     <MESSAGE value="Commit for grading" />
     <MESSAGE value="Add 3D fractals support for basic shapes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add 3D fractals support for basic shapes" />
-  </component>
-  <component name="XDebuggerManager">
-    <watches-manager>
-      <configuration name="CMakeRunConfiguration">
-        <watch expression="zbuffer[0].size()" language="ObjectiveC" />
-      </configuration>
-    </watches-manager>
+    <MESSAGE value="snake_case -&gt; camelCase" />
+    <option name="LAST_COMMIT_MESSAGE" value="snake_case -&gt; camelCase" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -1,5 +1,5 @@
 for f in $1/*.ini
-do
+  do
     y=${f%.ini}
     p="$y.png"
     b="$y.bmp"
