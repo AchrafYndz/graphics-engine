@@ -11,75 +11,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="Add README.md">
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals017.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals018.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals019.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals020.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals044.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals045.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals046.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals047.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals050.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals051.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals052.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals053.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals054.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals071.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals072.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals073.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals074.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals077.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals078.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals079.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals080.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals081.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals098.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals099.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals100.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals101.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals104.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals105.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals106.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals107.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals108.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals125.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals126.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals127.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals128.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals131.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals132.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals133.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals134.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals135.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals152.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals153.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals154.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals155.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals158.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals159.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals160.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals161.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals162.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals163.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals164.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals165.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals166.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals167.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals168.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals169.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals170.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals171.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals172.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals173.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals175.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals176.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals177.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals178.bmp" afterDir="false" />
+    <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="Remove createBuckyBall()">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals023.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals023.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/3d_fractals/out.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/3d_fractals/out.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/include/Fractals3D.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/Fractals3D.cc" afterDir="false" />
     </list>
     <list id="bab7a8e1-9703-4f08-be94-b31643734fe9" name="Changes by Jonas" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -148,7 +81,12 @@
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.engine">
-    <configuration name="engine" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="3d_fractals023.ini" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$/ini/3d_fractals" PASS_PARENT_ENVS_2="true" PROJECT_NAME="engine" TARGET_NAME="engine" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="engine" RUN_TARGET_NAME="engine">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="engine" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$/ini/3d_fractals" PASS_PARENT_ENVS_2="true" PROJECT_NAME="engine" TARGET_NAME="engine" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="engine" RUN_TARGET_NAME="engine">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -265,7 +203,7 @@
       <workItem from="1651864663975" duration="23000" />
       <workItem from="1652011351774" duration="860000" />
       <workItem from="1652013032606" duration="1613000" />
-      <workItem from="1652015746813" duration="3074000" />
+      <workItem from="1652015746813" duration="3243000" />
     </task>
     <task id="LOCAL-00001" summary="Remove redundant theta+pi">
       <created>1647092291607</created>
@@ -540,7 +478,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652019039321</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Remove createBuckyBall()">
+      <created>1652020357473</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1652020357473</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -562,7 +507,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Add support for cylinder + start working on torus" />
     <MESSAGE value="Backup before dos2unix" />
     <MESSAGE value="Refactor Draw2DLsystem()" />
     <MESSAGE value="Set up 3DLsystem functions" />
@@ -587,7 +531,8 @@
     <MESSAGE value="Fix crucial typo" />
     <MESSAGE value="Change fractal scale from int to double" />
     <MESSAGE value="Add README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add README.md" />
+    <MESSAGE value="Remove createBuckyBall()" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove createBuckyBall()" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

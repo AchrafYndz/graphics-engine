@@ -159,8 +159,6 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
                     int m = configuration["Figure" + std::to_string(i)]["n"];
                     figures.push_back(
                             createTorus(color, center, scale, angleX, angleY, angleZ, r, R, n, m, toTriangulate));
-                } else if (type == "BuckyBall") {
-                    figures.push_back(createBuckyBall(color, center, scale, angleX, angleY, angleZ, toTriangulate));
                 } else if (type == "MengerSponge") {
                     Figures3D sponges;
                     toTriangulate = true;
