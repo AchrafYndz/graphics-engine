@@ -11,8 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="Change fractal scale from int to double">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="Add README.md">
       <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals017.bmp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals018.bmp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals019.bmp" afterDir="false" />
@@ -78,7 +77,9 @@
       <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals177.bmp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals178.bmp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals023.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals023.bmp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ini/3d_fractals/out.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/3d_fractals/out.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/include/Fractals3D.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/Fractals3D.cc" afterDir="false" />
     </list>
     <list id="bab7a8e1-9703-4f08-be94-b31643734fe9" name="Changes by Jonas" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -147,7 +148,7 @@
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.engine">
-    <configuration name="engine" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$/ini/3d_fractals" PASS_PARENT_ENVS_2="true" PROJECT_NAME="engine" TARGET_NAME="engine" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="engine" RUN_TARGET_NAME="engine">
+    <configuration name="engine" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="3d_fractals023.ini" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$/ini/3d_fractals" PASS_PARENT_ENVS_2="true" PROJECT_NAME="engine" TARGET_NAME="engine" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="engine" RUN_TARGET_NAME="engine">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -264,7 +265,7 @@
       <workItem from="1651864663975" duration="23000" />
       <workItem from="1652011351774" duration="860000" />
       <workItem from="1652013032606" duration="1613000" />
-      <workItem from="1652015746813" duration="1788000" />
+      <workItem from="1652015746813" duration="3074000" />
     </task>
     <task id="LOCAL-00001" summary="Remove redundant theta+pi">
       <created>1647092291607</created>
@@ -532,7 +533,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652016313892</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Add README.md">
+      <created>1652019039321</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1652019039321</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -554,7 +562,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Fix cone" />
     <MESSAGE value="Add support for cylinder + start working on torus" />
     <MESSAGE value="Backup before dos2unix" />
     <MESSAGE value="Refactor Draw2DLsystem()" />
@@ -579,7 +586,8 @@
     <MESSAGE value="dos2unix" />
     <MESSAGE value="Fix crucial typo" />
     <MESSAGE value="Change fractal scale from int to double" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change fractal scale from int to double" />
+    <MESSAGE value="Add README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add README.md" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
