@@ -196,7 +196,7 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
                     int fractalScale = configuration["Figure" + std::to_string(i)]["fractalScale"];
                     generateFractal(octahedron, fractal, nrIterations, fractalScale);
                     figures.insert(figures.end(), fractal.begin(), fractal.end());
-                } else if (type == "FractalDedocahedron") {
+                } else if (type == "FractalDodecahedron") {
                     int nrIterations = configuration["Figure" + std::to_string(i)]["nrIterations"];
                     Figure dodecahedron = createDodecahedron(color, center, scale, angleX, angleY, angleZ,
                                                              toTriangulate);
