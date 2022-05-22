@@ -11,12 +11,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="Start working on menger sponge">
-      <change afterPath="$PROJECT_DIR$/src/lib/Light.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/Light.h" afterDir="false" />
+    <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="Define class Light">
+      <change afterPath="$PROJECT_DIR$/src/lib/InfLight.cc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/InfLight.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/Figure.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/Figure.h" afterDir="false" />
     </list>
     <list id="bab7a8e1-9703-4f08-be94-b31643734fe9" name="Changes by Jonas" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -182,7 +181,7 @@
       <workItem from="1651071701972" duration="2120000" />
       <workItem from="1651091185906" duration="111000" />
       <workItem from="1651147013821" duration="7000" />
-      <workItem from="1653249898719" duration="254000" />
+      <workItem from="1653249898719" duration="360000" />
     </task>
     <task id="LOCAL-00001" summary="Remove redundant theta+pi">
       <created>1647092291607</created>
@@ -422,7 +421,21 @@
       <option name="project" value="LOCAL" />
       <updated>1651091246426</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Replace Figure's Color attribute with the new reflection's colors">
+      <created>1653250198751</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1653250198751</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Define class Light">
+      <created>1653250212078</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1653250212078</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -445,8 +458,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Fix wrong index Icosahedron" />
-    <MESSAGE value="Add circle support" />
     <MESSAGE value="Use Vector3D arithmetic" />
     <MESSAGE value="Start working on Cone" />
     <MESSAGE value="Fix cone" />
@@ -470,7 +481,9 @@
     <MESSAGE value="Commit for grading" />
     <MESSAGE value="Add 3D fractals support for basic shapes" />
     <MESSAGE value="Start working on menger sponge" />
-    <option name="LAST_COMMIT_MESSAGE" value="Start working on menger sponge" />
+    <MESSAGE value="Replace Figure's Color attribute with the new reflection's colors" />
+    <MESSAGE value="Define class Light" />
+    <option name="LAST_COMMIT_MESSAGE" value="Define class Light" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

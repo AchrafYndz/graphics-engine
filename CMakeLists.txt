@@ -43,7 +43,7 @@ set(engine_sources
 		src/include/ZBufferTriangles.h
 		src/include/Fractals3D.cc
 		src/include/Fractals3D.h
-        src/lib/Light.cc src/lib/Light.h)
+        src/lib/Light.cc src/lib/Light.h src/lib/InfLight.cc src/lib/InfLight.h)
 
 ############################################################
 # Create an executable
