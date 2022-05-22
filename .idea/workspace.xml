@@ -11,34 +11,12 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="Fix zbuffer wireframes">
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals023.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals026.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/util/diffScript/out.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/util/diffScript/script.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/util/diffScript/temp.png" afterDir="false" />
+    <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="Start working on menger sponge">
+      <change afterPath="$PROJECT_DIR$/src/lib/Light.cc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/Light.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/3d_fractals/out.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/3d_fractals/out.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/z-buffering_wireframe/out.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z-buffering_wireframe/out.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes028.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes028.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes029.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes029.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes030.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes030.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes031.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes031.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes032.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes032.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes033.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes033.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes036.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes036.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes072.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes072.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes073.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes073.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes078.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes078.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes079.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes079.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes115.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes115.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes117.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes117.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes118.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes118.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes121.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes121.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/engine.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/include/Figures3D.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/Figures3D.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/include/Fractals3D.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/Fractals3D.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/include/Fractals3D.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/Fractals3D.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/Figure.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/Figure.h" afterDir="false" />
     </list>
     <list id="bab7a8e1-9703-4f08-be94-b31643734fe9" name="Changes by Jonas" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -107,9 +85,19 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="engine" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="3d_fractals026.ini" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$/ini/3d_fractals" PASS_PARENT_ENVS_2="true" PROJECT_NAME="engine" TARGET_NAME="engine" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="engine" RUN_TARGET_NAME="engine">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
   </component>
@@ -192,6 +180,9 @@
       <workItem from="1651060203678" duration="6749000" />
       <workItem from="1651067086294" duration="4057000" />
       <workItem from="1651071701972" duration="2120000" />
+      <workItem from="1651091185906" duration="111000" />
+      <workItem from="1651147013821" duration="7000" />
+      <workItem from="1653249898719" duration="254000" />
     </task>
     <task id="LOCAL-00001" summary="Remove redundant theta+pi">
       <created>1647092291607</created>
@@ -424,7 +415,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650460993026</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Start working on menger sponge">
+      <created>1651091246426</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1651091246426</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -447,7 +445,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Add points to Dodecahedron" />
     <MESSAGE value="Fix wrong index Icosahedron" />
     <MESSAGE value="Add circle support" />
     <MESSAGE value="Use Vector3D arithmetic" />
@@ -472,7 +469,8 @@
     <MESSAGE value="Reset x_*_* on every triangle row" />
     <MESSAGE value="Commit for grading" />
     <MESSAGE value="Add 3D fractals support for basic shapes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add 3D fractals support for basic shapes" />
+    <MESSAGE value="Start working on menger sponge" />
+    <option name="LAST_COMMIT_MESSAGE" value="Start working on menger sponge" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

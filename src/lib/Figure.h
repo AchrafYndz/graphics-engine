@@ -14,7 +14,13 @@ public:
     std::vector<Vector3D> points;
     std::vector<Face> faces;
     Vector3D center;
-    Color color;
+
+    Color ambientReflection;
+    Color diffuseReflection;
+    Color specularReflection;
+
+    double reflectionCoefficient;
+
     double rotateAngleX;
     double rotateAngleY;
     double rotateAngleZ;
