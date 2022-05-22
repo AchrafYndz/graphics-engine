@@ -11,9 +11,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="Define class Light">
-      <change afterPath="$PROJECT_DIR$/src/lib/InfLight.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/InfLight.h" afterDir="false" />
+    <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="Define class InfLight">
+      <change afterPath="$PROJECT_DIR$/src/lib/PointLight.cc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/PointLight.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
     </list>
@@ -181,7 +181,7 @@
       <workItem from="1651071701972" duration="2120000" />
       <workItem from="1651091185906" duration="111000" />
       <workItem from="1651147013821" duration="7000" />
-      <workItem from="1653249898719" duration="360000" />
+      <workItem from="1653249898719" duration="450000" />
     </task>
     <task id="LOCAL-00001" summary="Remove redundant theta+pi">
       <created>1647092291607</created>
@@ -435,7 +435,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653250212078</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Define class InfLight">
+      <created>1653250289801</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1653250289801</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -458,7 +465,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Use Vector3D arithmetic" />
     <MESSAGE value="Start working on Cone" />
     <MESSAGE value="Fix cone" />
     <MESSAGE value="Add support for cylinder + start working on torus" />
@@ -483,7 +489,8 @@
     <MESSAGE value="Start working on menger sponge" />
     <MESSAGE value="Replace Figure's Color attribute with the new reflection's colors" />
     <MESSAGE value="Define class Light" />
-    <option name="LAST_COMMIT_MESSAGE" value="Define class Light" />
+    <MESSAGE value="Define class InfLight" />
+    <option name="LAST_COMMIT_MESSAGE" value="Define class InfLight" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
