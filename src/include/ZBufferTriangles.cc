@@ -17,7 +17,8 @@ std::vector<Face> triangulate(const Face &face) {
 void
 draw_zbuf_trag(ZBuffer &zbuffer, img::EasyImage &image, Vector3D const &A, Vector3D const &B, Vector3D const &C,
                double d,
-               double dx, double dy, img::Color color) {
+               double dx, double dy, Color ambientReflection,
+               Lights3D &lights) {
     // Project the triangle
     Point2D AProjected = doProjection(A, d, dx, dy);
     Point2D BProjected = doProjection(B, d, dx, dy);
@@ -75,6 +76,14 @@ draw_zbuf_trag(ZBuffer &zbuffer, img::EasyImage &image, Vector3D const &A, Vecto
         }
         int x_L = lround(std::min({x_L_AB, x_L_AC, x_L_BC}) + 0.5);
         int x_R = lround(std::max({x_R_AB, x_R_AC, x_R_BC}) - 0.5);
+
+        Light light;
+        for (int i = 0; i < nrLights; i++) {
+            std::vector<double> curL = configuration["Light" + std::to_string(i)]["ambientLight"];
+            Color curLight(curL[0], curL[1], curL[2]);
+            light.ambientLight += curLight;
+        }
+
         for (int x = x_L; x <= x_R; x++) {
             double zReciprocal = (1.0001 * z_GReciprocal) + ((x - x_G) * dzdx) + ((y_I - y_G) * dzdy);
             if (zReciprocal < zbuffer[x][y_I]) {
