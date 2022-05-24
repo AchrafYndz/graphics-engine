@@ -13,6 +13,7 @@
 #include "include/Figures3D.h"
 #include "include/ZBufferTriangles.h"
 #include "include/Fractals3D.h"
+#include "lib/Light.h"
 
 #include <fstream>
 #include <iostream>
@@ -72,7 +73,6 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
                (std::string) configuration["General"]["type"] == "ZBuffering") {
         std::vector<double> bg_col = configuration["General"]["backgroundcolor"];
         img::Color bg(bg_col[0] * 255, bg_col[1] * 255, bg_col[2] * 255);
-//        img::Color bg(0, 255, 0);
         int size = configuration["General"]["size"];
         bool zBuffer = ((std::string) configuration["General"]["type"] == "ZBufferedWireframe");
         bool toTriangulate = ((std::string) configuration["General"]["type"] == "ZBuffering");
@@ -238,8 +238,148 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
         fout << image;
         fout.close();
         return image;
-    }
+    } else if ((std::string) configuration["General"]["type"] == "LightedZBuffering") {
+        std::vector<double> bg_col = configuration["General"]["backgroundcolor"];
+        img::Color bg(bg_col[0] * 255, bg_col[1] * 255, bg_col[2] * 255);
+        int size = configuration["General"]["size"];
+        bool zBuffer = ((std::string) configuration["General"]["type"] == "ZBufferedWireframe");
+        bool toTriangulate = ((std::string) configuration["General"]["type"] == "ZBuffering");
+        Figures3D figures;
+        int nrFigures = configuration["General"]["nrFigures"];
+        int nrLights = configuration["General"]["nrLights"];
+        for (int i = 0; i < nrFigures; i++) {
+            //    ############################# 3D Figures #############################
+            std::vector<double> col = configuration["Figure" + std::to_string(i)]["color"];
+            Color color(col[0], col[1], col[2]);
+            std::vector<double> centerFetch = configuration["Figure" + std::to_string(i)]["center"];
+            Vector3D center = Vector3D::point(centerFetch[0], centerFetch[1], centerFetch[2]);
+            double scale = configuration["Figure" + std::to_string(i)]["scale"];
+            std::vector<double> ambRefl = configuration["Figure" + std::to_string(i)]["ambientReflection"];
+            Color ambientReflection(ambRefl[0], ambRefl[1], ambRefl[2]);
 
+            // Get rotation angles
+            double degreeX = configuration["Figure" + std::to_string(i)]["rotateX"];
+            double angleX = degreeX / 180 * M_PI;
+            double degreeY = configuration["Figure" + std::to_string(i)]["rotateY"];
+            double angleY = degreeY / 180 * M_PI;
+            double degreeZ = configuration["Figure" + std::to_string(i)]["rotateZ"];
+            double angleZ = degreeZ / 180 * M_PI;
+            std::string type = configuration["Figure" + std::to_string(i)]["type"];
+            if (type == "Cube")
+                figures.push_back(createCube(color, center, scale, angleX, angleY, angleZ, toTriangulate));
+            else if (type == "Tetrahedron")
+                figures.push_back(createTetrahedron(color, center, scale, angleX, angleY, angleZ, toTriangulate));
+            else if (type == "Icosahedron")
+                figures.push_back(createIcosahedron(color, center, scale, angleX, angleY, angleZ, toTriangulate));
+            else if (type == "Octahedron")
+                figures.push_back(createOctahedron(color, center, scale, angleX, angleY, angleZ, toTriangulate));
+            else if (type == "Dodecahedron")
+                figures.push_back(createDodecahedron(color, center, scale, angleX, angleY, angleZ, toTriangulate));
+            else if (type == "Cone") {
+                double height = configuration["Figure" + std::to_string(i)]["height"];
+                int n = configuration["Figure" + std::to_string(i)]["n"];
+                figures.push_back(
+                        createCone(color, center, scale, angleX, angleY, angleZ, n, height, toTriangulate));
+            } else if (type == "Cylinder") {
+                double height = configuration["Figure" + std::to_string(i)]["height"];
+                int n = configuration["Figure" + std::to_string(i)]["n"];
+                figures.push_back(
+                        createCylinder(color, center, scale, angleX, angleY, angleZ, n, height, toTriangulate));
+            } else if (type == "Sphere") {
+                int n = configuration["Figure" + std::to_string(i)]["n"];
+                figures.push_back(createSphere(color, center, scale, angleX, angleY, angleZ, n, toTriangulate));
+            } else if (type == "Torus") {
+                double r = configuration["Figure" + std::to_string(i)]["r"];
+                double R = configuration["Figure" + std::to_string(i)]["R"];
+                int n = configuration["Figure" + std::to_string(i)]["m"];
+                int m = configuration["Figure" + std::to_string(i)]["n"];
+                figures.push_back(
+                        createTorus(color, center, scale, angleX, angleY, angleZ, r, R, n, m, toTriangulate));
+            } else if (type == "MengerSponge") {
+                Figures3D sponges;
+                toTriangulate = true;
+                int nrIterations = configuration["Figure" + std::to_string(i)]["nrIterations"];
+                createMengerSponge(color, center, scale, angleX, angleY, angleZ, toTriangulate,
+                                   nrIterations, sponges);
+                figures.insert(figures.end(), sponges.begin(), sponges.end());
+            } else if (type == "FractalTetrahedron") {
+                int nrIterations = configuration["Figure" + std::to_string(i)]["nrIterations"];
+                Figure tetrahedron = createTetrahedron(color, center, scale, angleX, angleY, angleZ, toTriangulate);
+                Figures3D fractal;
+                double fractalScale = configuration["Figure" + std::to_string(i)]["fractalScale"];
+                generateFractal(tetrahedron, fractal, nrIterations, fractalScale);
+                figures.insert(figures.end(), fractal.begin(), fractal.end());
+            } else if (type == "FractalCube") {
+                int nrIterations = configuration["Figure" + std::to_string(i)]["nrIterations"];
+                Figure cube = createCube(color, center, scale, angleX, angleY, angleZ, toTriangulate);
+                Figures3D fractal;
+                double fractalScale = configuration["Figure" + std::to_string(i)]["fractalScale"];
+                generateFractal(cube, fractal, nrIterations, fractalScale);
+                figures.insert(figures.end(), fractal.begin(), fractal.end());
+            } else if (type == "FractalIcosahedron") {
+                int nrIterations = configuration["Figure" + std::to_string(i)]["nrIterations"];
+                Figure icosahedron = createIcosahedron(color, center, scale, angleX, angleY, angleZ, toTriangulate);
+                Figures3D fractal;
+                double fractalScale = configuration["Figure" + std::to_string(i)]["fractalScale"];
+                generateFractal(icosahedron, fractal, nrIterations, fractalScale);
+                figures.insert(figures.end(), fractal.begin(), fractal.end());
+            } else if (type == "FractalOctahedron") {
+                int nrIterations = configuration["Figure" + std::to_string(i)]["nrIterations"];
+                Figure octahedron = createOctahedron(color, center, scale, angleX, angleY, angleZ, toTriangulate);
+                Figures3D fractal;
+                double fractalScale = configuration["Figure" + std::to_string(i)]["fractalScale"];
+                generateFractal(octahedron, fractal, nrIterations, fractalScale);
+                figures.insert(figures.end(), fractal.begin(), fractal.end());
+            } else if (type == "FractalDodecahedron") {
+                int nrIterations = configuration["Figure" + std::to_string(i)]["nrIterations"];
+                Figure dodecahedron = createDodecahedron(color, center, scale, angleX, angleY, angleZ, toTriangulate);
+                Figures3D fractal;
+                double fractalScale = configuration["Figure" + std::to_string(i)]["fractalScale"];
+                generateFractal(dodecahedron, fractal, nrIterations, fractalScale);
+                figures.insert(figures.end(), fractal.begin(), fractal.end());
+            } else if (type == "3DLSystem") {
+                LParser::LSystem3D l_system;
+                std::ifstream input_stream(configuration["Figure" + std::to_string(i)]["inputfile"]);
+                input_stream >> l_system;
+                input_stream.close();
+                figures.push_back(draw3DLSystem(l_system, center, color, scale, angleX, angleY, angleZ));
+            }
+        }
+        Lights3D lights;
+        for (int i = 0; i < nrLights; i++) {
+            std::vector<double> curL = configuration["Light" + std::to_string(i)]["ambientLight"];
+            Color curLight(curL[0], curL[1], curL[2]);
+            Light light;
+            light.ambientLight = curLight;
+            lights.push_front(light);
+        }
+        std::vector<double> eyepoint_ = configuration["General"]["eye"];
+        Vector3D eyepoint = Vector3D::point(eyepoint_[0], eyepoint_[1], eyepoint_[2]);
+        img::EasyImage image;
+        if (toTriangulate) {
+            double d;
+            double dx;
+            double dy;
+            double width;
+            double height;
+            getImageSpecs(doProjection(figures, eyepoint), size, d, dx, dy, width, height);
+
+            ZBuffer zbuf(width, height);
+            image = img::EasyImage(width, height, bg);
+            for (Figure &figure: figures) {
+                for (const Face &triangle: figure.faces) {
+                    draw_zbuf_trag(zbuf, image, figure.points[triangle.point_indexes[0]],
+                                   figure.points[triangle.point_indexes[1]],
+                                   figure.points[triangle.point_indexes[2]],
+                                   d, dx, dy, ambientReflection, lights);
+                }
+            }
+        } else image = draw2DLines(doProjection(figures, eyepoint), size, bg, zBuffer);
+        std::ofstream fout("out.bmp", std::ios::binary);
+        fout << image;
+        fout.close();
+        return image;
+    }
 }
 
 
