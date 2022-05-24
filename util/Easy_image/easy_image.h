@@ -70,7 +70,6 @@ namespace img
 			 */
 			~Color();
 
-            Color& operator+=(const Color& rhs);
 	};
 
 	/**

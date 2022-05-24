@@ -8,6 +8,7 @@ public:
     double green;
     double blue;
     Color(double r, double g, double b): red(r), green(g), blue(b) {};
+    Color& operator+=(Color& rhs);
 };
 
 
