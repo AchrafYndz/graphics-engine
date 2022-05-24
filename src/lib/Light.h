@@ -7,9 +7,9 @@
 
 class Light {
 public:
-    Color ambientLight;
-    Color diffuseLight;
-    Color specularLight;
+    Color ambientLight = Color(0, 0, 0);
+    Color diffuseLight = Color(0, 0, 0);
+    Color specularLight = Color(0, 0, 0);
 };
 
 typedef std::list<Light> Lights3D;
