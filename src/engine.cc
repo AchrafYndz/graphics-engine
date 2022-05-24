@@ -159,10 +159,9 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
                     int m = configuration["Figure" + std::to_string(i)]["n"];
                     figures.push_back(
                             createTorus(color, center, scale, angleX, angleY, angleZ, r, R, n, m, toTriangulate));
-                } else if (type == "BuckyBall") {
-                    figures.push_back(createBuckyBall(color, center, scale, angleX, angleY, angleZ, toTriangulate));
                 } else if (type == "MengerSponge") {
                     Figures3D sponges;
+                    toTriangulate = true;
                     int nrIterations = configuration["Figure" + std::to_string(i)]["nrIterations"];
                     createMengerSponge(color, center, scale, angleX, angleY, angleZ, toTriangulate,
                                        nrIterations, sponges);
@@ -171,36 +170,36 @@ img::EasyImage generate_image(const ini::Configuration &configuration) {
                     int nrIterations = configuration["Figure" + std::to_string(i)]["nrIterations"];
                     Figure tetrahedron = createTetrahedron(color, center, scale, angleX, angleY, angleZ, toTriangulate);
                     Figures3D fractal;
-                    int fractalScale = configuration["Figure" + std::to_string(i)]["fractalScale"];
+                    double fractalScale = configuration["Figure" + std::to_string(i)]["fractalScale"];
                     generateFractal(tetrahedron, fractal, nrIterations, fractalScale);
                     figures.insert(figures.end(), fractal.begin(), fractal.end());
                 } else if (type == "FractalCube") {
                     int nrIterations = configuration["Figure" + std::to_string(i)]["nrIterations"];
                     Figure cube = createCube(color, center, scale, angleX, angleY, angleZ, toTriangulate);
                     Figures3D fractal;
-                    int fractalScale = configuration["Figure" + std::to_string(i)]["fractalScale"];
+                    double fractalScale = configuration["Figure" + std::to_string(i)]["fractalScale"];
                     generateFractal(cube, fractal, nrIterations, fractalScale);
                     figures.insert(figures.end(), fractal.begin(), fractal.end());
                 } else if (type == "FractalIcosahedron") {
                     int nrIterations = configuration["Figure" + std::to_string(i)]["nrIterations"];
                     Figure icosahedron = createIcosahedron(color, center, scale, angleX, angleY, angleZ, toTriangulate);
                     Figures3D fractal;
-                    int fractalScale = configuration["Figure" + std::to_string(i)]["fractalScale"];
+                    double fractalScale = configuration["Figure" + std::to_string(i)]["fractalScale"];
                     generateFractal(icosahedron, fractal, nrIterations, fractalScale);
                     figures.insert(figures.end(), fractal.begin(), fractal.end());
                 } else if (type == "FractalOctahedron") {
                     int nrIterations = configuration["Figure" + std::to_string(i)]["nrIterations"];
                     Figure octahedron = createOctahedron(color, center, scale, angleX, angleY, angleZ, toTriangulate);
                     Figures3D fractal;
-                    int fractalScale = configuration["Figure" + std::to_string(i)]["fractalScale"];
+                    double fractalScale = configuration["Figure" + std::to_string(i)]["fractalScale"];
                     generateFractal(octahedron, fractal, nrIterations, fractalScale);
                     figures.insert(figures.end(), fractal.begin(), fractal.end());
-                } else if (type == "FractalDedocahedron") {
+                } else if (type == "FractalDodecahedron") {
                     int nrIterations = configuration["Figure" + std::to_string(i)]["nrIterations"];
                     Figure dodecahedron = createDodecahedron(color, center, scale, angleX, angleY, angleZ,
                                                              toTriangulate);
                     Figures3D fractal;
-                    int fractalScale = configuration["Figure" + std::to_string(i)]["fractalScale"];
+                    double fractalScale = configuration["Figure" + std::to_string(i)]["fractalScale"];
                     generateFractal(dodecahedron, fractal, nrIterations, fractalScale);
                     figures.insert(figures.end(), fractal.begin(), fractal.end());
                 } else if (type == "3DLSystem") {
