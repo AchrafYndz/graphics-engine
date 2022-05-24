@@ -16,10 +16,6 @@ public:
     Vector3D center;
 
     Color ambientReflection;
-    Color diffuseReflection;
-    Color specularReflection;
-
-    double reflectionCoefficient;
 
     double rotateAngleX;
     double rotateAngleY;
