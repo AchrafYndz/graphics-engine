@@ -69,6 +69,8 @@ namespace img
 			 * Destructor
 			 */
 			~Color();
+
+            Color& operator+=(const Color& rhs);
 	};
 
 	/**

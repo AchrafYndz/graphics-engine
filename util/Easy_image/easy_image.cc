@@ -123,6 +123,14 @@ img::Color::~Color()
 {
 }
 
+img::Color &img::Color::operator+=(const img::Color &rhs) {
+    this->blue += rhs.blue;
+    this->green += rhs.green;
+    this->red += rhs.red;
+
+    return *this;
+}
+
 img::UnsupportedFileTypeException::UnsupportedFileTypeException(std::string const& msg) :
 	message(msg)
 {
