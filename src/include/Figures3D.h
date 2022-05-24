@@ -4,28 +4,28 @@
 
 #include "../lib/Figure.h"
 
-Figure createCube(Color color, Vector3D &center, double scale, double angleX, double angleY, double angleZ, bool toTriangulate);
+Figure createCube(Color ambientReflection, Vector3D &center, double scale, double angleX, double angleY, double angleZ, bool toTriangulate);
 
-Figure createTetrahedron(Color color, Vector3D &center, double scale, double angleX, double angleY, double angleZ, bool toTriangulate);
+Figure createTetrahedron(Color ambientReflection, Vector3D &center, double scale, double angleX, double angleY, double angleZ, bool toTriangulate);
 
-Figure createOctahedron(Color color, Vector3D &center, double scale, double angleX, double angleY, double angleZ, bool toTriangulate);
+Figure createOctahedron(Color ambientReflection, Vector3D &center, double scale, double angleX, double angleY, double angleZ, bool toTriangulate);
 
-Figure createIcosahedron(Color color, Vector3D &center, double scale, double angleX, double angleY, double angleZ, bool toTriangulate);
+Figure createIcosahedron(Color ambientReflection, Vector3D &center, double scale, double angleX, double angleY, double angleZ, bool toTriangulate);
 
-Figure createDodecahedron(Color color, Vector3D &center, double scale, double angleX, double angleY, double angleZ, bool toTriangulate);
+Figure createDodecahedron(Color ambientReflection, Vector3D &center, double scale, double angleX, double angleY, double angleZ, bool toTriangulate);
 
 Figure
-createSphere(Color color, Vector3D &center, double scale, double angleX, double angleY, double angleZ, int n, bool toTriangulate);
+createSphere(Color ambientReflection, Vector3D &center, double scale, double angleX, double angleY, double angleZ, int n, bool toTriangulate);
 
-Figure createCone(Color color, Vector3D &center, double scale, double angleX, double angleY, double angleZ, int n,
+Figure createCone(Color ambientReflection, Vector3D &center, double scale, double angleX, double angleY, double angleZ, int n,
                   double h, bool toTriangulate);
 
 Figure
-createCylinder(Color color, Vector3D &center, double scale, double angleX, double angleY, double angleZ, int n,
+createCylinder(Color ambientReflection, Vector3D &center, double scale, double angleX, double angleY, double angleZ, int n,
                double h, bool toTriangulate);
 
 Figure
-createTorus(Color color, Vector3D &center, double scale, double angleX, double angleY, double angleZ, double r,
+createTorus(Color ambientReflection, Vector3D &center, double scale, double angleX, double angleY, double angleZ, double r,
             double R, int n, int m, bool toTriangulate);
 
 #endif //ENGINE_FIGURES3D_H
