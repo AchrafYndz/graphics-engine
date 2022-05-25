@@ -11,8 +11,271 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="Remove createBuckyBall()">
+    <list default="true" id="1ee65c4c-70b8-4bb5-9408-b2103f142d1d" name="Changes" comment="Change all color parameters to ambientReflection">
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals017.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals018.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals019.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals020.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals024.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals025.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals027.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals044.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals045.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals046.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals047.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals051.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals052.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals053.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals054.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals071.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals072.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals073.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals074.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals078.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals079.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals080.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals081.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals098.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals099.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals100.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals101.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals105.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals106.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals107.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals108.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals125.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals126.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals127.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals128.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals132.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals133.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals134.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals135.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals152.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals153.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals154.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals155.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals159.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals160.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals161.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals162.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals163.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals164.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals165.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals166.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals167.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals169.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals170.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals171.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals172.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals173.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals175.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals176.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals177.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals178.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light001.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light002.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light003.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light004.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light005.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light006.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light007.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light008.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light009.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light010.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light011.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light012.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light013.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light014.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light015.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light016.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light017.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light018.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light019.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light020.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light021.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light022.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light023.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light024.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light025.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light026.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light027.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light028.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light029.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light030.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light031.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light032.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light033.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light034.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light035.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light036.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light037.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light038.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light039.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light040.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light041.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light042.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light043.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light044.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light045.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light046.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light047.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light048.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light049.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light053.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light054.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light055.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light056.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light057.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light058.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light059.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light060.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light061.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light062.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light063.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light064.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light065.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light066.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light067.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light068.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light069.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light070.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light071.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light072.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light073.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light074.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light075.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light076.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light077.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light078.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light079.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light080.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light081.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light082.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light083.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light084.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light085.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light086.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light087.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light088.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light089.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light090.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light091.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light092.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light093.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light094.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light095.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light096.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light097.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light098.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light099.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light100.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light101.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light102.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light103.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light104.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light105.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light106.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light107.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light108.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light109.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light110.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light111.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light112.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light113.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light114.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light115.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light119.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light120.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light121.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light122.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light123.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light124.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light125.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light126.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light127.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light128.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light129.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light130.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light131.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light132.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light133.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light134.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/ambient_light135.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/ambient/out.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/filelist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ini/intro/Intro1_ColorRectangle.bmp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals023.bmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals026.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/3d_fractals/3d_fractals026.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/3d_fractals/out.bmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/intro/out.bmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems001.ini" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems001.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems002.ini" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems002.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems003.ini" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems003.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems004.ini" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems004.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems005.ini" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems005.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems006.ini" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems006.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems007.ini" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems007.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems008.ini" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems008.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems009.ini" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems009.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems010.ini" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems010.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems011.ini" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems011.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems012.ini" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems012.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems013.ini" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems013.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems014.ini" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems014.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems015.ini" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems015.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems016.ini" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems016.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems017.ini" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems017.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems018.ini" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems018.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems019.ini" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems019.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems020.ini" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems020.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems021.ini" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems021.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems022.ini" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems022.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems023.ini" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems023.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems024.ini" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems024.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems025.ini" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems025.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/l-systems/l_systems026.ini" beforeDir="false" afterPath="$PROJECT_DIR$/ini/l-systems/l_systems026.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/l-systems/out.bmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/line_drawings/line_drawings005.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/line_drawings/line_drawings005.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/line_drawings/out.bmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/wireframe/out.bmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/wireframe/wireframes010.ini" beforeDir="false" afterPath="$PROJECT_DIR$/ini/wireframe/wireframes010.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/wireframe/wireframes011.ini" beforeDir="false" afterPath="$PROJECT_DIR$/ini/wireframe/wireframes011.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/wireframe/wireframes012.ini" beforeDir="false" afterPath="$PROJECT_DIR$/ini/wireframe/wireframes012.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/wireframe/wireframes013.ini" beforeDir="false" afterPath="$PROJECT_DIR$/ini/wireframe/wireframes013.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/wireframe/wireframes014.ini" beforeDir="false" afterPath="$PROJECT_DIR$/ini/wireframe/wireframes014.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/wireframe/wireframes015.ini" beforeDir="false" afterPath="$PROJECT_DIR$/ini/wireframe/wireframes015.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/wireframe/wireframes027.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/wireframe/wireframes027.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/wireframe/wireframes029.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/wireframe/wireframes029.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/wireframe/wireframes031.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/wireframe/wireframes031.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/wireframe/wireframes055.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/wireframe/wireframes055.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/wireframe/wireframes058.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/wireframe/wireframes058.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/wireframe/wireframes059.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/ini/wireframe/wireframes059.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z-buffering_wireframe/out.bmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes037.ini" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes037.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes038.ini" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes038.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes039.ini" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes039.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes040.ini" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes040.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes041.ini" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes041.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes042.ini" beforeDir="false" afterPath="$PROJECT_DIR$/ini/z-buffering_wireframe/z_buffered_wireframes042.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini/z_buffering_triangles/out.bmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/engine.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/include/Figures3D.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/Figures3D.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/include/Logic3D.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/Logic3D.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/include/ZBufferTriangles.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/ZBufferTriangles.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/Color.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/Color.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/Color.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/Color.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/Figure.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/Figure.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/Figure.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/Figure.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/InfLight.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/InfLight.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/InfLight.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/InfLight.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/Light.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/Light.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/Light.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/Light.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/PointLight.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/PointLight.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/PointLight.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/PointLight.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/diffScript/temp.png" beforeDir="false" afterPath="$PROJECT_DIR$/util/diffScript/temp.png" afterDir="false" />
     </list>
     <list id="bab7a8e1-9703-4f08-be94-b31643734fe9" name="Changes by Jonas" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -73,25 +336,20 @@
       <recent name="C:\Users\Achraf\CLionProjects\graphics-engine\ini\line_drawings" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\yando\CLionProjects\graphics-engine\ini" />
       <recent name="C:\Users\yando\CLionProjects\graphics-engine\src\lib" />
       <recent name="C:\Users\yando\CLionProjects\graphics-engine" />
       <recent name="C:\Users\yando\CLionProjects\graphics-engine\util\src" />
       <recent name="$PROJECT_DIR$/ini/wireframe" />
-      <recent name="C:\Users\Achraf\CLionProjects\graphics-engine\ini\line_drawings" />
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.engine">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="engine" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$/ini/3d_fractals" PASS_PARENT_ENVS_2="true" PROJECT_NAME="engine" TARGET_NAME="engine" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="engine" RUN_TARGET_NAME="engine">
+    <configuration name="engine" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$/ini" PASS_PARENT_ENVS_2="true" PROJECT_NAME="engine" TARGET_NAME="engine" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="engine" RUN_TARGET_NAME="engine">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="script.sh" type="ShConfigurationType" temporary="true">
+    <configuration name="script.sh" type="ShConfigurationType">
       <option name="SCRIPT_TEXT" value="" />
       <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
       <option name="SCRIPT_PATH" value="$PROJECT_DIR$/util/diffScript/script.sh" />
@@ -110,11 +368,6 @@
       <item itemvalue="CMake Application.engine" />
       <item itemvalue="Shell Script.script.sh" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Shell Script.script.sh" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -203,14 +456,13 @@
       <workItem from="1651864663975" duration="23000" />
       <workItem from="1652011351774" duration="860000" />
       <workItem from="1652013032606" duration="1613000" />
-      <workItem from="1652015746813" duration="3243000" />
-    </task>
-    <task id="LOCAL-00001" summary="Remove redundant theta+pi">
-      <created>1647092291607</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1647092291607</updated>
+      <workItem from="1652015746813" duration="3939000" />
+      <workItem from="1652023959047" duration="566000" />
+      <workItem from="1652443433746" duration="16000" />
+      <workItem from="1653423253732" duration="7498000" />
+      <workItem from="1653433429629" duration="1658000" />
+      <workItem from="1653467172520" duration="5094000" />
+      <workItem from="1653473712105" duration="1254000" />
     </task>
     <task id="LOCAL-00002" summary="FIx minor bugs">
       <created>1647282407363</created>
@@ -485,7 +737,77 @@
       <option name="project" value="LOCAL" />
       <updated>1652020357473</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Remove createBuckyBall() declaration">
+      <created>1652020602989</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1652020602989</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Overload += operator for Color">
+      <created>1653425650184</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1653425650184</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Fix Color values not going above 1">
+      <created>1653425896855</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1653425896855</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Move overload from img::Color to Color">
+      <created>1653427190325</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1653427190325</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Change Figure constructor's parameters">
+      <created>1653430603974</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1653430603974</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Remove unused attributes">
+      <created>1653430612656</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1653430612656</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Initialize color's attributes">
+      <created>1653430628677</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1653430628677</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Start writing ZBufferLights logic">
+      <created>1653430662548</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1653430662548</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Change draw_zbuf_trag's parameters">
+      <created>1653430684627</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1653430684627</updated>
+    </task>
+    <task id="LOCAL-00050" summary="Change all color parameters to ambientReflection">
+      <created>1653433565186</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1653433565187</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -507,16 +829,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Backup before dos2unix" />
-    <MESSAGE value="Refactor Draw2DLsystem()" />
-    <MESSAGE value="Set up 3DLsystem functions" />
-    <MESSAGE value="Rework 3D L-system logic" />
-    <MESSAGE value="Start rewriting 3DLsystem logic" />
-    <MESSAGE value="Fix error when compiling" />
-    <MESSAGE value="Finish 3D L-systems" />
-    <MESSAGE value="Fix zbuffering wireframes" />
-    <MESSAGE value="Clean up code structure + better coding conventions" />
-    <MESSAGE value="Start working on ZBuffering with triangulation" />
     <MESSAGE value="Write a part of the draw_zbuf_trag() function" />
     <MESSAGE value="Fix triangulation indexes" />
     <MESSAGE value="Write more zbuffering logic" />
@@ -532,7 +844,17 @@
     <MESSAGE value="Change fractal scale from int to double" />
     <MESSAGE value="Add README.md" />
     <MESSAGE value="Remove createBuckyBall()" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove createBuckyBall()" />
+    <MESSAGE value="Remove createBuckyBall() declaration" />
+    <MESSAGE value="Overload += operator for Color" />
+    <MESSAGE value="Fix Color values not going above 1" />
+    <MESSAGE value="Move overload from img::Color to Color" />
+    <MESSAGE value="Change Figure constructor's parameters" />
+    <MESSAGE value="Remove unused attributes" />
+    <MESSAGE value="Initialize color's attributes" />
+    <MESSAGE value="Start writing ZBufferLights logic" />
+    <MESSAGE value="Change draw_zbuf_trag's parameters" />
+    <MESSAGE value="Change all color parameters to ambientReflection" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change all color parameters to ambientReflection" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

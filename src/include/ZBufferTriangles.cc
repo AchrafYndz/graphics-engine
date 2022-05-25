@@ -44,6 +44,16 @@ draw_zbuf_trag(ZBuffer &zbuffer, img::EasyImage &image, Vector3D const &A, Vecto
     int y_min = lround(std::min({AProjected.y, BProjected.y, CProjected.y}) + 0.5);
     int y_max = lround(std::max({AProjected.y, BProjected.y, CProjected.y}) - 0.5);
 
+
+    // Ambient light stuff
+    Light totalLight;
+    for (Light light: lights) {
+        totalLight.ambientLight += light.ambientLight;
+    }
+    totalLight.ambientLight *= ambientReflection;
+
+    img::Color color(totalLight.ambientLight.red * 255, totalLight.ambientLight.green * 255, totalLight.ambientLight.blue * 255);
+
     for (int y_I = y_min; y_I <= y_max; y_I++) {
         int x_L_AB = std::numeric_limits<int>::max();
         int x_L_AC = std::numeric_limits<int>::max();
@@ -76,13 +86,6 @@ draw_zbuf_trag(ZBuffer &zbuffer, img::EasyImage &image, Vector3D const &A, Vecto
         }
         int x_L = lround(std::min({x_L_AB, x_L_AC, x_L_BC}) + 0.5);
         int x_R = lround(std::max({x_R_AB, x_R_AC, x_R_BC}) - 0.5);
-
-        Light light;
-        for (int i = 0; i < nrLights; i++) {
-            std::vector<double> curL = configuration["Light" + std::to_string(i)]["ambientLight"];
-            Color curLight(curL[0], curL[1], curL[2]);
-            light.ambientLight += curLight;
-        }
 
         for (int x = x_L; x <= x_R; x++) {
             double zReciprocal = (1.0001 * z_GReciprocal) + ((x - x_G) * dzdx) + ((y_I - y_G) * dzdy);

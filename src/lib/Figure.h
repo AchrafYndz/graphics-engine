@@ -29,7 +29,6 @@ public:
                                                              center(center_), scale(scale_), rotateAngleX(angleX_),
                                                              rotateAngleY(angleY_), rotateAngleZ(angleZ_) {};
 
-    img::Color getEzColor();
 };
 
 typedef std::list<Figure> Figures3D;

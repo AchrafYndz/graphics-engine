@@ -11,3 +11,11 @@ Color &Color::operator+=(Color &rhs) {
 
     return *this;
 }
+
+Color &Color::operator*=(Color &rhs) {
+    this->blue *= rhs.blue;
+    this->green *= rhs.green;
+    this->red *= rhs.red;
+
+    return *this;
+}

@@ -148,13 +148,13 @@ Lines2D doProjection(Figures3D &figs, const Vector3D &eyepoint) {
                     Vector3D p1 = fig.points[face.point_indexes[i + 1]];
                     Point2D x = doProjection(p0, 1);
                     Point2D y = doProjection(p1, 1);
-                    projection.push_back(Line2D(x, y, fig.color, p0.z, p1.z));
+                    projection.push_back(Line2D(x, y, fig.ambientReflection, p0.z, p1.z));
                 } else {
                     Vector3D p0 = fig.points[face.point_indexes[i]];
                     Vector3D p1 = fig.points[face.point_indexes[0]];
                     Point2D x = doProjection(p0, 1);
                     Point2D y = doProjection(p1, 1);
-                    projection.push_back(Line2D(x, y, fig.color, p0.z, p1.z));
+                    projection.push_back(Line2D(x, y, fig.ambientReflection, p0.z, p1.z));
                 }
             }
         }

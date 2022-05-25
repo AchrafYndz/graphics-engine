@@ -42,8 +42,9 @@ createCube(Color ambientReflection, Vector3D &center, double scale, double angle
     return {points, faces, ambientReflection, center, scale, angleX, angleY, angleZ};
 }
 
-Figure createTetrahedron(Color ambientReflection, Vector3D &center, double scale, double angleX, double angleY, double angleZ,
-                         bool toTriangulate) {
+Figure
+createTetrahedron(Color ambientReflection, Vector3D &center, double scale, double angleX, double angleY, double angleZ,
+                  bool toTriangulate) {
     // Create points
     std::vector<Vector3D> points;
     points.push_back(Vector3D::point(1, -1, -1));
@@ -71,8 +72,9 @@ Figure createTetrahedron(Color ambientReflection, Vector3D &center, double scale
     return {points, faces, ambientReflection, center, scale, angleX, angleY, angleZ};
 }
 
-Figure createOctahedron(Color ambientReflection, Vector3D &center, double scale, double angleX, double angleY, double angleZ,
-                        bool toTriangulate) {
+Figure
+createOctahedron(Color ambientReflection, Vector3D &center, double scale, double angleX, double angleY, double angleZ,
+                 bool toTriangulate) {
     // Create points
     std::vector<Vector3D> points;
     points.push_back(Vector3D::point(1, 0, 0));
@@ -107,8 +109,9 @@ Figure createOctahedron(Color ambientReflection, Vector3D &center, double scale,
     return {points, faces, ambientReflection, center, scale, angleX, angleY, angleZ};
 }
 
-Figure createIcosahedron(Color ambientReflection, Vector3D &center, double scale, double angleX, double angleY, double angleZ,
-                         bool toTriangulate) {
+Figure
+createIcosahedron(Color ambientReflection, Vector3D &center, double scale, double angleX, double angleY, double angleZ,
+                  bool toTriangulate) {
     // Create points
     std::vector<Vector3D> points;
 
@@ -161,12 +164,13 @@ Figure createIcosahedron(Color ambientReflection, Vector3D &center, double scale
     return {points, faces, ambientReflection, center, scale, angleX, angleY, angleZ};
 }
 
-Figure createDodecahedron(Color ambientReflection, Vector3D &center, double scale, double angleX, double angleY, double angleZ,
-                          bool toTriangulate) {
+Figure
+createDodecahedron(Color ambientReflection, Vector3D &center, double scale, double angleX, double angleY, double angleZ,
+                   bool toTriangulate) {
     // Create points
     std::vector<Vector3D> points;
 
-    Figure icosahedron = createIcosahedron(color, center, scale, angleX, angleY, angleZ, toTriangulate);
+    Figure icosahedron = createIcosahedron(ambientReflection, center, scale, angleX, angleY, angleZ, toTriangulate);
 
     for (const Face &triangle: icosahedron.faces) {
         Vector3D point1 = icosahedron.points[triangle.point_indexes[0]];
@@ -206,7 +210,8 @@ Figure createDodecahedron(Color ambientReflection, Vector3D &center, double scal
 }
 
 Figure
-createSphere(Color ambientReflection, Vector3D &center, double scale, double angleX, double angleY, double angleZ, const int n,
+createSphere(Color ambientReflection, Vector3D &center, double scale, double angleX, double angleY, double angleZ,
+             const int n,
              bool toTriangulate) {
     Figure icosahedron = createIcosahedron(ambientReflection, center, scale, angleX, angleY, angleZ, toTriangulate);
 
@@ -269,7 +274,8 @@ createSphere(Color ambientReflection, Vector3D &center, double scale, double ang
     return icosahedron;
 }
 
-Figure createCone(Color ambientReflection, Vector3D &center, double scale, double angleX, double angleY, double angleZ, const int n,
+Figure createCone(Color ambientReflection, Vector3D &center, double scale, double angleX, double angleY, double angleZ,
+                  const int n,
                   const double h, bool toTriangulate) {
     // Create points
     std::vector<Vector3D> points;
@@ -303,7 +309,8 @@ Figure createCone(Color ambientReflection, Vector3D &center, double scale, doubl
 }
 
 Figure
-createCylinder(Color ambientReflection, Vector3D &center, double scale, double angleX, double angleY, double angleZ, const int n,
+createCylinder(Color ambientReflection, Vector3D &center, double scale, double angleX, double angleY, double angleZ,
+               const int n,
                const double h, bool toTriangulate) {
     // Create points
     std::vector<Vector3D> points;
@@ -349,7 +356,8 @@ createCylinder(Color ambientReflection, Vector3D &center, double scale, double a
 }
 
 Figure
-createTorus(Color ambientReflection, Vector3D &center, double scale, double angleX, double angleY, double angleZ, const double r,
+createTorus(Color ambientReflection, Vector3D &center, double scale, double angleX, double angleY, double angleZ,
+            const double r,
             const double R, const int n, const int m, bool toTriangulate) {
     // Create points
     std::vector<Vector3D> points;
