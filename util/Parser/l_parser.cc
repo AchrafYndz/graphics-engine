@@ -118,7 +118,7 @@ namespace
 			}
 			std::string readQuotedString()
 			{
-				if (((char) getChar()) != '"')
+				if (static_cast<char>(getChar()) != '"')
 					throw LParser::ParserException("Did not find expected string char:'\"'", line, col);
 				std::string value("");
 				for (std::istream::int_type c = getChar(); c != '"'; c = getChar())
@@ -188,7 +188,7 @@ namespace
 					if (std::isdigit(c))
 						getChar();
 				}
-				return (double) whole + ((double) part / (double) denom);
+				return static_cast<double>(whole) + (static_cast<double>(part) / static_cast<double>(denom));
 			}
 			int getLine()
 			{
@@ -297,7 +297,7 @@ namespace
 			int value = parser.readInt();
 			if (value != 0 && value != 1)
 				throw LParser::ParserException(std::string("Invalid draw specification for entry '") + alphabet_char + "' in draw specification", parser.getLine(), parser.getCol());
-			draw[alphabet_char] = (bool) value;
+			draw[alphabet_char] = static_cast<bool>(value);
 			parser.skip_comments_and_whitespace();
 			c = parser.getChar();
 			if (c == '}')

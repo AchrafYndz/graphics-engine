@@ -235,26 +235,26 @@ void img::EasyImage::draw_line(unsigned int x0, unsigned int y0, unsigned int x1
 			std::swap(x0, x1);
 			std::swap(y0, y1);
 		}
-		double m = ((double) y1 - (double) y0) / ((double) x1 - (double) x0);
+		double m = (static_cast<double>(y1) - static_cast<double>(y0)) / (static_cast<double>(x1) - static_cast<double>(x0));
 		if (-1.0 <= m && m <= 1.0)
 		{
 			for (unsigned int i = 0; i <= (x1 - x0); i++)
 			{
-				(*this)(x0 + i, (unsigned int) round(y0 + m * i)) = color;
+				(*this)(x0 + i, static_cast<unsigned int>(round(y0 + m * i))) = color;
 			}
 		}
 		else if (m > 1.0)
 		{
 			for (unsigned int i = 0; i <= (y1 - y0); i++)
 			{
-				(*this)((unsigned int) round(x0 + (i / m)), y0 + i) = color;
+				(*this)(static_cast<unsigned int>(round(x0 + (i / m))), y0 + i) = color;
 			}
 		}
 		else if (m < -1.0)
 		{
 			for (unsigned int i = 0; i <= (y0 - y1); i++)
 			{
-				(*this)((unsigned int) round(x0 - (i / m)), y0 - i) = color;
+				(*this)(static_cast<unsigned int>(round(x0 - (i / m))), y0 - i) = color;
 			}
 		}
 	}

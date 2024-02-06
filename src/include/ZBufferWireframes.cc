@@ -31,7 +31,7 @@ draw_zbuf_line(ZBuffer &zbuffer, img::EasyImage &image, unsigned int x0, unsigne
             double x = x0;
             double y = i;
             // Fetch a
-            double a = ((double) std::max(y0, y1) - std::min(y0, y1));
+            double a = (static_cast<double>(std::max(y0, y1)) - std::min(y0, y1));
             // Calculate p and Zp
             double p = (i - std::min(y0, y1)) / a;
             double Zp = (p / z1) + ((1 - p) / z0);
@@ -51,7 +51,7 @@ draw_zbuf_line(ZBuffer &zbuffer, img::EasyImage &image, unsigned int x0, unsigne
             double x = i;
             double y = y0;
             // Fetch a
-            double a = ((double) std::max(x0, x1) - std::min(x0, x1));
+            double a = (static_cast<double>(std::max(x0, x1)) - std::min(x0, x1));
             // Calculate p and Zp
             double p = (i - std::min(x0, x1)) / a;
             double Zp = (p / z1) + ((1 - p) / z0);
@@ -68,7 +68,7 @@ draw_zbuf_line(ZBuffer &zbuffer, img::EasyImage &image, unsigned int x0, unsigne
             std::swap(y0, y1);
             std::swap(z0, z1);
         }
-        double m = ((double) y1 - (double) y0) / ((double) x1 - (double) x0);
+        double m = (static_cast<double>(y1) - static_cast<double>(y0)) / (static_cast<double>(x1) - static_cast<double>(x0));
         if (-1.0 <= m && m <= 1.0) {
             for (unsigned int i = 0; i <= (x1 - x0); i++) {
                 // Define x and y values
@@ -88,7 +88,7 @@ draw_zbuf_line(ZBuffer &zbuffer, img::EasyImage &image, unsigned int x0, unsigne
         } else if (m > 1.0) {
             for (unsigned int i = 0; i <= (y1 - y0); i++) {
                 // Define x and y values
-                double x = (unsigned int) round(x0 + (i / m));
+                double x = static_cast<unsigned int>(round(x0 + (i / m)));
                 double y = y0 + i;
                 // Fetch a
                 double a = ((double) (y1 - y0));
@@ -104,7 +104,7 @@ draw_zbuf_line(ZBuffer &zbuffer, img::EasyImage &image, unsigned int x0, unsigne
         } else if (m < -1.0) {
             for (unsigned int i = 0; i <= (y0 - y1); i++) {
                 // Define x and y values
-                double x = (unsigned int) round(x0 - (i / m));
+                double x = static_cast<unsigned int>(round(x0 - (i / m)));
                 double y = y0 - i;
                 // Fetch a
                 double a = ((double) (y0 - y1));
